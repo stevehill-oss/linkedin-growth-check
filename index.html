@@ -1,0 +1,1358 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raymond Shaahu | LinkedIn for founders and senior executives</title>
+<meta name="description" content="Executive LinkedIn presence for founders and CEOs, built around your experience and managed for you. Nothing goes out without your approval.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Look as good on LinkedIn as you do in the room.">
+<meta property="og:description" content="Executive LinkedIn presence, built around your experience and managed for you.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://stevehill-oss.github.io/linkedin-growth-check/">
+<meta property="og:url" content="https://stevehill-oss.github.io/linkedin-growth-check/">
+<!-- SHARING PICTURE (HANDOVER.md, Step 5). Only if you have a share picture (1200 by 627 pixels,
+     saved next to index.html), copy this line out of the comment with the picture's full web address:
+<meta property="og:image" content="FULL-ADDRESS-OF-THE-PICTURE">
+     If you move to your own domain, change the address in the canonical and og:url lines above. -->
+
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#13221C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16241E" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4A3C'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%23F1E6D2' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",P052,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --bg:#F6F4EF;--bg-alt:#EDE9E0;--surface:#FFFFFF;--panel:#FCFBF8;
+  --ink:#17201C;--muted:#4A544F;--line:rgba(23,32,28,.13);--line-strong:rgba(23,32,28,.24);--control:#7F8782;
+  --accent:#1F4A3C;--accent-hover:#163729;--on-accent:#FFFFFF;--accent-soft:#E2EBE5;
+  --brass:#7A5216;--brass-line:#B8894A;--brass-soft:#F3E9D7;
+  --band:#13221C;--band-ink:#EEF1EC;--band-muted:#B5C1BB;--band-brass:#E2C188;
+  --error:#A0281B;--ok:#1E6542;--focus:#1F4A3C;--placeholder:#69716D;
+  --setup-bg:#FFF1CF;--setup-ink:#3A2A08;
+  --shadow-s:0 1px 1px rgba(16,28,23,.04),0 2px 4px rgba(16,28,23,.05),0 6px 12px rgba(16,28,23,.05);
+  --shadow-l:0 2px 4px rgba(16,28,23,.04),0 10px 20px rgba(16,28,23,.06),0 28px 56px rgba(16,28,23,.10);
+  --fs-xs:.8125rem;--fs-s:.9375rem;--fs-base:1.0625rem;
+  --fs-l:clamp(1.125rem,1.06rem + .3vw,1.3rem);
+  --fs-h3:clamp(1.25rem,1.15rem + .45vw,1.5rem);
+  --fs-h2:clamp(1.9rem,1.45rem + 1.9vw,3.1rem);
+  --fs-h1:clamp(2.5rem,1.75rem + 3.4vw,4.75rem);
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --section-y:clamp(4rem,9vw,8rem);
+  --ease:cubic-bezier(.32,.72,0,1);--ease-out:cubic-bezier(.22,1,.36,1);
+  --t-fast:160ms;--t-base:280ms;--t-slow:520ms;
+  --setup-h:0px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1412;--bg-alt:#121A17;--surface:#18221E;--panel:#1A2521;
+    --ink:#E7EBE7;--muted:#A6B0AB;--line:rgba(231,235,231,.12);--line-strong:rgba(231,235,231,.24);--control:#76817B;
+    --accent:#9AD0B8;--accent-hover:#B6DFCC;--on-accent:#0E1412;--accent-soft:#1F3029;
+    --brass:#D6AE6E;--brass-line:#9C7A45;--brass-soft:#2A241A;
+    --band:#16241E;--band-ink:#EEF1EC;--band-muted:#AAB7B0;--band-brass:#DDB878;
+    --error:#F2A093;--ok:#8FD1AE;--focus:#9AD0B8;--placeholder:#8E9893;
+    --shadow-s:0 1px 2px rgba(0,0,0,.3),0 4px 10px rgba(0,0,0,.25);
+    --shadow-l:0 2px 6px rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.35);
+  }
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-bottom:var(--setup-h)}
+/* Keeps keyboard focus clear of the fixed bars at the bottom of the screen */
+@media (max-width:899.98px){html{scroll-padding-bottom:calc(var(--setup-h) + 6.5rem + env(safe-area-inset-bottom))}}
+/* No CSS smooth scrolling: it also slows keyboard focus scrolling. In-page links glide by script instead. */
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-base)/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:var(--setup-h)}
+@media (min-width:900px){body{font-size:1.125rem}}
+[hidden]{display:none!important}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4,h5,p,ol,ul,dl,dd,figure,blockquote{margin:0}
+h1,h2,h3,h4,h5{font-weight:500}
+ol,ul{padding:0;list-style:none}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+h2[tabindex="-1"]:focus{outline:none}
+::selection{background:var(--accent);color:var(--on-accent)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:50;background:var(--accent);color:var(--on-accent);padding:.7rem 1rem;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{width:min(100% - 2*var(--gutter),72rem);margin-inline:auto}
+section{padding-block:var(--section-y)}
+section[id]{scroll-margin-top:1rem}
+.alt{background:var(--bg-alt)}
+.eyebrow{font:600 var(--fs-xs)/1.35 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.h2{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.015em;text-wrap:balance;max-width:22ch}
+.lede{font-size:var(--fs-l);line-height:1.6;color:var(--muted);max-width:56ch;text-wrap:pretty}
+.sec-lede{margin-top:1.1rem}
+.h3{font-family:var(--serif);font-size:var(--fs-h3);line-height:1.25;letter-spacing:-.005em}
+.muted{color:var(--muted)}
+.small{font-size:var(--fs-s)}
+.tiny{font-size:var(--fs-xs)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:3.25rem;padding:.8rem 1.45rem;border-radius:12px;border:1.5px solid transparent;background:var(--accent);color:var(--on-accent);font:600 1.0625rem/1.2 var(--sans);text-decoration:none;cursor:pointer;transition:background-color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+.btn:hover{background:var(--accent-hover)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled],.btn[aria-disabled="true"]{opacity:.72;cursor:progress}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn-quiet{background:transparent;color:var(--accent);border-color:var(--control)}
+.btn-quiet:hover{background:var(--accent-soft)}
+.btn-block{width:100%}
+@media (min-width:600px){.btn-block{width:auto}}
+
+/* ---------- Header (sits on the dark hero band) ---------- */
+.site-head{background:var(--band);color:var(--band-ink);--focus:var(--band-brass);border-bottom:1px solid rgba(238,241,236,.1)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.75rem}
+.brand{display:inline-flex;align-items:center;gap:.7rem;color:inherit;text-decoration:none;font:500 1.0625rem/1.2 var(--serif);min-height:44px}
+.head-nav{display:flex;align-items:center;gap:1.25rem}
+.head-link{font-weight:600;font-size:var(--fs-s);display:inline-flex;align-items:center;min-height:44px;color:var(--band-ink)}
+.head-cta{display:none;font-weight:600;font-size:var(--fs-s);text-decoration:none;padding:.55rem 1rem;border-radius:10px;background:var(--band-brass);color:var(--band)}
+.head-cta:hover{background:#EED3A4}
+@media (min-width:900px){.head-cta{display:inline-flex;align-items:center;min-height:44px}}
+
+/* ---------- Avatar / monogram ---------- */
+.avatar{--av:2.25rem;width:var(--av);height:var(--av);border-radius:50%;overflow:hidden;flex:none;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:500 calc(var(--av)*.4)/1 var(--serif);letter-spacing:.02em;box-shadow:inset 0 0 0 1px var(--line)}
+.site-head .avatar{background:rgba(226,193,136,.16);color:var(--band-brass);box-shadow:inset 0 0 0 1px rgba(226,193,136,.45)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar-lg{--av:clamp(7.5rem,24vw,12.5rem);margin:8px;box-shadow:0 0 0 1px var(--line),0 0 0 7px var(--bg),0 0 0 8px var(--brass-line)}
+
+/* ---------- Hero: dark band, big type, the "two first impressions" cards ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--band);color:var(--band-ink);--focus:var(--band-brass);padding-block:clamp(1.75rem,5vw,5rem) clamp(2.75rem,7vw,6rem)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 45% at 88% 6%,rgba(226,193,136,.2),transparent 70%),radial-gradient(45% 40% at 0% 100%,rgba(154,208,184,.1),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(238,241,236,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(238,241,236,.045) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:linear-gradient(#000,transparent 80%);mask-image:linear-gradient(#000,transparent 80%)}
+.hero-grid{display:grid;gap:2.5rem}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.2fr .8fr;align-items:center;gap:4rem}}
+.hero .eyebrow{color:var(--band-brass);display:flex;align-items:center;gap:.7rem}
+.hero .eyebrow::before{content:"";width:1.75rem;height:1px;background:currentColor}
+.hero h1{font:500 clamp(2.3rem,1.1rem + 6.6vw,5.4rem)/1.02 var(--serif);letter-spacing:-.03em;max-width:12.5ch;margin-top:1rem;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--band-brass);position:relative;white-space:nowrap}
+.swash{position:absolute;left:0;right:0;bottom:-.14em;width:100%;height:.28em;overflow:visible;color:var(--band-brass)}
+.swash path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.positioning{margin-top:1.4rem;padding-left:1rem;border-left:2px solid var(--band-brass);font:500 var(--fs-l)/1.45 var(--serif);max-width:36ch;text-wrap:balance}
+.hero .lede{margin-top:1.1rem;color:var(--band-muted)}
+.hero-actions{margin-top:1.75rem;display:grid;gap:.7rem}
+@media (min-width:600px){.hero-actions{display:flex;flex-wrap:wrap}}
+.btn-brass{background:var(--band-brass);color:var(--band)}
+.btn-brass:hover{background:#EED3A4}
+.btn-ghost{background:transparent;color:var(--band-ink);border-color:rgba(238,241,236,.55)}
+.btn-ghost:hover{background:rgba(238,241,236,.08);border-color:var(--band-ink)}
+.reassure{margin-top:1rem;display:flex;gap:.55rem;align-items:center;color:var(--muted);font-size:var(--fs-s)}
+.reassure svg{width:18px;height:18px;color:var(--accent);flex:none}
+.hero .reassure{color:var(--band-muted)}
+.hero .reassure svg{color:var(--band-brass)}
+.in-glyph{width:1.05em;height:1.05em;flex:none}
+.ext{width:.85em;height:.85em;opacity:.8}
+
+/* The visual: the same person, two first impressions */
+.duo-wrap{display:grid;gap:1rem;justify-items:center;width:100%;max-width:24rem;justify-self:center}
+.duo{position:relative;width:100%;height:16.5rem}
+.duo-card{position:absolute;width:72%;border-radius:18px;padding:1rem 1rem 1.1rem;display:grid;gap:.55rem}
+.duo-online{left:0;top:0;border:1.5px dashed rgba(238,241,236,.35);background:rgba(238,241,236,.03);transform:rotate(-5deg);color:var(--band-muted)}
+.duo-room{right:0;bottom:0;background:#FBF8F1;color:#17201C;box-shadow:0 24px 48px rgba(0,0,0,.35),0 0 0 1px rgba(226,193,136,.5);transform:rotate(2deg)}
+.duo-k{font:700 .7rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.duo-room .duo-k{color:#7A5216}
+.duo-top{display:flex;align-items:center;gap:.7rem}
+.duo-av{width:2.6rem;height:2.6rem;border-radius:50%;flex:none;position:relative}
+.duo-online .duo-av{border:1.5px dashed rgba(238,241,236,.35)}
+.duo-room .duo-av{background:#1F4A3C}
+.duo-av svg{position:absolute;inset:-5px;width:calc(100% + 10px);height:calc(100% + 10px);transform:rotate(-90deg)}
+.duo-av circle{fill:none;stroke:#B8894A;stroke-width:2.5;stroke-linecap:round}
+.duo-lines{display:grid;gap:.4rem;flex:1}
+.duo i{display:block;height:.5rem;border-radius:9px}
+.duo-online i{background:rgba(238,241,236,.12)}
+.duo-room i{background:#1F4A3C}
+.duo-room .duo-lines i+i,.duo-room .duo-posts i{background:#D9D2C2}
+.duo-posts{display:grid;gap:.4rem;padding-top:.6rem;border-top:1px solid currentColor;border-color:rgba(127,135,130,.3)}
+.duo-posts i:nth-child(2){width:86%}.duo-posts i:nth-child(3){width:64%}
+.w40{width:40%}.w55{width:55%}.w65{width:65%}.w80{width:80%}
+.duo-cap{font:italic 400 var(--fs-s)/1.4 var(--serif);color:var(--band-muted);text-align:center}
+@media (prefers-reduced-motion:no-preference){
+  .swash path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s .5s var(--ease-out) forwards}
+  .duo-room{animation:rise .9s .25s var(--ease-out) both}
+  .duo-av circle{stroke-dasharray:100;stroke-dashoffset:100;animation:ring 1.4s .7s var(--ease-out) forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes ring{to{stroke-dashoffset:8}}
+  @keyframes rise{from{transform:translate(8px,22px) rotate(5deg);opacity:.4}to{transform:rotate(2deg);opacity:1}}
+}
+
+/* ---------- Problem ---------- */
+.points{display:grid;gap:2.25rem;margin-top:2.75rem;counter-reset:pt}
+@media (min-width:900px){.points{grid-template-columns:repeat(3,1fr);gap:3rem}}
+.point{display:grid;gap:.6rem;align-content:start;padding-top:1.25rem;border-top:1px solid var(--line-strong)}
+.point::before{counter-increment:pt;content:"0" counter(pt);font:500 1.05rem/1 var(--serif);color:var(--brass)}
+.point p{color:var(--muted)}
+
+/* Checked facts */
+.fact{margin-top:3rem;display:grid;gap:.45rem;padding:1.4rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brass-line);border-radius:4px 16px 16px 4px;max-width:40rem}
+.fact-k{font:600 var(--fs-xs)/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.fact-big{font:500 clamp(1.6rem,1.3rem + 1.4vw,2.4rem)/1.12 var(--serif);letter-spacing:-.015em}
+.fact-t{color:var(--muted)}
+.fact-src{font-size:var(--fs-xs);color:var(--muted)}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;gap:2rem;margin-top:2.75rem;align-items:start}
+@media (min-width:800px){.about-grid{grid-template-columns:auto 1fr;gap:3.5rem}}
+.about-name{font:500 clamp(1.6rem,1.35rem + 1vw,2.1rem)/1.15 var(--serif)}
+.about-body{display:grid;gap:1rem;max-width:40rem}
+.about-meta{display:grid;gap:.35rem;color:var(--muted);font-size:var(--fs-s)}
+.creds{display:grid;gap:.4rem;margin-top:.4rem}
+.creds li{padding-left:1.1rem;position:relative}
+.creds li::before{content:"";position:absolute;left:0;top:.65em;width:.4rem;height:.4rem;border-radius:50%;background:var(--brass-line)}
+.nudge{color:var(--muted);font-style:italic}
+.about-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+
+/* ---------- What I take care of ---------- */
+.benefits{display:grid;gap:1rem;margin-top:2.75rem}
+@media (min-width:640px){.benefits{grid-template-columns:1fr 1fr;gap:1.25rem}}
+@media (min-width:1000px){.benefits{grid-template-columns:repeat(3,1fr)}}
+.benefit{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.5rem 1.5rem 1.65rem;display:grid;gap:.55rem;align-content:start}
+.benefit::before{content:"";display:block;width:28px;height:2px;background:var(--brass-line);margin-bottom:.7rem}
+.benefit p{color:var(--muted)}
+.addon{margin-top:1.25rem;padding:1.25rem 1.5rem;border:1.5px dashed var(--line-strong);border-radius:16px;display:grid;gap:.35rem;max-width:46rem}
+.addon p{color:var(--muted)}
+.honest{margin-top:2rem;display:flex;gap:.7rem;align-items:flex-start;max-width:46rem;color:var(--muted)}
+.honest svg{width:20px;height:20px;flex:none;margin-top:.2rem;color:var(--brass)}
+
+/* ---------- How it works ---------- */
+.steps{margin-top:2.75rem;display:grid;counter-reset:st}
+.step{position:relative;padding:0 0 2.1rem 3.6rem;display:grid;gap:.45rem;align-content:start}
+.step::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:-.15rem;width:2.5rem;height:2.5rem;border-radius:50%;border:1.5px solid var(--brass-line);color:var(--brass);display:grid;place-items:center;font:500 1.15rem/1 var(--serif);background:var(--bg)}
+.step::after{content:"";position:absolute;left:1.25rem;top:2.6rem;bottom:.35rem;width:1px;background:var(--line-strong)}
+.step:last-child{padding-bottom:0}
+.step:last-child::after{display:none}
+.step p{color:var(--muted)}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(4,1fr);gap:2rem}
+  .step{padding:3.75rem 0 0}
+  .step::after{left:3.1rem;right:-1.4rem;top:1.25rem;bottom:auto;width:auto;height:1px}
+}
+
+/* ---------- Case studies and proof ---------- */
+.cs-list{margin-top:2.5rem;display:grid;gap:1.25rem}
+@media (min-width:860px){.cs-list{grid-template-columns:1fr 1fr}}
+.cs{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:grid;gap:1rem;align-content:start}
+.cs-who{font:600 var(--fs-xs)/1.35 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.cs dl{display:grid;gap:.85rem}
+.cs dt{font-weight:700;font-size:var(--fs-s)}
+.cs dd{color:var(--muted)}
+.cs blockquote{font:400 1.15rem/1.45 var(--serif);padding-top:1rem;border-top:1px dashed var(--line-strong)}
+.cs-empty{margin-top:2.5rem;max-width:46rem;padding:1.6rem 1.6rem 1.7rem;border:1.5px dashed var(--line-strong);border-radius:16px;background:var(--surface);display:grid;gap:.7rem;justify-items:start}
+.cs-empty p{color:var(--muted)}
+.slot{margin-top:3rem}
+.slot-list{margin-top:1.25rem;display:grid;gap:1rem}
+@media (min-width:760px){.slot-list.two{grid-template-columns:1fr 1fr}}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.5rem;display:grid;gap:1rem}
+.quote blockquote{font:400 1.2rem/1.45 var(--serif)}
+.quote figcaption{font-size:var(--fs-s);color:var(--muted)}
+.quote figcaption strong{color:var(--ink)}
+.res{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem;display:grid;gap:.4rem}
+.res-r{font:500 1.2rem/1.35 var(--serif)}
+.res-m{font-size:var(--fs-s);color:var(--muted)}
+.logos{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center}
+.logos img{height:3rem;width:auto;max-width:10rem;object-fit:contain}
+.logo-name{font-weight:600;color:var(--muted)}
+
+/* ---------- Check teaser (dark band) ---------- */
+.band{background:var(--band);color:var(--band-ink);--focus:var(--band-brass)}
+.band .eyebrow{color:var(--band-brass)}
+.band .lede{color:var(--band-muted)}
+.teaser-grid{display:grid;gap:3rem;align-items:center}
+@media (min-width:960px){.teaser-grid{grid-template-columns:1fr 1fr;gap:4.5rem}}
+.teaser-grid .h2{margin-top:.9rem}
+.btn-light{background:var(--band-ink);color:var(--band);margin-top:2rem}
+.btn-light:hover{background:#FFFFFF}
+.band .reassure{color:var(--band-muted)}
+.band .reassure svg{color:var(--band-brass)}
+.preview-wrap{position:relative;perspective:1000px;max-width:31rem;width:100%;justify-self:center;--focus:var(--accent)}
+.preview-wrap::before{content:"";position:absolute;inset:6% -3% -4% 5%;border-radius:22px;background:var(--brass-soft);border:1px solid var(--line);transform:rotate(3deg);z-index:0;opacity:.9}
+.preview{position:relative;z-index:1;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.4rem 1.4rem 1.2rem;box-shadow:var(--shadow-l);transition:transform var(--t-fast) var(--ease)}
+.pv-top{display:flex;justify-content:space-between;font-size:var(--fs-xs);color:var(--muted);font-weight:600;letter-spacing:.04em}
+.pv-bar{height:5px;background:var(--line);border-radius:9px;margin:.7rem 0 1.25rem;overflow:hidden}
+.pv-bar>span{display:block;height:100%;width:12.5%;background:var(--accent);border-radius:9px}
+.pv-q{font-family:var(--serif);font-size:clamp(1.2rem,1.1rem + .5vw,1.45rem);line-height:1.3;text-wrap:balance}
+.pv-hint{margin-top:.8rem;font-size:var(--fs-s);color:var(--muted)}
+.pv-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-top:1rem}
+.pv-scale a{display:grid;place-items:center;height:3rem;border:1.5px solid var(--control);border-radius:11px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--panel);color:var(--ink);text-decoration:none;transition:background-color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),color var(--t-fast) var(--ease)}
+.pv-scale a:hover{border-color:var(--accent);background:var(--accent);color:var(--on-accent)}
+.pv-ends{display:flex;justify-content:space-between;font-size:var(--fs-xs);color:var(--muted);margin-top:.45rem}
+.pv-go{display:flex;align-items:center;gap:.45rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--accent);font-weight:600;font-size:var(--fs-s);text-decoration:none;min-height:44px}
+.pv-go:hover{text-decoration:underline;text-underline-offset:.2em}
+.pv-go svg{width:1em;height:1em}
+
+/* ---------- FAQ ---------- */
+.faq{margin-top:2.5rem;border-top:1px solid var(--line-strong);max-width:52rem}
+.faq details{border-bottom:1px solid var(--line-strong)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.25rem;padding:1.15rem 0;font:500 clamp(1.1rem,1.05rem + .3vw,1.3rem)/1.35 var(--serif);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:.85rem;height:.85rem;background:linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 100% no-repeat;color:var(--accent);transition:transform var(--t-base) var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--accent)}
+.faq .a{padding:0 0 1.35rem;color:var(--muted);max-width:62ch;display:grid;gap:.7rem}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;gap:2rem;margin-top:2.5rem;align-items:start}
+@media (min-width:900px){.contact-grid{grid-template-columns:1.4fr .9fr;gap:3rem}}
+.contact-panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:clamp(1.15rem,4.5vw,2.5rem);box-shadow:var(--shadow-s)}
+.contact-panel noscript p + p{margin-top:.75rem}
+.form-h{font:500 var(--fs-h3)/1.25 var(--serif)}
+.field{display:grid;gap:.4rem;margin-top:1.3rem}
+.field label{font-weight:650}
+.help{font-size:var(--fs-s);color:var(--muted)}
+.input{width:100%;min-height:3.25rem;padding:.75rem .9rem;border:1.5px solid var(--control);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;font-size:1.0625rem;line-height:1.4;transition:border-color var(--t-fast) var(--ease)}
+textarea.input{min-height:7.5rem;resize:vertical}
+.input::placeholder{color:var(--placeholder);opacity:1}
+.input:hover{border-color:var(--ink)}
+.input:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-color:var(--accent)}
+.input[aria-invalid="true"]{border-color:var(--error);border-width:2px}
+.field-err{color:var(--error);font-size:var(--fs-s);font-weight:600}
+.suggest{font-size:var(--fs-s)}
+.suggest button{font:inherit;font-weight:700;background:none;border:0;padding:.3rem .4rem;margin-inline:-.1rem;color:var(--accent);text-decoration:underline;cursor:pointer;display:inline-flex;align-items:center;min-height:44px;vertical-align:middle;border-radius:8px}
+.privacy-line{margin-top:1.5rem;display:flex;gap:.6rem;align-items:flex-start;font-size:var(--fs-s);color:var(--muted)}
+.privacy-line svg{width:18px;height:18px;flex:none;margin-top:.2rem;color:var(--accent)}
+.send{margin-top:1.25rem}
+.reply-time{margin-top:.9rem;font-size:var(--fs-s);color:var(--muted)}
+.status{margin-top:1rem;font-size:var(--fs-s);font-weight:600}
+.status:empty{display:none}
+.status.is-error{color:var(--error)}
+.fallback{margin-top:1rem;padding:1.15rem;border-radius:14px;border:1.5px solid var(--control);display:grid;gap:.9rem;justify-items:start}
+.cut-note{font-weight:600}
+.copy-status{font-size:var(--fs-s);color:var(--muted)}
+.copy-status:empty{display:none}
+.input{scroll-margin-block:6rem}
+.done{display:grid;gap:.6rem;padding:1.5rem;border-radius:16px;background:var(--accent-soft)}
+.done h3{font:500 1.6rem/1.2 var(--serif);outline:none}
+.hp{display:none!important}
+.direct{display:grid;gap:1rem;align-content:start}
+.direct-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.5rem;display:grid;gap:.75rem;justify-items:start}
+.direct-card p{color:var(--muted)}
+.direct-card .btn{width:100%}
+.direct-email{font-size:var(--fs-s);word-break:break-all}
+/* Links that stand alone on their line get a full thumb-sized tap area */
+.tap,.direct-email a,.foot-meta a{display:inline-flex;align-items:center;min-height:44px}
+.check-alt{color:var(--muted);font-size:var(--fs-s)}
+
+/* ---------- Footer ---------- */
+.site-foot{background:var(--bg-alt);padding-block:3.5rem 7rem;font-size:var(--fs-s);color:var(--muted);border-top:1px solid var(--line)}
+@media (min-width:900px){.site-foot{padding-bottom:3.5rem}}
+.foot-grid{display:grid;gap:1.75rem}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr;gap:3rem}}
+.site-foot strong{color:var(--ink)}
+.foot-meta{display:grid;gap:.4rem}
+.foot-meta a{word-break:break-all}
+.foot-base{margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;justify-content:space-between}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 1.25rem}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---------- Sticky CTA + setup bar ---------- */
+/* Two thumb-sized actions at the bottom of the phone screen. Hidden over the hero, the contact
+   form and whenever a form field has focus, so it never covers what someone is typing into. */
+.sticky-cta{position:fixed;left:0;right:0;bottom:var(--setup-h);z-index:30;display:grid;grid-template-columns:1.1fr 1fr;gap:.55rem;padding:.6rem var(--gutter) calc(.6rem + env(safe-area-inset-bottom));background:rgba(19,34,28,.94);border-top:1px solid rgba(226,193,136,.35);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);--focus:var(--band-brass);transform:translateY(105%);visibility:hidden;transition:transform var(--t-base) var(--ease),visibility 0s linear var(--t-base)}
+.sticky-cta.show{transform:none;visibility:visible;transition-delay:0s}
+.sticky-cta .btn{min-height:3rem;padding-inline:.75rem;font-size:1rem}
+@media (min-width:900px){.sticky-cta{display:none}}
+@media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
+.setup{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--setup-bg);color:var(--setup-ink);border-top:2px solid #C9971F;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom));font-size:var(--fs-s);line-height:1.4}
+.setup strong{font-weight:800}
+
+/* ---------- Reveal (only once the script says it will animate) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .will-animate .rv{opacity:0;transform:translateY(18px);transition:opacity var(--t-slow) var(--ease-out),transform var(--t-slow) var(--ease-out)}
+  .will-animate .rv.in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="avatar" data-avatar="decor" data-needs-any="name photo" hidden></span>
+      <span data-cfg="brandName">Executive LinkedIn</span>
+    </a>
+    <nav class="head-nav" aria-label="Main">
+      <a class="head-link" href="check/">LinkedIn check</a>
+      <a class="head-cta" href="#contact">Discuss your LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">For founders and CEOs</p>
+        <h1 id="hero-title">Look as good on LinkedIn as you do <em>in the room.<svg class="swash" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5C30 2.5 64 2 99 6"/></svg></em></h1>
+        <p class="positioning">Executive LinkedIn presence, built around your experience and managed for you.</p>
+        <p class="lede">You built the company. Buyers, investors and senior hires look you up before they decide. I turn what you know into LinkedIn posts that sound like you, and I run it, so it never lands back on your desk.</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="#contact">Discuss your LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-quiet btn-ghost" href="check/">Take the free LinkedIn check</a>
+        </div>
+        <p class="reassure">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>
+          Nothing goes out in your name without your approval.
+        </p>
+      </div>
+
+      <!-- The visual: two cards, the same person online and in the room. Decoration only. -->
+      <figure class="duo-wrap">
+        <div class="duo" aria-hidden="true">
+          <div class="duo-card duo-online">
+            <p class="duo-k">Online today</p>
+            <div class="duo-top"><span class="duo-av"></span><span class="duo-lines"><i class="w65"></i><i class="w40"></i></span></div>
+            <div class="duo-posts"><i></i><i></i></div>
+          </div>
+          <div class="duo-card duo-room">
+            <p class="duo-k">In the room</p>
+            <div class="duo-top"><span class="duo-av"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" pathLength="100"/></svg></span><span class="duo-lines"><i class="w80"></i><i class="w55"></i></span></div>
+            <div class="duo-posts"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <figcaption class="duo-cap">Same person. Two very different first impressions.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2. THE PROBLEM -->
+  <section id="problem" aria-labelledby="problem-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="problem-title">Your reputation is built in the room. Then people look you up.</h2>
+      <div class="points">
+        <article class="point rv">
+          <h3 class="h3">The profile doesn’t match the person</h3>
+          <p>After a good conversation, people check you out. A thin or out-of-date profile doesn’t match the person they just met, and it leaves them with less to go on.</p>
+        </article>
+        <article class="point rv">
+          <h3 class="h3">Your experience doesn’t show</h3>
+          <p>Years of decisions, clients and hard-won judgement, and none of it is visible to anyone who wasn’t in the room with you.</p>
+        </article>
+        <article class="point rv">
+          <h3 class="h3">The introduction goes elsewhere</h3>
+          <p>Clients, partners and senior hires lean towards people whose thinking they can already see. Being passed over rarely announces itself.</p>
+        </article>
+      </div>
+      <aside class="fact rv" data-fact-slot="reach" aria-label="A checked fact from LinkedIn" hidden></aside>
+    </div>
+  </section>
+
+  <!-- 3. WHO I AM -->
+  <section id="about" class="alt" aria-labelledby="about-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="about-title">Who you’d be working with</h2>
+      <div class="about-grid">
+        <span class="avatar avatar-lg rv" data-avatar="photo" data-needs-any="name photo" hidden></span>
+        <div class="about-body rv">
+          <p class="about-name" data-cfg="name" data-needs="name" hidden></p>
+          <p class="lede">I work with founders, CEOs and managing directors who have plenty worth saying and no time to write it down.</p>
+          <!-- BIO: fill CONFIG.bio and it appears here. CREDENTIALS: fill CONFIG.credentials. -->
+          <p data-cfg="bio" data-needs="bio" hidden></p>
+          <div class="about-meta">
+            <p data-cfg="yearsExperience" data-needs="yearsExperience" hidden></p>
+            <p data-needs="location" hidden>Based in <span data-cfg="location"></span></p>
+          </div>
+          <div id="slot-credentials" hidden>
+            <h3 class="small" style="font-weight:700">Qualifications and memberships</h3>
+            <ul class="slot-list creds"></ul>
+          </div>
+          <p class="nudge" data-needs="linkedinUrl" hidden>Have a look at my own LinkedIn profile before you decide anything. It’s fair to judge me on it.</p>
+          <div class="about-actions">
+            <a class="btn btn-quiet" data-cfg-href="linkedinUrl" data-needs="linkedinUrl" hidden target="_blank" rel="noopener noreferrer">
+              <svg class="in-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="8" r="1.35" fill="currentColor"/><rect x="6.85" y="10.3" width="2.3" height="7.2" rx=".4" fill="currentColor"/><path d="M11.2 10.3h2.2v1.05c.5-.78 1.4-1.25 2.5-1.25 1.95 0 3 1.25 3 3.45v3.95h-2.3v-3.7c0-1.15-.48-1.75-1.38-1.75-.95 0-1.72.68-1.72 1.9v3.55h-2.3z" fill="currentColor"/></svg>
+              See my LinkedIn profile
+              <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+            <a class="btn btn-quiet" href="#contact">Discuss your LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHAT I TAKE CARE OF (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="services-title">What I take care of</h2>
+      <p class="lede sec-lede rv">The service is built around your own profile, because that’s the one people check after they’ve met you.</p>
+      <ul class="benefits">
+        <li class="benefit rv"><h3 class="h3">Profile positioning</h3><p>Your headline, About section and the way your profile introduces you, rewritten so it matches the person people meet.</p></li>
+        <li class="benefit rv"><h3 class="h3">Content discovery</h3><p>A proper first interview, then regular short catch-ups to capture ideas, stories and opinions while they’re fresh.</p></li>
+        <li class="benefit rv"><h3 class="h3">Content strategy</h3><p>Who you want to reach, what you should be known for, and the few themes you keep coming back to.</p></li>
+        <li class="benefit rv"><h3 class="h3">LinkedIn writing</h3><p>Original posts drawn from your experience and written in your voice.</p></li>
+        <li class="benefit rv"><h3 class="h3">Publishing management</h3><p>Drafts, approvals and scheduling, so posts keep going out in the weeks you’re flat out.</p></li>
+        <li class="benefit rv"><h3 class="h3">Monthly review</h3><p>A short summary in plain English: what went out, who responded and what changes next. No vanity charts.</p></li>
+      </ul>
+      <div class="addon rv">
+        <h3 class="h3">Company page support</h3>
+        <p>Available as an add-on if your business page needs the same attention as your own profile.</p>
+      </div>
+      <p class="honest rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        <span>I won’t promise numbers, and I’d be wary of anyone who does. At the start we agree what you want LinkedIn to do for you, and each month I report against that.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. HOW IT WORKS (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section id="how" class="alt" aria-labelledby="how-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="how-title">How it works</h2>
+      <p class="lede sec-lede rv">Posts that sound like you start with listening, so that’s where I start.</p>
+      <ol class="steps">
+        <li class="step rv"><h3 class="h3">I get to know you</h3><p>A proper conversation about your career, what you know, the calls you’ve made and where the business is going.</p></li>
+        <li class="step rv"><h3 class="h3">We agree what you should be known for</h3><p>The topics, opinions and stories that make you credible to the people you want to reach.</p></li>
+        <li class="step rv"><h3 class="h3">I write in your voice</h3><p>Original posts built from what you’ve told me, so they read like you and not like a corporate account.</p></li>
+        <li class="step rv"><h3 class="h3">I run the process</h3><p>Drafts, your feedback, approvals, scheduling and a monthly review, with as little of your time as possible.</p></li>
+      </ol>
+      <p class="honest rv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        <span>Your part: one proper conversation at the start, then reading drafts and telling me yes, or what to change.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 6. CASE STUDIES. Driven by CONFIG.caseStudies. While there are none, the
+       "coming soon" block below shows instead. Never write example case studies. -->
+  <section id="case-studies" aria-labelledby="cs-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="cs-title">Case studies</h2>
+      <div class="cs-empty rv" id="cs-empty">
+        <h3 class="h3">Case studies coming soon</h3>
+        <p>I’m adding examples here as clients approve them. Until then, ask me when we speak and I’ll talk you through anonymised examples of the work.</p>
+        <a class="btn btn-quiet" href="#contact">Discuss your LinkedIn</a>
+      </div>
+      <ul class="cs-list" id="cs-list" hidden></ul>
+
+      <!-- Proof slots: each stays hidden until CONFIG holds real content -->
+      <div class="slot" id="slot-results" hidden>
+        <h3 class="h3">Recent results</h3>
+        <ul class="slot-list two"></ul>
+      </div>
+      <div class="slot" id="slot-testimonials" hidden>
+        <h3 class="h3">What clients say</h3>
+        <div class="slot-list two"></div>
+      </div>
+      <div class="slot" id="slot-logos" hidden>
+        <h3 class="h3">Businesses I’ve worked with</h3>
+        <ul class="slot-list logos"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CHECK TEASER: links to the check page -->
+  <section id="check-teaser" class="band" aria-labelledby="teaser-title">
+    <div class="wrap teaser-grid">
+      <div>
+        <p class="eyebrow">Not ready to talk yet?</p>
+        <h2 class="h2" id="teaser-title">Take the free LinkedIn check</h2>
+        <p class="lede sec-lede">Eight blunt statements about LinkedIn at the top of a company. Say how true each one is for you, then see your score and your three biggest gaps straight away, with no email needed.</p>
+        <a class="btn btn-light btn-block" href="check/">Start the LinkedIn check
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="preview-wrap" data-tilt>
+        <div class="preview" role="group" aria-labelledby="pv-q" aria-describedby="pv-hint">
+          <div class="pv-top" aria-hidden="true"><span>Your profile</span><span>1 of 8</span></div>
+          <div class="pv-bar" aria-hidden="true"><span></span></div>
+          <p class="pv-q" id="pv-q">Buyers and investors look me up, and my profile undersells what I’ve built.</p>
+          <p class="pv-hint" id="pv-hint">How true is this for you? Tap a number to start the check.</p>
+          <div class="pv-scale">
+            <a href="check/?a1=1" aria-label="1, Not true for me">1</a>
+            <a href="check/?a1=2" aria-label="2, Rarely true">2</a>
+            <a href="check/?a1=3" aria-label="3, Partly true">3</a>
+            <a href="check/?a1=4" aria-label="4, Mostly true">4</a>
+            <a href="check/?a1=5" aria-label="5, Very true for me">5</a>
+          </div>
+          <div class="pv-ends" aria-hidden="true"><span>Not true for me</span><span>Very true for me</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="faq-title">Straight answers</h2>
+      <div class="faq">
+        <details>
+          <summary>How much of my time will it take?</summary>
+          <div class="a"><p>More at the start, much less after. The first conversation needs a proper block of your time, because everything I write comes from it. After that it’s mostly reading drafts and approving them, plus a short catch-up when something’s worth writing about.</p></div>
+        </details>
+        <details>
+          <summary>Will it sound like me?</summary>
+          <div class="a"><p>That’s the job. I work from how you actually talk: your opinions, your stories, the phrases you use with clients. Expect more back and forth in the first few weeks while I learn how you like things said. If a draft doesn’t sound like you, send it back.</p></div>
+        </details>
+        <details>
+          <summary>Do I approve everything before it goes out?</summary>
+          <div class="a"><p>Yes. Every post comes to you as a draft. Edit it, send it back or approve it. If you don’t like a post, it doesn’t go out, and nothing is published in your name without your yes.</p></div>
+        </details>
+        <details>
+          <summary>Is what I tell you kept confidential?</summary>
+          <div class="a"><p>Yes. What you tell me in our conversations stays between us. I don’t name clients or share anything about our work together unless you’ve agreed to it in writing.</p></div>
+        </details>
+        <details>
+          <summary>Do you need my LinkedIn password?</summary>
+          <div class="a"><p>No, never. For your personal profile, I write drafts, you approve them, and either you post them or a scheduling tool you’ve connected yourself does. For a company page, you add me as an admin in LinkedIn’s own settings and can remove me whenever you like.</p><p><a class="tap" href="privacy/#access">How account access works, step by step</a></p></div>
+        </details>
+        <details>
+          <summary>Why aren’t prices on this page?</summary>
+          <div class="a"><p>Because it depends on what you need. Most people want their own profile looked after, and some want their company page too. After we’ve talked, I’ll give you a price in writing before you agree to anything.</p></div>
+        </details>
+        <details data-needs="contractTerms" hidden>
+          <summary>How long do I have to sign up for?</summary>
+          <div class="a"><p><span data-cfg="contractTerms"></span> You’ll get the full terms in writing before you agree to anything.</p></div>
+        </details>
+        <details>
+          <summary>What results should I expect?</summary>
+          <div class="a"><p>I won’t promise numbers. What you should see is a profile that explains you properly and posts going out steadily. Over time, that should mean more of the right people commenting, messaging and getting in touch. Each month I’ll show you what’s working and what isn’t, against what we agreed at the start.</p></div>
+        </details>
+        <details>
+          <summary>What if my LinkedIn already works?</summary>
+          <div class="a"><p>Then keep going. The <a href="check/">free LinkedIn check</a> will tell you if your score is high, and I’d rather say so than sell you something you don’t need.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CALL TO ACTION AND CONTACT -->
+  <section id="contact" class="alt" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 class="h2 rv" id="contact-title">Let’s talk about your LinkedIn</h2>
+      <p class="lede sec-lede rv">Tell me a little about yourself and I’ll reply to arrange a conversation. There’s no obligation.</p>
+      <div class="contact-grid">
+        <div class="contact-panel" id="contact-panel">
+          <p class="sr-only" id="announce" aria-live="polite" aria-atomic="true"></p>
+
+          <!-- NO-JAVASCRIPT MESSAGE: shows your email if the visitor's browser has JavaScript off.
+               If you change your email in CONFIG, change it here too (both places on the line). -->
+          <noscript>
+            <p><strong>This form needs JavaScript, which is switched off in your browser.</strong></p>
+            <p>Email me instead: <a href="mailto:raymond.shaahu@gmail.com">raymond.shaahu@gmail.com</a></p>
+          </noscript>
+
+          <div id="enquiry-body" hidden>
+            <h3 class="form-h">Send me a short note</h3>
+            <form id="enquiry-form" novalidate>
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input class="input" id="f-name" name="name" type="text" autocomplete="name" required>
+                <p class="field-err" id="e-name" hidden>Please add your name.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">Work email</label>
+                <p class="help" id="h-email">I’ll only use this to reply.</p>
+                <input class="input" id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="name@company.co.uk" required aria-describedby="h-email">
+                <p class="suggest" id="s-email" hidden>Did you mean <button type="button" id="s-email-btn"></button>?</p>
+                <p class="field-err" id="e-email" hidden>Please check your email address. It should look like name@company.co.uk.</p>
+              </div>
+              <div class="field">
+                <label for="f-company">Company</label>
+                <input class="input" id="f-company" name="company" type="text" autocomplete="organization" required>
+                <p class="field-err" id="e-company" hidden>Please add your company name.</p>
+              </div>
+              <div class="field">
+                <label for="f-role">Your role</label>
+                <input class="input" id="f-role" name="role" type="text" autocomplete="organization-title" placeholder="For example: founder or CEO" required>
+                <p class="field-err" id="e-role" hidden>Please add your role.</p>
+              </div>
+              <div class="field">
+                <label for="f-message">Anything you’d like me to know? (optional)</label>
+                <textarea class="input" id="f-message" name="message" rows="4" maxlength="2000"></textarea>
+              </div>
+              <!-- Spam trap (Web3Forms honeypot). People never see or tick it. -->
+              <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <p class="privacy-line">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg>
+                <span>Only I read this, and I’ll use it to reply to you and nothing else.<span data-needs="web3formsKey" hidden> It reaches me through Web3Forms, a form service.</span> <a href="privacy/">How your information is handled</a></span>
+              </p>
+              <button class="btn btn-block send" type="submit" id="send">Send my enquiry</button>
+              <p class="reply-time" data-needs="responseTime" hidden>I reply <span data-cfg="responseTime"></span>.</p>
+              <p class="status" id="form-status" role="status" aria-live="polite"></p>
+              <div class="fallback" id="fallback" hidden>
+                <p id="fallback-text"></p>
+                <p class="cut-note" id="fallback-cut" hidden></p>
+                <button class="btn btn-quiet" type="button" id="copy-msg" hidden>Copy my message</button>
+                <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+                <a class="btn btn-quiet" id="mailto-btn" href="#">Email it instead</a>
+              </div>
+            </form>
+          </div>
+          <div class="done" id="done" hidden>
+            <h3 id="done-h" tabindex="-1"></h3>
+            <p id="done-t"></p>
+          </div>
+        </div>
+
+        <div class="direct">
+          <div class="direct-card" data-needs-any="email linkedinUrl" hidden>
+            <h3 class="h3">Rather not fill in a form?</h3>
+            <p>Email me or send me a message on LinkedIn. Either reaches me directly.</p>
+            <a class="btn btn-quiet" data-cfg-mailto data-needs="email" hidden href="#">Email me</a>
+            <p class="direct-email" data-needs="email" hidden><a data-cfg-mailto data-show-email href="#"></a></p>
+            <a class="btn btn-quiet" data-cfg-href="linkedinUrl" data-needs="linkedinUrl" hidden target="_blank" rel="noopener noreferrer">
+              <svg class="in-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="8" r="1.35" fill="currentColor"/><rect x="6.85" y="10.3" width="2.3" height="7.2" rx=".4" fill="currentColor"/><path d="M11.2 10.3h2.2v1.05c.5-.78 1.4-1.25 2.5-1.25 1.95 0 3 1.25 3 3.45v3.95h-2.3v-3.7c0-1.15-.48-1.75-1.38-1.75-.95 0-1.72.68-1.72 1.9v3.55h-2.3z" fill="currentColor"/></svg>
+              Message me on LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <p class="check-alt">Not sure yet? <a href="check/">Take the free LinkedIn check</a> first and see where your profile stands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p><strong>Your privacy.</strong> Only I read what you send, and I only use it to reply to you. I never sell it, and I’ll delete my copy whenever you ask. This site sets no tracking cookies.</p>
+        <p style="margin-top:.6rem"><a class="tap" href="privacy/">Privacy notice and how account access works</a></p>
+      </div>
+      <div class="foot-meta">
+        <p data-needs="email" hidden>Email <a data-cfg-mailto data-show-email href="#"></a></p>
+        <p data-needs="linkedinUrl" hidden><a data-cfg-href="linkedinUrl" target="_blank" rel="noopener noreferrer">LinkedIn profile<span class="sr-only"> (opens in a new tab)</span></a></p>
+        <p data-needs="location" hidden>Based in <span data-cfg="location"></span></p>
+        <p data-cfg="companyDetails" data-needs="companyDetails" hidden></p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p data-needs="brandName" hidden>© <span data-cfg="year"></span> <span data-cfg="brandName"></span></p>
+      <div class="foot-links">
+        <a href="check/">LinkedIn check</a>
+        <a href="privacy/">Privacy</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky" hidden>
+  <a class="btn btn-brass" href="#contact" aria-label="Discuss your LinkedIn">Discuss</a>
+  <a class="btn btn-ghost" href="check/">Take the check</a>
+</div>
+
+<div class="setup" id="setup" role="status" hidden></div>
+
+<script>
+/* =========================================================================
+   CONFIG: everything about you lives here.
+   The SAME block is in all three pages: index.html, check/index.html and
+   privacy/index.html. Change it here, then copy it to the other two, or run
+   "node tools/sync-config.mjs" from the project folder to copy it for you.
+   Fill in each value between the quote marks, save the file, then publish.
+   Leave a value as "" (or [] for lists) if you do not have it yet.
+   Anything left empty stays hidden on the page.
+   Never put sample, made-up or "for now" text in here: visitors would see it.
+   Step-by-step help is in HANDOVER.md.
+   ========================================================================= */
+const CONFIG = {
+  // Your full name, exactly as it appears on your LinkedIn profile.
+  name: "Raymond Shaahu",
+
+  // Your first name. Leave empty to use the first word of name.
+  firstName: "",
+
+  // Your trading or business name for the header and footer. Leave empty to use your name.
+  businessName: "",
+
+  // The full web address of your own LinkedIn profile, starting https://www.linkedin.com/in/
+  linkedinUrl: "https://www.linkedin.com/in/raymondshaahu/",
+
+  // Your photo: a file saved in the site folder (for example "photo.jpg").
+  // The check and privacy pages sit one folder down, so they look for it as "../photo.jpg"
+  // automatically. Leave empty and the pages show your initials in a circle instead.
+  photo: "",
+
+  // The email address that receives enquiries and is shown on the page.
+  email: "raymond.shaahu@gmail.com",
+
+  // Your free Web3Forms access key (see HANDOVER.md). It is safe to publish.
+  // Leave empty and the forms open the visitor's own email app instead.
+  web3formsKey: "",
+
+  // The town or city you work from. Shown in the About section and footer.
+  location: "",
+
+  // How quickly you ALWAYS reply, written to follow the words "I reply".
+  // Only fill this in if you meet it every single time.
+  responseTime: "",
+
+  // Your real terms in one or two plain sentences, such as minimum term and notice period.
+  // Filling this also switches on the "How long do I have to sign up for?" question.
+  contractTerms: "",
+
+  // Optional, only if true and checkable: how long you have worked in LinkedIn, marketing or a related field.
+  yearsExperience: "",
+
+  // Two to four sentences in your own words: what you did before, why you started this, who you work best with.
+  bio: "",
+
+  // Qualifications or memberships you actually hold, written as the issuing body writes them.
+  // Each one looks like: { name: "", issuer: "" }
+  credentials: [],
+
+  /* CASE STUDIES. Shown in the "Case studies" section of the main page.
+     While this list is empty, the page shows one honest "Case studies coming soon" block.
+     Each case study goes between the square brackets, inside curly brackets, with a comma
+     between case studies. Start from this empty shape:
+       { title: "", who: "", challenge: "", whatIDid: "", outcome: "", quote: "", permission: false }
+     Field by field:
+       title      A short heading, for example "A quiet profile brought back to life".
+       who        An anonymised description of the client, for example
+                  "Managing director, professional services firm". No names unless they agreed.
+       challenge  One or two sentences: where they were before you started.
+       whatIDid   One or two sentences: what you actually did.
+       outcome    One or two sentences: what changed. Only what really happened, in their terms,
+                  with dates if you give numbers. No estimates, no rounding up.
+       quote      Optional. Their exact words, with their permission. Trim if you like, never reword.
+       permission Type true (no quote marks) ONLY when the client has agreed in writing that you
+                  can publish this. Anything else keeps the case study hidden.
+     A case study only shows when permission is true and title, who, challenge, whatIDid and
+     outcome are all filled in. Never write an example or a made-up case study. */
+  caseStudies: [],
+
+  // Real client quotes with their written permission. Trim them if you like, never reword them.
+  // Each one looks like: { quote: "", name: "", role: "", company: "" }
+  testimonials: [],
+
+  // Real outcomes a named client has agreed you can share, with the dates they cover.
+  // Each one looks like: { client: "", result: "", period: "DD/MM/YYYY to DD/MM/YYYY" }
+  results: [],
+
+  // Logos of clients who have said you can show them. Save the logo file in the site folder.
+  // Each one looks like: { name: "", logoFile: "", alt: "" }
+  clientLogos: [],
+
+  // Trading name, plus company number and registered office address if you are a limited company.
+  companyDetails: "",
+
+  // The web address of the main page once published (used in lead emails and the QR code).
+  siteUrl: "https://stevehill-oss.github.io/linkedin-growth-check/"
+};
+
+/* =========================================================================
+   WORDS USED BY THE ENQUIRY FORM. Edit wording here if you need to.
+   ========================================================================= */
+const COPY = {
+  form: {
+    error: "A couple of things need fixing before this can send. They’re marked below.",
+    sending: "Sending...",
+    sendButton: "Send my enquiry",
+    successHeading: "Sent. Thank you, {visitorFirstName}.",
+    successText: "I’ll read your note and reply by email to arrange a time to talk. If you can’t see my reply, check your junk folder or email me at {email}.",
+    successTextNoEmail: "I’ll read your note and reply by email to arrange a time to talk. If you can’t see my reply, check your junk folder.",
+    failText: "Sorry, that didn’t send. Tap below to email it to me instead. Everything is already filled in.",
+    failButton: "Email it instead",
+    mailText: "Your email app should open with everything filled in. Press send there and it comes straight to me. If nothing opened, tap below.",
+    mailButton: "Open my email app",
+    /* Added to a long message in the email-app version only, which has to stay short */
+    mailShortened: "(shortened)",
+    /* Shown above the email button only when the message had to be shortened */
+    mailCutNote: "Your message was too long for an email link, so the end has been cut. Copy it here, then paste the full message into the email before you send it.",
+    mailTextCut: "Nearly there. Everything else is already filled in, and the button at the bottom opens your email app.",
+    copied: "Copied. Paste it into the email in place of the shortened message.",
+    copyFailed: "Your browser wouldn’t copy it. Your message is still in the box above, so you can copy it from there.",
+    notReady: "Sorry, this form can’t send yet. Please try again later."
+  },
+  leadSubject: "LinkedIn enquiry: {visitorName}, {role}, {company}",
+  leadBody: [
+    "New enquiry from {visitorName}", "",
+    "Role: {role}", "Company: {company}", "Email: {visitorEmail}", "",
+    "Message:", "{message}", "",
+    "Sent on {sentDate}", "Came from: {source}"
+  ]
+};
+
+/* Checked facts from the research file. Only LinkedIn-owned sources that loaded are shown. */
+const FACTS = [
+  { id: "li-members-1-4bn", slot: "reach", sourceOwner: "LinkedIn Pressroom", loadedOk: true,
+    label: "From LinkedIn’s own figures", big: "More than 1.4 billion members",
+    text: "That’s LinkedIn’s own count of its members, in its latest business update.",
+    sourceName: "LinkedIn Pressroom", url: "https://news.linkedin.com/2026/October/q1-business-highlights",
+    dateLabel: "published", date: "28/10/2026" }
+];
+
+(function () {
+  "use strict";
+  const doc = document;
+  const root = doc.documentElement;
+  const $ = (s, c) => (c || doc).querySelector(s);
+  const $$ = (s, c) => Array.prototype.slice.call((c || doc).querySelectorAll(s));
+  const reduceMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const reduced = () => reduceMQ.matches;
+
+  function h(tag, props) {
+    const n = doc.createElement(tag);
+    if (props) Object.keys(props).forEach((k) => {
+      const v = props[k];
+      if (v == null || v === false) return;
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else if (k.indexOf("on") === 0) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v === true ? "" : String(v));
+    });
+    for (let i = 2; i < arguments.length; i++) {
+      [].concat(arguments[i]).forEach((kid) => {
+        if (kid == null || kid === false) return;
+        n.append(kid.nodeType ? kid : String(kid));
+      });
+    }
+    return n;
+  }
+  const fill = (s, map) => String(s).replace(/\{(\w+)\}/g, (m, k) => (map[k] != null ? String(map[k]) : m));
+  const pad = (n) => String(n).padStart(2, "0");
+  const today = () => { const d = new Date(); return pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear(); };
+
+  /* ---------- Read CONFIG ---------- */
+  const str = (v) => (typeof v === "string" ? v.trim() : "");
+  const list = (v) => (Array.isArray(v) ? v.filter((x) => x && typeof x === "object") : []);
+  const C = {};
+  ["name", "firstName", "businessName", "linkedinUrl", "photo", "email", "web3formsKey", "location", "responseTime",
+    "contractTerms", "yearsExperience", "bio", "companyDetails", "siteUrl"].forEach((k) => { C[k] = str(CONFIG[k]); });
+  ["credentials", "caseStudies", "testimonials", "results", "clientLogos"].forEach((k) => { C[k] = list(CONFIG[k]); });
+  if (!C.firstName && C.name) C.firstName = C.name.split(/\s+/)[0];
+  if (C.linkedinUrl && !/^https?:\/\//i.test(C.linkedinUrl)) C.linkedinUrl = "https://" + C.linkedinUrl.replace(/^\/+/, "");
+  const V = Object.assign({}, C, { brandName: C.businessName || C.name, year: String(new Date().getFullYear()) });
+  const filled = (k) => !!V[k];
+
+  $$("[data-cfg]").forEach((n) => { const v = V[n.getAttribute("data-cfg")]; if (v) n.textContent = v; });
+  $$("[data-needs]").forEach((n) => { n.hidden = !n.getAttribute("data-needs").split(/\s+/).every(filled); });
+  $$("[data-needs-any]").forEach((n) => { n.hidden = !n.getAttribute("data-needs-any").split(/\s+/).some(filled); });
+  $$("[data-cfg-href]").forEach((a) => { const v = V[a.getAttribute("data-cfg-href")]; if (v) a.href = v; });
+  $$("[data-cfg-mailto]").forEach((a) => {
+    if (!C.email) return;
+    a.href = "mailto:" + C.email;
+    if (a.hasAttribute("data-show-email")) a.textContent = C.email;
+  });
+  if (C.name && doc.title.indexOf(C.name) === -1) doc.title = doc.title + " | " + C.name;
+
+  /* Photo, or an initials monogram */
+  const words = C.name.split(/\s+/).filter(Boolean);
+  const initials = words.length ? (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : "")).toUpperCase() : "";
+  $$("[data-avatar]").forEach((box) => {
+    const mono = () => { box.textContent = initials; box.setAttribute("aria-hidden", "true"); };
+    box.textContent = "";
+    if (C.photo) {
+      const decor = box.getAttribute("data-avatar") === "decor";
+      const img = h("img", { src: C.photo, alt: decor ? "" : C.name, width: 400, height: 400, decoding: "async" });
+      img.addEventListener("error", () => { img.remove(); mono(); });
+      box.append(img);
+      if (decor) box.setAttribute("aria-hidden", "true");
+    } else mono();
+  });
+
+  /* Proof slots: hidden unless they hold real, complete entries */
+  function slot(id, items, build) {
+    const sec = doc.getElementById(id);
+    if (!sec) return;
+    const host = $(".slot-list", sec);
+    const nodes = items.map(build).filter(Boolean);
+    nodes.forEach((n) => host.append(n));
+    sec.hidden = nodes.length === 0;
+  }
+  slot("slot-results", C.results, (r) => {
+    const client = str(r.client), result = str(r.result), period = str(r.period);
+    if (!client || !result) return null;
+    return h("li", { class: "res" }, h("p", { class: "res-r", text: result }), h("p", { class: "res-m", text: client + (period ? ", " + period : "") }));
+  });
+  slot("slot-testimonials", C.testimonials, (t) => {
+    const quote = str(t.quote), name = str(t.name), role = str(t.role), company = str(t.company);
+    if (!quote || !name) return null;
+    const who = [role, company].filter(Boolean).join(", ");
+    return h("figure", { class: "quote" }, h("blockquote", { text: "“" + quote + "”" }),
+      h("figcaption", null, h("strong", { text: name }), who ? ", " + who : ""));
+  });
+  slot("slot-logos", C.clientLogos, (l) => {
+    const name = str(l.name), file = str(l.logoFile), alt = str(l.alt) || name;
+    if (!name) return null;
+    if (!file) return h("li", { class: "logo-name", text: name });
+    const img = h("img", { src: file, alt: alt, width: 160, height: 48, loading: "lazy", decoding: "async" });
+    const li = h("li", null, img);
+    img.addEventListener("error", () => { li.textContent = name; li.className = "logo-name"; });
+    return li;
+  });
+  slot("slot-credentials", C.credentials, (c) => {
+    const name = str(c.name), issuer = str(c.issuer);
+    if (!name) return null;
+    return h("li", { text: name + (issuer ? ", " + issuer : "") });
+  });
+
+  /* Case studies: only entries with permission === true and every required field filled */
+  (function caseStudies() {
+    const listEl = $("#cs-list"), empty = $("#cs-empty");
+    const ok = C.caseStudies.filter((c) => c.permission === true &&
+      ["title", "who", "challenge", "whatIDid", "outcome"].every((k) => str(c[k])));
+    ok.forEach((c) => {
+      const quote = str(c.quote);
+      listEl.append(h("li", { class: "cs" },
+        h("p", { class: "cs-who", text: str(c.who) }),
+        h("h3", { class: "h3", text: str(c.title) }),
+        h("dl", null,
+          h("div", null, h("dt", { text: "The challenge" }), h("dd", { text: str(c.challenge) })),
+          h("div", null, h("dt", { text: "What I did" }), h("dd", { text: str(c.whatIDid) })),
+          h("div", null, h("dt", { text: "The outcome" }), h("dd", { text: str(c.outcome) }))),
+        quote ? h("blockquote", { text: "“" + quote + "”" }) : null));
+    });
+    listEl.hidden = ok.length === 0;
+    empty.hidden = ok.length > 0;
+  })();
+
+  /* Checked LinkedIn facts: LinkedIn-owned and loaded only */
+  FACTS.filter((f) => f.loadedOk === true && /^LinkedIn\b/.test(f.sourceOwner)).forEach((f) => {
+    const host = $('[data-fact-slot="' + f.slot + '"]');
+    if (!host) return;
+    host.append(
+      h("p", { class: "fact-k", text: f.label }),
+      h("p", { class: "fact-big", text: f.big }),
+      h("p", { class: "fact-t", text: f.text }),
+      h("p", { class: "fact-src" }, "Source: ",
+        h("a", { href: f.url, target: "_blank", rel: "noopener noreferrer" }, f.sourceName, h("span", { class: "sr-only", text: " (opens in a new tab)" })),
+        " (" + f.dateLabel + " " + f.date + ")")
+    );
+    host.hidden = false;
+  });
+
+  /* Pass "came from QR code" on to the check page, so its lead emails say so too */
+  const params = new URLSearchParams(window.location.search);
+  const src = (params.get("src") || "").slice(0, 40);
+  const sourceLabel = src === "qr" ? "QR code" : (src || "Direct link");
+  if (src) $$('a[href^="check/"]').forEach((a) => {
+    const u = new URL(a.getAttribute("href"), window.location.href);
+    u.searchParams.set("src", src);
+    a.href = u.href;
+  });
+
+  /* Setup guard: stops anyone printing a QR code to an unfinished page */
+  const setup = $("#setup");
+  const missing = [];
+  if (!C.name) missing.push("name");
+  if (!C.linkedinUrl) missing.push("LinkedIn link");
+  if (!C.email) missing.push("email");
+  /* With scripts on, the browser keeps noscript content as plain text, so a placeholder can be read here.
+     The placeholder is split in two so a find-and-replace of it never changes this check. */
+  if ($$("noscript").some((n) => n.textContent.indexOf("EMAIL-NOT" + "-SET") > -1)) missing.push("email in the no-JavaScript message");
+  function syncSetupHeight() { root.style.setProperty("--setup-h", setup.hidden ? "0px" : setup.offsetHeight + "px"); }
+  if (missing.length) {
+    setup.append(h("strong", { text: "Setup: " + missing.length + " detail" + (missing.length === 1 ? "" : "s") + " missing" }),
+      " (" + missing.join(", ") + "). Fill " + (missing.length === 1 ? "it" : "them") + " in before printing a QR code. HANDOVER.md, Step 1, shows where.");
+    setup.hidden = false;
+    syncSetupHeight();
+    window.addEventListener("resize", syncSetupHeight);
+  }
+
+  /* ---------- Enquiry form ---------- */
+  const announce = $("#announce");
+  const form = $("#enquiry-form");
+  $("#enquiry-body").hidden = false;
+  const F = { name: $("#f-name"), email: $("#f-email"), company: $("#f-company"), role: $("#f-role"), message: $("#f-message") };
+  const sendBtn = $("#send");
+  const statusEl = $("#form-status");
+  const fallback = $("#fallback");
+  const mailtoBtn = $("#mailto-btn");
+  const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+  const RULES = {
+    name: (v) => v.length > 0,
+    email: (v) => EMAIL_RE.test(v),
+    company: (v) => v.length > 0,
+    role: (v) => v.length > 0
+  };
+  /* A field that gets focus half off the screen is brought fully into view. The browser alone
+     stops as soon as the top edge shows; scroll-margin on .input keeps a gap round it. */
+  $$(".input", form).forEach((el) => el.addEventListener("focus", () => {
+    const r = el.getBoundingClientRect();
+    if (r.bottom > window.innerHeight || r.top < 0) el.scrollIntoView({ block: "nearest" });
+  }));
+  const touched = {};
+  /* Each field's description lists only the help, suggestion and error text that is showing */
+  function syncDesc(key) {
+    const ids = ["h-" + key, "s-" + key, "e-" + key].filter((id) => { const n = doc.getElementById(id); return n && !n.hidden; });
+    if (ids.length) F[key].setAttribute("aria-describedby", ids.join(" ")); else F[key].removeAttribute("aria-describedby");
+  }
+  function check(key) {
+    const input = F[key];
+    const ok = RULES[key](input.value.trim());
+    $("#e-" + key).hidden = ok;
+    if (ok) input.removeAttribute("aria-invalid"); else input.setAttribute("aria-invalid", "true");
+    syncDesc(key);
+    return ok;
+  }
+  /* Pressing the send button blurs the field first. Showing an error at that moment would push the
+     button down under the pointer, so the click would miss. Send checks every field anyway. */
+  let pressingSend = false;
+  sendBtn.addEventListener("pointerdown", () => { pressingSend = true; window.setTimeout(() => { pressingSend = false; }, 1500); });
+  sendBtn.addEventListener("click", () => { pressingSend = false; });
+  Object.keys(RULES).forEach((key) => {
+    F[key].addEventListener("blur", (e) => { if (pressingSend || e.relatedTarget === sendBtn) return; if (F[key].value.trim() || touched[key]) { touched[key] = true; check(key); } });
+    F[key].addEventListener("input", () => { if (F[key].getAttribute("aria-invalid") === "true") check(key); });
+  });
+
+  /* Gentle typo check on common email domains */
+  const TYPOS = { "gmial.com": "gmail.com", "gamil.com": "gmail.com", "gmai.com": "gmail.com", "gmail.co": "gmail.com", "gmail.con": "gmail.com",
+    "gmail.co.uk": "gmail.com", "hotmial.com": "hotmail.com", "hotmal.com": "hotmail.com", "hotmail.con": "hotmail.com", "hotmail.co": "hotmail.co.uk",
+    "outlok.com": "outlook.com", "outlook.con": "outlook.com", "yahoo.con": "yahoo.com", "yaho.com": "yahoo.com", "iclod.com": "icloud.com",
+    "icloud.con": "icloud.com", "btinternet.con": "btinternet.com", "btinternt.com": "btinternet.com" };
+  const suggestBox = $("#s-email"), suggestBtn = $("#s-email-btn");
+  function suggestEmail() {
+    const v = F.email.value.trim(), at = v.lastIndexOf("@");
+    let fix = "";
+    if (at > 0) {
+      const dom = v.slice(at + 1).toLowerCase();
+      let better = TYPOS[dom] || "";
+      if (!better && /\.con$|\.cmo$|\.ocm$/.test(dom)) better = dom.replace(/\.(con|cmo|ocm)$/, ".com");
+      if (!better && /\.co\.k$|\.couk$|\.co\.uk\.$/.test(dom)) better = dom.replace(/\.(co\.k|couk|co\.uk\.)$/, ".co.uk");
+      if (better) fix = v.slice(0, at + 1) + better;
+    }
+    const isNew = !!fix && (suggestBox.hidden || suggestBtn.textContent !== fix);
+    suggestBtn.textContent = fix;
+    suggestBox.hidden = !fix;
+    syncDesc("email");
+    /* Focus has already left the field, so say it out loud through the live region */
+    if (isNew) { announce.textContent = ""; window.setTimeout(() => { announce.textContent = "Did you mean " + fix + "?"; }, 60); }
+  }
+  F.email.addEventListener("blur", (e) => { if (!pressingSend && e.relatedTarget !== sendBtn) suggestEmail(); });
+  suggestBtn.addEventListener("click", () => { F.email.value = suggestBtn.textContent; suggestBox.hidden = true; check("email"); F.email.focus(); });
+  Object.keys(RULES).forEach(syncDesc);
+
+  function buildLead() {
+    const visitorName = F.name.value.trim();
+    const map = {
+      visitorName: visitorName, visitorFirstName: visitorName.split(/\s+/)[0] || visitorName,
+      visitorEmail: F.email.value.trim(), company: F.company.value.trim(), role: F.role.value.trim(),
+      message: F.message.value.trim() || "None",
+      sentDate: today(), source: sourceLabel
+    };
+    return { map: map, subject: fill(COPY.leadSubject, map), body: fill(COPY.leadBody.join("\n"), map) };
+  }
+
+  /* Email-app version: CRLF line breaks (RFC 6068), and the visitor's message is shortened
+     if needed so the whole link stays under the length some Windows mail apps accept. */
+  const MAILTO_MAX = 1900;
+  let mailCut = false;
+  function mailtoHref(L) {
+    const head = "mailto:" + C.email + "?subject=" + encodeURIComponent(L.subject) + "&body=";
+    const make = (message) => head + encodeURIComponent(fill(COPY.leadBody.join("\n"), Object.assign({}, L.map, { message: message })).replace(/\r?\n/g, "\r\n"));
+    const full = L.map.message;
+    let href = make(full), keep = full.length;
+    mailCut = false;
+    while (href.length > MAILTO_MAX && keep > 0) {
+      mailCut = true;
+      keep = Math.max(0, keep - Math.max(20, Math.ceil((href.length - MAILTO_MAX) / 3)));
+      href = make(full.slice(0, keep).trim() + " " + COPY.form.mailShortened);
+    }
+    return href;
+  }
+  function setStatus(text, isError) { statusEl.textContent = text || ""; statusEl.classList.toggle("is-error", !!isError); }
+  /* If the email version had to cut the message, say so and offer to copy the full text */
+  const cutNote = $("#fallback-cut"), copyBtn = $("#copy-msg"), copyStatus = $("#copy-status");
+  copyBtn.addEventListener("click", async () => {
+    const text = F.message.value.trim();
+    let ok = false;
+    try { if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); ok = true; } } catch (err) { ok = false; }
+    if (!ok) {
+      try { F.message.focus(); F.message.select(); ok = document.execCommand("copy"); } catch (err) { ok = false; }
+      copyBtn.focus();
+    }
+    copyStatus.textContent = ok ? COPY.form.copied : COPY.form.copyFailed;
+  });
+  function showFallback(L, text, btnText) {
+    if (!C.email) { setStatus(COPY.form.notReady, true); return; }
+    $("#fallback-text").textContent = text;
+    mailtoBtn.textContent = btnText;
+    mailtoBtn.href = mailtoHref(L);
+    cutNote.textContent = mailCut ? COPY.form.mailCutNote : "";
+    cutNote.hidden = !mailCut;
+    copyBtn.hidden = !mailCut;
+    copyStatus.textContent = "";
+    fallback.hidden = false;
+  }
+  /* Where focus goes once the fallback shows: the copy button first if the message was cut */
+  function fallbackFocus() { if (fallback.hidden) return; if (mailCut) copyBtn.focus(); else mailtoBtn.focus(); }
+  function succeed(L) {
+    const map = { visitorFirstName: L.map.visitorFirstName, email: C.email };
+    $("#done-h").textContent = fill(COPY.form.successHeading, map);
+    $("#done-t").textContent = fill(C.email ? COPY.form.successText : COPY.form.successTextNoEmail, map);
+    $("#enquiry-body").hidden = true;
+    $("#done").hidden = false;
+    $("#done-h").focus();
+  }
+
+  let sending = false;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (sending) return;
+    fallback.hidden = true;
+    const bad = Object.keys(RULES).filter((k) => { touched[k] = true; return !check(k); });
+    if (bad.length) { setStatus(COPY.form.error, true); F[bad[0]].focus(); return; }
+    setStatus("");
+    const L = buildLead();
+    const data = new FormData(form);
+
+    if (!C.web3formsKey) {
+      if (data.get("botcheck")) return;
+      if (!C.email) { setStatus(COPY.form.notReady, true); return; }
+      showFallback(L, COPY.form.mailText, COPY.form.mailButton);
+      /* A cut message waits for the visitor to copy it before the email app opens */
+      if (mailCut) { $("#fallback-text").textContent = COPY.form.mailTextCut; fallbackFocus(); }
+      else window.location.href = mailtoHref(L);
+      return;
+    }
+
+    /* Web3Forms JSON request, as in their HTML and JavaScript guide. FormData includes the
+       hidden botcheck box only if something ticked it, which is how their spam trap works. */
+    const payload = Object.fromEntries(data);
+    payload.message = L.map.message;
+    Object.assign(payload, {
+      access_key: C.web3formsKey,
+      subject: L.subject,
+      "Came from": sourceLabel,
+      "Sent on": L.map.sentDate,
+      "Page": C.siteUrl || (window.location.origin + window.location.pathname),
+      "Summary": L.body
+    });
+
+    /* aria-disabled, not disabled, so keyboard focus stays on the button while it sends */
+    sending = true;
+    sendBtn.setAttribute("aria-disabled", "true");
+    sendBtn.textContent = COPY.form.sending;
+    setStatus(COPY.form.sending);
+    const ctrl = "AbortController" in window ? new AbortController() : null;
+    const timer = window.setTimeout(() => { if (ctrl) ctrl.abort(); }, 15000);
+    let ok = false;
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined
+      });
+      const json = await res.json().catch(() => ({}));
+      ok = res.ok && json && json.success === true;
+    } catch (err) { ok = false; }
+    window.clearTimeout(timer);
+    sending = false;
+    sendBtn.removeAttribute("aria-disabled");
+    sendBtn.textContent = COPY.form.sendButton;
+    setStatus("");
+    if (ok) { succeed(L); return; }
+    showFallback(L, COPY.form.failText, COPY.form.failButton);
+    fallbackFocus();
+  });
+
+  /* ---------- Sticky mobile button ---------- */
+  const sticky = $("#sticky");
+  const hero = $(".hero");
+  const contactSec = $("#contact");
+  const vis = { hero: true, contact: false, typing: false };
+  function updateSticky() {
+    const show = !vis.hero && !vis.contact && !vis.typing;
+    sticky.classList.toggle("show", show);
+    /* inert keeps the hidden bar's links out of the Tab order */
+    if (show) { sticky.removeAttribute("aria-hidden"); sticky.inert = false; }
+    else { sticky.setAttribute("aria-hidden", "true"); sticky.inert = true; }
+  }
+  if ("IntersectionObserver" in window) {
+    sticky.hidden = false;
+    updateSticky();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.target === hero) vis.hero = en.isIntersecting; else vis.contact = en.isIntersecting; });
+      updateSticky();
+    }, { threshold: 0 });
+    io.observe(hero);
+    io.observe(contactSec);
+    /* While a field has focus the phone keyboard is up: the bar steps aside */
+    const isField = (el) => !!el && el.matches && el.matches("input, textarea, select");
+    doc.addEventListener("focusin", (e) => { if (isField(e.target)) { vis.typing = true; updateSticky(); } });
+    doc.addEventListener("focusout", (e) => { if (isField(e.target)) { vis.typing = isField(e.relatedTarget); updateSticky(); } });
+  }
+
+  /* In-page links glide to their section in a fixed 0.6 seconds, however far down it is (the
+     browser's own smooth scroll takes much longer over a long page), and land focus there.
+     With reduced motion it is a straight jump. Touching or wheeling the page stops the glide. */
+  let glide = 0;
+  const stopGlide = () => { if (glide) window.cancelAnimationFrame(glide); glide = 0; };
+  ["wheel", "touchstart", "keydown"].forEach((t) => window.addEventListener(t, stopGlide, { passive: true }));
+  function glideTo(el) {
+    stopGlide();
+    const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+    const max = doc.documentElement.scrollHeight - window.innerHeight;
+    const to = Math.max(0, Math.min(max, el.getBoundingClientRect().top + window.scrollY - margin));
+    const from = window.scrollY;
+    if (reduced() || Math.abs(to - from) < 2) { window.scrollTo(0, to); return; }
+    const t0 = performance.now(), dur = 600;
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      window.scrollTo(0, from + (to - from) * (1 - Math.pow(1 - p, 3)));
+      glide = p < 1 ? window.requestAnimationFrame(step) : 0;
+    };
+    glide = window.requestAnimationFrame(step);
+  }
+  $$('a[href^="#"]').forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    const target = id && doc.getElementById(id);
+    if (!target || id === "main" || id === "top") return;
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      glideTo(target);
+      if (window.history && history.pushState) history.pushState(null, "", "#" + id); else window.location.hash = id;
+      const h2 = $("h2", target) || target;
+      if (!h2.hasAttribute("tabindex")) h2.setAttribute("tabindex", "-1");
+      h2.focus({ preventScroll: true });
+    });
+  });
+
+  /* ---------- Gentle reveals (content is visible if this never runs) ---------- */
+  (function reveals() {
+    const items = $$(".rv");
+    if (!items.length || !("IntersectionObserver" in window) || reduced()) return;
+    root.classList.add("will-animate");
+    const showAll = () => items.forEach((el) => el.classList.add("in"));
+    const failSafe = window.setTimeout(showAll, 3000);
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); obs.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -40px 0px", threshold: 0 });
+    items.forEach((el) => io.observe(el));
+    window.addEventListener("load", () => window.clearTimeout(failSafe));
+    /* A fast scroll can jump clean over a block, which the observer never reports.
+       Anything that is now above the bottom of the screen is shown regardless. */
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        ticking = false;
+        $$(".rv:not(.in)").forEach((el) => { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("in"); });
+      });
+    }, { passive: true });
+    /* Keyboard focus never waits for a fade: the block shows at once */
+    doc.addEventListener("focusin", (e) => { const r = e.target.closest && e.target.closest(".rv:not(.in)"); if (r) { r.style.transition = "none"; r.classList.add("in"); } });
+    reduceMQ.addEventListener && reduceMQ.addEventListener("change", () => { if (reduced()) showAll(); });
+  })();
+
+  /* ---------- Preview card tilt (pointer only, never with reduced motion) ---------- */
+  (function tilt() {
+    const wrap = $("[data-tilt]");
+    const card = wrap && $(".preview", wrap);
+    if (!card || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    const MAX = 6;
+    wrap.addEventListener("pointermove", (e) => {
+      if (reduced()) return;
+      const b = card.getBoundingClientRect();
+      const px = (e.clientX - b.left) / b.width, py = (e.clientY - b.top) / b.height;
+      card.style.transform = "rotateX(" + ((0.5 - py) * 2 * MAX).toFixed(2) + "deg) rotateY(" + ((px - 0.5) * 2 * MAX).toFixed(2) + "deg)";
+    });
+    wrap.addEventListener("pointerleave", () => { card.style.transform = ""; });
+  })();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy and account access | Raymond Shaahu</title>
+<meta name="description" content="How your information is handled when you send an enquiry or your LinkedIn check answers, and how account access works without sharing your password.">
+<link rel="canonical" href="https://stevehill-oss.github.io/linkedin-growth-check/privacy/">
+<!-- If you move to your own domain, change the address in the canonical line above. -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#13221C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16241E" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F4A3C'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%23F1E6D2' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+/* ---------- Tokens (same as the main page) ---------- */
+:root{
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",P052,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --bg:#F6F4EF;--bg-alt:#EDE9E0;--surface:#FFFFFF;
+  --ink:#17201C;--muted:#4A544F;--line:rgba(23,32,28,.13);--line-strong:rgba(23,32,28,.24);--control:#7F8782;
+  --accent:#1F4A3C;--accent-hover:#163729;--on-accent:#FFFFFF;--accent-soft:#E2EBE5;
+  --brass:#7A5216;--brass-line:#B8894A;--brass-soft:#F3E9D7;
+  --focus:#1F4A3C;--setup-bg:#FFF1CF;--setup-ink:#3A2A08;
+  --fs-xs:.8125rem;--fs-s:.9375rem;--fs-base:1.0625rem;
+  --fs-l:clamp(1.125rem,1.06rem + .3vw,1.3rem);
+  --fs-h3:clamp(1.25rem,1.15rem + .45vw,1.5rem);
+  --fs-h2:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);
+  --fs-h1:clamp(2.1rem,1.6rem + 2.4vw,3.6rem);
+  --gutter:clamp(1.25rem,5vw,3rem);
+  --ease:cubic-bezier(.32,.72,0,1);--t-fast:160ms;
+  --setup-h:0px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1412;--bg-alt:#121A17;--surface:#18221E;
+    --ink:#E7EBE7;--muted:#A6B0AB;--line:rgba(231,235,231,.12);--line-strong:rgba(231,235,231,.24);--control:#76817B;
+    --accent:#9AD0B8;--accent-hover:#B6DFCC;--on-accent:#0E1412;--accent-soft:#1F3029;
+    --brass:#D6AE6E;--brass-line:#9C7A45;--brass-soft:#2A241A;--focus:#9AD0B8;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-base)/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:var(--setup-h)}
+@media (min-width:900px){body{font-size:1.125rem}}
+[hidden]{display:none!important}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4,p,ol,ul{margin:0}
+h1,h2,h3,h4{font-weight:500}
+ol,ul{padding:0;list-style:none}
+a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:50;background:var(--accent);color:var(--on-accent);padding:.7rem 1rem;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{width:min(100% - 2*var(--gutter),48rem);margin-inline:auto}
+.eyebrow{font:600 var(--fs-xs)/1.35 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.muted{color:var(--muted)}
+
+/* Header */
+.site-head{background:#13221C;color:#EEF1EC;--focus:#E2C188;border-bottom:1px solid rgba(238,241,236,.1)}
+@media (prefers-color-scheme:dark){.site-head{background:#16241E}}
+.site-head .wrap{width:min(100% - 2*var(--gutter),72rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.7rem;color:inherit;text-decoration:none;font:500 1.0625rem/1.2 var(--serif);min-height:44px}
+.head-back{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;font-size:var(--fs-s);min-height:44px;color:#EEF1EC}
+.head-back svg{width:1.05em;height:1.05em}
+.avatar{--av:2.25rem;width:var(--av);height:var(--av);border-radius:50%;overflow:hidden;flex:none;display:grid;place-items:center;background:rgba(226,193,136,.16);color:#E2C188;font:500 calc(var(--av)*.4)/1 var(--serif);letter-spacing:.02em;box-shadow:inset 0 0 0 1px rgba(226,193,136,.45)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+/* Page */
+.intro{padding-block:clamp(2.5rem,6vw,5rem) 1.5rem}
+.intro h1{font-family:var(--serif);font-size:var(--fs-h1);line-height:1.08;letter-spacing:-.02em;margin-top:.8rem;text-wrap:balance}
+.intro p.lede{margin-top:1rem;font-size:var(--fs-l);color:var(--muted);max-width:52ch}
+.toc{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem}
+.toc a{font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+.doc{padding-block:2rem clamp(3rem,7vw,5rem);scroll-margin-top:1rem}
+.doc + .doc{border-top:1px solid var(--line-strong)}
+.doc h2{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+.doc .sub{margin-top:.7rem;color:var(--muted)}
+.blocks{margin-top:2rem;display:grid;gap:1.6rem}
+.blocks h3{font-weight:700;font-size:1.0625rem;font-family:var(--sans)}
+.blocks p{margin-top:.35rem;color:var(--muted)}
+.blocks p + p{margin-top:.6rem}
+.cards{margin-top:2rem;display:grid;gap:1rem}
+@media (min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem;display:grid;gap:.5rem;align-content:start}
+.card h3{font:500 var(--fs-h3)/1.25 var(--serif)}
+.card p{color:var(--muted)}
+.steps-box{margin-top:1.25rem;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.5rem;display:grid;gap:1.75rem}
+@media (min-width:700px){.steps-box{grid-template-columns:1fr 1fr;padding:2rem;gap:2.5rem}}
+.steps-box h3{font-weight:700;font-size:1.0625rem}
+.steps-box ol{display:grid;gap:.7rem;margin-top:.8rem;counter-reset:ac}
+.steps-box li{position:relative;padding-left:2rem;color:var(--muted)}
+.steps-box li::before{counter-increment:ac;content:counter(ac);position:absolute;left:0;top:.1rem;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:700;display:grid;place-items:center}
+.fact{margin-top:2rem;display:grid;gap:.45rem;padding:1.4rem 1.5rem;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--brass-line);border-radius:4px 16px 16px 4px}
+.fact-k{font:600 var(--fs-xs)/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.fact-big{font:500 clamp(1.3rem,1.15rem + .7vw,1.65rem)/1.15 var(--serif)}
+.fact-t{color:var(--muted)}
+.fact-src{font-size:var(--fs-xs);color:var(--muted)}
+.notrack{margin-top:1.5rem;display:flex;gap:.6rem;align-items:flex-start;color:var(--muted);font-size:var(--fs-s)}
+.notrack svg{width:18px;height:18px;flex:none;margin-top:.15rem;color:var(--accent)}
+
+/* Footer */
+.site-foot{background:var(--bg-alt);padding-block:2.5rem;font-size:var(--fs-s);color:var(--muted);border-top:1px solid var(--line)}
+.site-foot .wrap{width:min(100% - 2*var(--gutter),72rem);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;justify-content:space-between}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 1.25rem}
+.foot-links a{display:inline-flex;align-items:center;min-height:44px}
+.setup{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--setup-bg);color:var(--setup-ink);border-top:2px solid #C9971F;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom));font-size:var(--fs-s);line-height:1.4}
+.setup strong{font-weight:800}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <span class="avatar" data-avatar="decor" data-needs-any="name photo" hidden></span>
+      <span data-cfg="brandName">Executive LinkedIn</span>
+    </a>
+    <a class="head-back" href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Main page
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap intro">
+    <p class="eyebrow">The detail</p>
+    <h1>Privacy and account access</h1>
+    <p class="lede">Two things people reasonably want to know before they get in touch: what happens to what they send, and how I work on their LinkedIn without their password.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#privacy">How your information is handled</a>
+      <a href="#access">How account access works</a>
+    </nav>
+  </div>
+
+  <!-- PRIVACY NOTICE (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section class="doc" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <h2 id="privacy-title">How your information is handled</h2>
+      <p class="sub">This covers the enquiry form on the main page and the LinkedIn check.</p>
+      <div class="blocks">
+        <div data-needs-any="brandName email" hidden>
+          <h3>Who is responsible for it</h3>
+          <p><span data-cfg="brandName"></span><span data-needs="brandName email" hidden>, </span><a data-cfg-mailto data-show-email data-needs="email" hidden href="#"></a></p>
+        </div>
+        <div>
+          <h3>What I collect</h3>
+          <p>Only what you choose to send. From the enquiry form: your name, work email, company, role and any message. From the LinkedIn check: your answers, your score, the quick details you pick and the contact details you type in. Nothing is sent until you press the button.</p>
+        </div>
+        <div>
+          <h3>Why, and the legal basis</h3>
+          <p>To reply to your enquiry or your request for a free review. The legal basis is that you’ve asked me to do something before we agree any contract.</p>
+        </div>
+        <div>
+          <h3>Who else handles it</h3>
+          <p data-needs="web3formsKey" hidden>The forms are delivered to my inbox by Web3Forms, an email form service. Its <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy<span class="sr-only"> (opens in a new tab)</span></a> says it operates from India, keeps form submissions for up to three years and uses standard contractual clauses for transfers from the UK. It also says your IP address and email address may be sent to two spam-checking services, CleanTalk and Akismet.</p>
+          <p>If you send from your own email app, your message goes through your own email provider.</p>
+        </div>
+        <div>
+          <h3>How long I keep it</h3>
+          <p>Only as long as I need it to deal with your request. I’ll delete it sooner if you ask.</p>
+        </div>
+        <div>
+          <h3>What I don’t do</h3>
+          <p>I never sell what you send, and I don’t add you to any mailing list unless you say yes.</p>
+        </div>
+        <div>
+          <h3>Your rights</h3>
+          <p>You can ask to see, correct or delete what I hold about you, or object to how I use it. If you’re unhappy with how I handle it, you can complain to the Information Commissioner’s Office (<a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk<span class="sr-only"> (opens in a new tab)</span></a>).</p>
+        </div>
+        <div>
+          <h3>Cookies and storage</h3>
+          <p>These pages set no cookies and run no tracking or analytics. While you take the check, your answers are kept in your browser tab only, so a reload doesn’t lose them. Closing the tab clears them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW ACCESS WORKS (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section class="doc" id="access" aria-labelledby="access-title">
+    <div class="wrap">
+      <h2 id="access-title">How account access works</h2>
+      <p class="sub">Your account stays in your hands, and I never ask for your password.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>I never ask for your password</h3>
+          <p>For your personal profile, every post is a draft you approve first. Then you post it, or it goes out through a scheduling tool you connect to your own account. For a company page, you add me through LinkedIn’s own admin settings.</p>
+        </article>
+        <article class="card">
+          <h3>Nothing goes out without your yes</h3>
+          <p>You see every post before it’s published. Edit it, send it back or approve it.</p>
+        </article>
+        <article class="card">
+          <h3>Everything stays yours</h3>
+          <p>Your profile, your page, your posts and your connections belong to you. If we stop working together, you keep the lot and my access ends.</p>
+        </article>
+        <article class="card">
+          <h3>You can remove me at any time</h3>
+          <p>Company page admins and connected tools are both switched off from LinkedIn’s own settings, whenever you like.</p>
+        </article>
+      </div>
+
+      <div class="steps-box">
+        <div>
+          <h3>Your personal profile</h3>
+          <ol>
+            <li>I write each post as a draft for you to approve.</li>
+            <li>You post it yourself, or a scheduling tool posts it after you’ve signed in to LinkedIn and allowed it.</li>
+            <li>You can switch off any connected tool in LinkedIn’s settings, under Data privacy, whenever you like.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Your company page (if you add company page support)</h3>
+          <ol>
+            <li>You stay super admin, the top role, so you always control who has access.</li>
+            <li>You add me as an admin from your page’s settings, under Manage admins. LinkedIn asks that I follow your page first.</li>
+            <li>You can remove me from that same screen at any time.</li>
+          </ol>
+        </div>
+      </div>
+
+      <aside class="fact" data-fact-slot="password" aria-label="A checked fact from LinkedIn" hidden></aside>
+
+      <p class="notrack">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>These pages set no tracking cookies, so nothing follows you around the web afterwards.</span>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p data-needs="brandName" hidden>© <span data-cfg="year"></span> <span data-cfg="brandName"></span></p>
+    <div class="foot-links">
+      <a href="../">Main page</a>
+      <a href="../check/">LinkedIn check</a>
+      <a data-cfg-mailto data-needs="email" hidden href="#">Email me</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<div class="setup" id="setup" role="status" hidden></div>
+
+<script>
+/* =========================================================================
+   CONFIG: everything about you lives here.
+   The SAME block is in all three pages: index.html, check/index.html and
+   privacy/index.html. Change it in index.html, then run
+   "node tools/sync-config.mjs" from the project folder to copy it here.
+   Full field-by-field help is in index.html and HANDOVER.md.
+   ========================================================================= */
+const CONFIG = {
+  // Your full name, exactly as it appears on your LinkedIn profile.
+  name: "Raymond Shaahu",
+
+  // Your first name. Leave empty to use the first word of name.
+  firstName: "",
+
+  // Your trading or business name for the header and footer. Leave empty to use your name.
+  businessName: "",
+
+  // The full web address of your own LinkedIn profile, starting https://www.linkedin.com/in/
+  linkedinUrl: "https://www.linkedin.com/in/raymondshaahu/",
+
+  // Your photo: a file saved in the site folder (for example "photo.jpg").
+  // The check and privacy pages sit one folder down, so they look for it as "../photo.jpg"
+  // automatically. Leave empty and the pages show your initials in a circle instead.
+  photo: "",
+
+  // The email address that receives enquiries and is shown on the page.
+  email: "raymond.shaahu@gmail.com",
+
+  // Your free Web3Forms access key (see HANDOVER.md). It is safe to publish.
+  // Leave empty and the forms open the visitor's own email app instead.
+  web3formsKey: "",
+
+  // The town or city you work from. Shown in the About section and footer.
+  location: "",
+
+  // How quickly you ALWAYS reply, written to follow the words "I reply".
+  // Only fill this in if you meet it every single time.
+  responseTime: "",
+
+  // Your real terms in one or two plain sentences, such as minimum term and notice period.
+  // Filling this also switches on the "How long do I have to sign up for?" question.
+  contractTerms: "",
+
+  // Optional, only if true and checkable: how long you have worked in LinkedIn, marketing or a related field.
+  yearsExperience: "",
+
+  // Two to four sentences in your own words: what you did before, why you started this, who you work best with.
+  bio: "",
+
+  // Qualifications or memberships you actually hold, written as the issuing body writes them.
+  // Each one looks like: { name: "", issuer: "" }
+  credentials: [],
+
+  /* CASE STUDIES. Shown in the "Case studies" section of the main page.
+     While this list is empty, the page shows one honest "Case studies coming soon" block.
+     Each case study goes between the square brackets, inside curly brackets, with a comma
+     between case studies. Start from this empty shape:
+       { title: "", who: "", challenge: "", whatIDid: "", outcome: "", quote: "", permission: false }
+     Field by field:
+       title      A short heading, for example "A quiet profile brought back to life".
+       who        An anonymised description of the client, for example
+                  "Managing director, professional services firm". No names unless they agreed.
+       challenge  One or two sentences: where they were before you started.
+       whatIDid   One or two sentences: what you actually did.
+       outcome    One or two sentences: what changed. Only what really happened, in their terms,
+                  with dates if you give numbers. No estimates, no rounding up.
+       quote      Optional. Their exact words, with their permission. Trim if you like, never reword.
+       permission Type true (no quote marks) ONLY when the client has agreed in writing that you
+                  can publish this. Anything else keeps the case study hidden.
+     A case study only shows when permission is true and title, who, challenge, whatIDid and
+     outcome are all filled in. Never write an example or a made-up case study. */
+  caseStudies: [],
+
+  // Real client quotes with their written permission. Trim them if you like, never reword them.
+  // Each one looks like: { quote: "", name: "", role: "", company: "" }
+  testimonials: [],
+
+  // Real outcomes a named client has agreed you can share, with the dates they cover.
+  // Each one looks like: { client: "", result: "", period: "DD/MM/YYYY to DD/MM/YYYY" }
+  results: [],
+
+  // Logos of clients who have said you can show them. Save the logo file in the site folder.
+  // Each one looks like: { name: "", logoFile: "", alt: "" }
+  clientLogos: [],
+
+  // Trading name, plus company number and registered office address if you are a limited company.
+  companyDetails: "",
+
+  // The web address of the main page once published (used in lead emails and the QR code).
+  siteUrl: "https://stevehill-oss.github.io/linkedin-growth-check/"
+};
+
+/* Checked fact from the research file (LinkedIn's own rules). */
+const FACTS = [
+  { id: "ua-2-2-password", slot: "password", sourceOwner: "LinkedIn (legal)", loadedOk: true,
+    label: "LinkedIn’s own rules", big: "Keep your password to yourself",
+    text: "LinkedIn’s User Agreement asks members to keep their password confidential and not to share or transfer their account. That’s why I never ask for yours.",
+    sourceName: "LinkedIn User Agreement, section 2.2", url: "https://www.linkedin.com/legal/user-agreement",
+    dateLabel: "effective", date: "03/11/2025" }
+];
+
+(function () {
+  "use strict";
+  const doc = document;
+  const root = doc.documentElement;
+  const $ = (s, c) => (c || doc).querySelector(s);
+  const $$ = (s, c) => Array.prototype.slice.call((c || doc).querySelectorAll(s));
+  function h(tag, props) {
+    const n = doc.createElement(tag);
+    if (props) Object.keys(props).forEach((k) => {
+      const v = props[k];
+      if (v == null || v === false) return;
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else n.setAttribute(k, v === true ? "" : String(v));
+    });
+    for (let i = 2; i < arguments.length; i++) {
+      [].concat(arguments[i]).forEach((kid) => {
+        if (kid == null || kid === false) return;
+        n.append(kid.nodeType ? kid : String(kid));
+      });
+    }
+    return n;
+  }
+
+  const str = (v) => (typeof v === "string" ? v.trim() : "");
+  const C = {};
+  ["name", "businessName", "linkedinUrl", "photo", "email", "web3formsKey"].forEach((k) => { C[k] = str(CONFIG[k]); });
+  if (C.linkedinUrl && !/^https?:\/\//i.test(C.linkedinUrl)) C.linkedinUrl = "https://" + C.linkedinUrl.replace(/^\/+/, "");
+  /* This page sits one folder below the photo, so a plain file name gets "../" in front */
+  if (C.photo && !/^(https?:|data:|\/|\.\.\/)/i.test(C.photo)) C.photo = "../" + C.photo;
+  const V = Object.assign({}, C, { brandName: C.businessName || C.name, year: String(new Date().getFullYear()) });
+  const filled = (k) => !!V[k];
+
+  $$("[data-cfg]").forEach((n) => { const v = V[n.getAttribute("data-cfg")]; if (v) n.textContent = v; });
+  $$("[data-needs]").forEach((n) => { n.hidden = !n.getAttribute("data-needs").split(/\s+/).every(filled); });
+  $$("[data-needs-any]").forEach((n) => { n.hidden = !n.getAttribute("data-needs-any").split(/\s+/).some(filled); });
+  $$("[data-cfg-mailto]").forEach((a) => {
+    if (!C.email) return;
+    a.href = "mailto:" + C.email;
+    if (a.hasAttribute("data-show-email")) a.textContent = C.email;
+  });
+  if (C.name && doc.title.indexOf(C.name) === -1) doc.title = doc.title + " | " + C.name;
+
+  const words = C.name.split(/\s+/).filter(Boolean);
+  const initials = words.length ? (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : "")).toUpperCase() : "";
+  $$("[data-avatar]").forEach((box) => {
+    const mono = () => { box.textContent = initials; box.setAttribute("aria-hidden", "true"); };
+    box.textContent = "";
+    if (C.photo) {
+      const img = h("img", { src: C.photo, alt: "", width: 400, height: 400, decoding: "async" });
+      img.addEventListener("error", () => { img.remove(); mono(); });
+      box.append(img);
+      box.setAttribute("aria-hidden", "true");
+    } else mono();
+  });
+
+  FACTS.filter((f) => f.loadedOk === true && /^LinkedIn\b/.test(f.sourceOwner)).forEach((f) => {
+    const host = $('[data-fact-slot="' + f.slot + '"]');
+    if (!host) return;
+    host.append(
+      h("p", { class: "fact-k", text: f.label }),
+      h("p", { class: "fact-big", text: f.big }),
+      h("p", { class: "fact-t", text: f.text }),
+      h("p", { class: "fact-src" }, "Source: ",
+        h("a", { href: f.url, target: "_blank", rel: "noopener noreferrer" }, f.sourceName, h("span", { class: "sr-only", text: " (opens in a new tab)" })),
+        " (" + f.dateLabel + " " + f.date + ")")
+    );
+    host.hidden = false;
+  });
+
+  /* Setup guard: shows what is missing before the site is shared */
+  const setup = $("#setup");
+  const missing = [];
+  if (!C.name) missing.push("name");
+  if (!C.linkedinUrl) missing.push("LinkedIn link");
+  if (!C.email) missing.push("email");
+  if (missing.length) {
+    setup.append(h("strong", { text: "Setup: " + missing.length + " detail" + (missing.length === 1 ? "" : "s") + " missing" }),
+      " (" + missing.join(", ") + "). HANDOVER.md, Step 1, shows where.");
+    setup.hidden = false;
+    root.style.setProperty("--setup-h", setup.offsetHeight + "px");
+  }
+})();
+</script>
+</body>
+</html>
