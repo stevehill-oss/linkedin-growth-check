@@ -1,0 +1,2308 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raymond Shaahu | LinkedIn for founders and senior executives</title>
+<meta name="description" content="Executive LinkedIn presence for founders and CEOs, built around your experience and managed for you. Nothing goes out without your approval.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Look as good on LinkedIn as you do in the room.">
+<meta property="og:description" content="Executive LinkedIn presence, built around your experience and managed for you.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://stevehill-oss.github.io/linkedin-growth-check/">
+<meta property="og:url" content="https://stevehill-oss.github.io/linkedin-growth-check/">
+<!-- SHARING PICTURE (HANDOVER.md, Step 5). Only if you have a share picture (1200 by 627 pixels,
+     saved next to index.html), copy this line out of the comment with the picture's full web address:
+<meta property="og:image" content="FULL-ADDRESS-OF-THE-PICTURE">
+     If you move to your own domain, change the address in the canonical and og:url lines above. -->
+
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0F1813" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090E0B" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1813'/%3E%3Cpath d='M14 26V14h12M38 14h12v12M50 38v12H38M26 50H14V38' fill='none' stroke='%23E0BD82' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+/* =========================================================================
+   v5 "THE FINAL CUT" (15/11/2026)
+   Paper and ink for most of the page. A dark "screen" for the hero, the check
+   block and the footer. Brass is the only accent. Film devices, used quietly:
+   viewfinder corners on the screens, scene numbers on each section, the
+   achievements set as end credits, and key lines that light up on scroll.
+   ========================================================================= */
+:root{
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",P052,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  /* Type: eight roles */
+  --fs-label:.75rem;                                       /* 12px mono caps */
+  --fs-small:.875rem;                                      /* 14px */
+  --fs-body:1.0625rem;                                     /* 17px, 18px from 900px */
+  --fs-lead:clamp(1.1875rem,1.12rem + .3vw,1.375rem);      /* 19 to 22px */
+  --fs-h3:clamp(1.375rem,1.15rem + 1vw,2rem);              /* 22 to 32px: findings, steps, questions, credits */
+  --fs-statement:clamp(1.5rem,1.15rem + 1.6vw,2.5rem);     /* 24 to 40px */
+  --fs-title:clamp(2.125rem,1.4rem + 3.1vw,4rem);          /* 34 to 64px */
+  --fs-display:clamp(2.125rem,1.2rem + 5vw,6rem);          /* 35px at 320, 39 at 390, 83 at 1280, 96 from 1680 */
+  /* Space: 4px base */
+  --s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.5rem;--s6:2rem;--s7:3rem;--s8:clamp(2.25rem,1.75rem + 2vw,3.5rem);--s9:clamp(3rem,2rem + 3vw,5rem);
+  --gutter:clamp(1.25rem,5vw,3.5rem);
+  --section:clamp(3rem,1.25rem + 5.5vw,5.75rem);
+  --max:76rem;
+  --head-h:3.75rem;
+  /* Motion */
+  --ease:cubic-bezier(.32,.72,0,1);--ease-out:cubic-bezier(.22,1,.36,1);--ease-out-expo:cubic-bezier(.16,1,.3,1);
+  --ease-in-out:cubic-bezier(.65,0,.35,1);--ease-exit:cubic-bezier(.4,0,1,1);
+  --t-press:90ms;--t-fast:160ms;--t-base:280ms;--t-slow:520ms;
+  --setup-h:0px;
+  /* Colour, light (contrast against bg, then raised) */
+  --bg:#F6F3EC;--raised:#FFFDF8;
+  --ink:#141D18;          /* 15.55 / 16.95 */
+  --muted:#545C56;        /* 6.23 / 6.79 */
+  --accent:#7A5216;       /* brass text, scene numbers: 6.22 / 6.78 */
+  --on-accent:#FFFDF8;
+  --action:#141D18;--on-action:#F6F3EC;   /* 15.55 */
+  --hairline:rgba(20,29,24,.12);          /* decoration only, never a control edge */
+  --rule:rgba(20,29,24,.2);
+  --control:#878D88;      /* input and answer edges: 3.06 / 3.33 */
+  --placeholder:#666D68;
+  --error:#A3261A;--success:#1D6340;--focus:#7A5216;
+  --setup-bg:#FFF1CF;--setup-ink:#3A2A08;
+  /* The screen: hero, check block, footer, header, menu, phone bar */
+  --screen:#0F1813;--screen-ink:#F1EEE6;--screen-muted:#B4BAB3;--screen-accent:#E0BD82;--screen-control:#8C928B;
+  --screen-line:rgba(241,238,230,.14);--corner:rgba(224,189,130,.6);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    /* 15/11: the page lifted a step (was #111915) so the darker screen reads as its own surface */
+    --bg:#18211C;--raised:#212B26;
+    --ink:#ECE9E1;--muted:#A7ADA7;--accent:#DDB878;--on-accent:#141D18;
+    --action:#ECE9E1;--on-action:#18211C;
+    --hairline:rgba(236,233,225,.12);--rule:rgba(236,233,225,.2);
+    --control:#737B74;--placeholder:#949B95;
+    --error:#F09C8E;--success:#8ED0AC;--focus:#DDB878;
+    /* In dark mode the screen sits darker than the page, like a cinema screen in a lit room */
+    --screen:#090E0B;
+  }
+  /* The screen's edges get a hairline in dark mode, the way a lit screen has a border */
+  .hero,.band,.site-foot{box-shadow:inset 0 1px 0 var(--screen-line),inset 0 -1px 0 var(--screen-line)}
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+/* The sticky header is --head-h tall, so keyboard focus and anchor jumps stop below it */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:var(--head-h);scroll-padding-bottom:calc(var(--setup-h) + 2rem)}
+@media (max-width:899.98px){html{scroll-padding-bottom:calc(var(--setup-h) + 6.5rem + env(safe-area-inset-bottom))}}
+@media (min-width:900px){html{scroll-padding-bottom:calc(var(--setup-h) + 5.5rem)}}
+/* No CSS smooth scrolling: it also slows keyboard focus scrolling. In-page links glide by script instead. */
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-body)/1.6 var(--sans);-webkit-font-smoothing:antialiased;font-kerning:normal;padding-bottom:var(--setup-h);accent-color:var(--action)}
+@media (min-width:900px){body{font-size:1.125rem}}
+[hidden]{display:none!important}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4,h5,p,ol,ul,dl,dd,figure,blockquote{margin:0}
+h1,h2,h3,h4,h5{font-weight:400}
+ol,ul{padding:0;list-style:none}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+/* Links inside running text: a taller tap area (at least 24px) without moving the lines */
+p a:not([class]){padding-block:.5em}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+h2[tabindex="-1"]:focus{outline:none}
+/* A link that ends a short line of small print: a full 44px tap area */
+.tap-in{display:inline-flex;align-items:center;min-height:44px;vertical-align:middle}
+::selection{background:var(--action);color:var(--on-action)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:50;background:var(--action);color:var(--on-action);padding:.7rem 1rem;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:calc(var(--head-h) + .75rem)}
+.wrap{width:min(100% - 2*var(--gutter),var(--max));margin-inline:auto}
+section{padding-block:var(--section)}
+/* Section tops land 1rem below the top of the screen: the header covers only their top padding */
+section[id]{scroll-margin-top:calc(1rem - var(--head-h))}
+.num{font-variant-numeric:tabular-nums lining-nums}
+
+/* ---------- Type roles ---------- */
+.label{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+/* The scene number: every section opens like a title card. The number is decoration. */
+.scene{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s6);padding-top:var(--s4);border-top:1px solid var(--hairline);color:var(--muted);font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.scene-n{color:var(--accent);font-variant-numeric:tabular-nums}
+.h2{font:400 var(--fs-title)/1.06 var(--serif);letter-spacing:-.018em;text-wrap:balance;max-width:18ch}
+.statement{font:400 var(--fs-statement)/1.22 var(--serif);letter-spacing:-.01em;text-wrap:pretty;max-width:30ch}
+/* Level 2 emphasis: the key clause of a statement takes its own line in full ink; the lead-in is muted.
+   Position and contrast together, so colour is never the only signal. */
+.statement .lead-in{color:var(--muted)}
+.statement strong{display:block;font-weight:400;color:var(--ink)}
+/* The two lit lines are the signature beats, so they are the only statements set at title size.
+   The supporting closes (services, process) step down to a calmer size, all in ink. */
+.statement.lit{font-size:var(--fs-title);line-height:1.08;letter-spacing:-.018em;max-width:20ch}
+.statement.quiet{font-size:var(--fs-h3);line-height:1.3;max-width:34ch}
+.statement.quiet .lead-in{color:var(--ink)}
+.lede,.first{font-size:var(--fs-lead);line-height:1.55;color:var(--ink);text-wrap:pretty}
+.body{max-width:34rem;display:grid;gap:var(--s4);color:var(--muted)}
+.body p{text-wrap:pretty}
+/* Level 3 emphasis: a phrase in running text. Semibold ink against muted body. */
+.body strong,.a strong,.step strong{font-weight:600;color:var(--ink)}
+.h3{font:400 var(--fs-h3)/1.25 var(--serif);letter-spacing:-.008em;text-wrap:balance}
+.small{font-size:var(--fs-small)}
+.muted{color:var(--muted)}
+/* Level 1 emphasis: the turn of a headline. Italic, plus a rule that draws once. */
+.turn{font-style:italic;position:relative;display:inline-block;padding-bottom:.06em;white-space:nowrap}
+.turn::after{content:"";position:absolute;left:0;right:.12em;bottom:0;height:max(1.5px,.035em);background:currentColor;opacity:.7;transform-origin:0 50%}
+/* Desktop: a 12-column grid. Titles take columns 1 to 7, their text columns 8 to 12. */
+.split{display:grid;gap:var(--s6)}
+@media (min-width:900px){
+  .split{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);align-items:end}
+  .split > .h2{grid-column:1/8}
+  .split > .body{grid-column:8/13}
+  /* Services: the text runs longer than the title, so both hang from the same top line */
+  #services .split{align-items:start}
+  #services .split > .body{padding-top:.6rem}
+}
+
+/* ---------- Buttons: pills, at least 52px tall ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:3.25rem;padding:.8rem 1.5rem;border-radius:999px;border:1.5px solid transparent;background:var(--action);color:var(--on-action);font:600 1rem/1.2 var(--sans);text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease-out)}
+.btn:active{transform:scale(.98);transition-duration:var(--t-press)}
+.btn[disabled],.btn[aria-disabled="true"]{opacity:.72;cursor:progress}
+.btn svg{width:1.05em;height:1.05em;flex:none;transition:transform var(--t-fast) var(--ease-out)}
+@media (hover:hover){.btn:hover svg{transform:translateX(3px)}.btn:hover{background:#2A3530}}
+@media (hover:hover) and (prefers-color-scheme:dark){.btn:hover{background:#FFFFFF}}
+.btn-quiet{background:transparent;color:var(--ink);border-color:var(--control)}
+@media (hover:hover){.btn-quiet:hover{background:transparent;border-color:var(--ink)}}
+.btn-block{width:100%}
+@media (min-width:600px){.btn-block{width:auto}}
+/* On the screen */
+.btn-brass{background:var(--screen-accent);color:#141D18}
+.btn-ghost{background:transparent;color:var(--screen-ink);border-color:var(--screen-control)}
+@media (hover:hover){.btn-brass:hover{background:#ECCF9C}.btn-ghost:hover{background:transparent;border-color:var(--screen-ink)}}
+.in-glyph{width:1.05em;height:1.05em;flex:none}
+.ext{width:.85em;height:.85em;opacity:.8}
+
+/* ---------- Header: sits on the screen, condenses, steps aside on the way down ---------- */
+.site-head{position:sticky;top:0;z-index:35;background:var(--screen);color:var(--screen-ink);--focus:var(--screen-accent);transition:transform 280ms var(--ease-out-expo)}
+.site-head .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:var(--head-h);transition:transform var(--t-base) var(--ease)}
+.site-head.is-stuck{transform:translateY(-10px);box-shadow:0 1px 0 var(--screen-line)}
+.site-head.is-stuck .wrap{transform:translateY(5px)}
+.site-head.is-hidden{transform:translateY(calc(-100% - 1.5rem));transition:transform 220ms var(--ease-exit)}
+@media (prefers-reduced-motion:reduce){.site-head,.site-head .wrap{transition:none}}
+/* Reading progress: a 1px brass line along the bottom of the header (motion allowed only) */
+.head-progress{position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--screen-accent);transform-origin:0 50%;transform:scaleX(0)}
+@media (prefers-reduced-motion:reduce){.head-progress{display:none}}
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:scroll()){.head-progress{animation:grow-x linear both;animation-timeline:scroll(root block)}}}
+@keyframes grow-x{to{transform:scaleX(1)}}
+.brand{display:inline-flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.01em;min-height:44px;white-space:nowrap}
+.head-nav{display:flex;align-items:center;gap:1.25rem}
+.head-link,.head-sec{font:500 var(--fs-small)/1 var(--sans);display:inline-flex;align-items:center;min-height:44px;color:var(--screen-muted);white-space:nowrap;text-decoration:none}
+.head-link:hover,.head-sec:hover{color:var(--screen-ink)}
+.head-sec{display:none;position:relative;padding-inline:.55rem;justify-content:center}
+.head-sec::after{content:"";position:absolute;left:.55rem;right:.55rem;bottom:10px;height:1px;background:var(--screen-accent);transform:scaleX(0);transform-origin:left;transition:transform 220ms var(--ease-out)}
+.head-sec:hover::after,.head-sec[aria-current]::after{transform:scaleX(1)}
+.head-sec[aria-current]{color:var(--screen-ink)}
+.head-cta{display:none;font:600 var(--fs-small)/1 var(--sans);color:var(--screen-accent);text-decoration:none;white-space:nowrap}
+.head-cta:hover{text-decoration:underline;text-decoration-thickness:1px}
+.menu-btn{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:.45rem .25rem .45rem .75rem;border:0;background:transparent;color:var(--screen-ink);font:500 var(--fs-small)/1 var(--sans);letter-spacing:.02em;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.menu-btn svg{width:1.15em;height:1.15em}
+@media (max-width:899.98px){.has-menu .head-link{display:none}}
+/* Phones: the nav keeps one width whether it holds the no-script link or the Menu button, so nothing shifts when the script arrives */
+@media (max-width:899.98px){.head-nav{min-width:6.25rem;justify-content:flex-end}}
+@media (min-width:900px){.head-cta{display:inline-flex;align-items:center;min-height:44px}}
+@media (min-width:1100px){.head-sec{display:inline-flex;min-width:44px}.menu-btn{display:none}.head-nav{gap:.6rem}.head-link{margin-inline:.55rem .9rem}}
+@media (max-width:359.98px){.brand{font-size:.9375rem}.head-nav{gap:.75rem}}
+
+/* ---------- Phone menu: a sheet on the screen colour, inside thumb reach ---------- */
+.menu{margin:auto 0 0;width:100%;max-width:none;max-height:88dvh;padding:0;border:0;border-radius:20px 20px 0 0;background:var(--screen);color:var(--screen-ink);--focus:var(--screen-accent);overflow:auto;overscroll-behavior:contain}
+.menu::backdrop{background:rgba(5,9,7,.62)}
+@media (min-width:600px){.menu{margin:auto;max-width:28rem;border-radius:20px}}
+.menu-in{padding:.6rem var(--gutter) calc(1.1rem + env(safe-area-inset-bottom));display:grid;gap:.9rem}
+.menu-top{display:flex;align-items:center;justify-content:space-between}
+.menu-title{font:500 var(--fs-label)/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--screen-accent)}
+.menu-close{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.4rem .2rem .4rem .6rem;background:none;border:0;color:var(--screen-ink);font:500 var(--fs-small)/1 var(--sans);cursor:pointer;border-radius:10px}
+.menu-close svg{width:1.2em;height:1.2em}
+.menu-links{border-top:1px solid var(--screen-line);counter-reset:mi}
+.menu-links a{display:flex;align-items:baseline;gap:1rem;min-height:3.3rem;padding-block:.85rem;font:400 1.375rem/1.2 var(--serif);color:var(--screen-ink);text-decoration:none;border-bottom:1px solid var(--screen-line)}
+.menu-links a::before{counter-increment:mi;content:counter(mi,decimal-leading-zero) / "";font:500 var(--fs-label)/1 var(--mono);letter-spacing:.1em;color:var(--screen-accent);min-width:1.5rem}
+.menu-links a:hover{color:var(--screen-accent)}
+.menu-actions{display:grid;gap:.6rem;margin-top:.35rem}
+.menu-up{justify-self:center;display:inline-flex;align-items:center;min-height:44px;color:var(--screen-ink);font-weight:500;font-size:var(--fs-small)}
+html.menu-open{overflow:hidden}
+/* Opening and closing both animate. Browsers without allow-discrete simply close at once. */
+@media (prefers-reduced-motion:no-preference){
+  .menu{translate:0 100%;transition:translate 220ms var(--ease-exit),display 220ms allow-discrete,overlay 220ms allow-discrete}
+  .menu[open]{translate:0 0;transition:translate 360ms var(--ease-out-expo),display 360ms allow-discrete,overlay 360ms allow-discrete}
+  @starting-style{.menu[open]{translate:0 100%}}
+  .menu::backdrop{opacity:0;transition:opacity 200ms ease,display 200ms allow-discrete,overlay 200ms allow-discrete}
+  .menu[open]::backdrop{opacity:1}
+  @starting-style{.menu[open]::backdrop{opacity:0}}
+  .menu[open] .menu-links li{animation:item-in 320ms var(--ease-out-expo) both}
+  .menu[open] .menu-links li:nth-child(2){animation-delay:30ms}
+  .menu[open] .menu-links li:nth-child(3){animation-delay:60ms}
+  .menu[open] .menu-links li:nth-child(4){animation-delay:90ms}
+  .menu[open] .menu-links li:nth-child(n+5){animation-delay:120ms}
+  @keyframes item-in{from{opacity:0;translate:0 8px}}
+  @media (min-width:600px){.menu{translate:0 16px;opacity:0;transition:translate 220ms var(--ease-exit),opacity 220ms var(--ease-exit),display 220ms allow-discrete,overlay 220ms allow-discrete}.menu[open]{translate:0 0;opacity:1;transition:translate 360ms var(--ease-out-expo),opacity 360ms var(--ease-out-expo),display 360ms allow-discrete,overlay 360ms allow-discrete}@starting-style{.menu[open]{translate:0 16px;opacity:0}}}
+}
+
+/* ---------- Back to top (desktop only, so it never meets the phone action bar) ---------- */
+.to-top{position:fixed;right:1.5rem;bottom:calc(1.5rem + var(--setup-h));z-index:30;width:3rem;height:3rem;border-radius:50%;display:grid;place-items:center;background:var(--screen);color:var(--screen-accent);border:1px solid rgba(224,189,130,.45);--focus:var(--screen-accent);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity var(--t-base) var(--ease),transform var(--t-base) var(--ease-out),visibility 0s linear var(--t-base)}
+.to-top.show{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.to-top:active{transform:scale(.96)}
+.to-top svg{width:1.25rem;height:1.25rem}
+/* A two-tone ring: brass on a dark halo, so it reads over paper and over the screen alike */
+.to-top:focus-visible{outline:2px solid var(--screen-accent);outline-offset:2px;box-shadow:0 0 0 6px var(--screen)}
+@media (max-width:899.98px){.to-top{display:none}}
+@media (prefers-reduced-motion:reduce){.to-top{transition:none}}
+
+/* ---------- Avatar (About, only with a real photo) ---------- */
+.avatar{--av:2.25rem;width:var(--av);height:var(--av);border-radius:50%;overflow:hidden;flex:none;display:grid;place-items:center;background:var(--raised);color:var(--accent);font:400 calc(var(--av)*.4)/1 var(--serif);box-shadow:inset 0 0 0 1px var(--hairline)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar-lg{--av:clamp(7.5rem,24vw,12.5rem)}
+
+/* ---------- The viewfinder: four brass corner marks. Decoration only. ---------- */
+/* Tied to the content column: each corner sits just outside the gutter line, not on the screen edge */
+.frame{position:absolute;inset:var(--s4) calc(var(--gutter) - .75rem);pointer-events:none;--l:1.25rem;--w:1.5px;
+  background:
+    linear-gradient(var(--corner) 0 0) left top/var(--l) var(--w),linear-gradient(var(--corner) 0 0) left top/var(--w) var(--l),
+    linear-gradient(var(--corner) 0 0) right top/var(--l) var(--w),linear-gradient(var(--corner) 0 0) right top/var(--w) var(--l),
+    linear-gradient(var(--corner) 0 0) left bottom/var(--l) var(--w),linear-gradient(var(--corner) 0 0) left bottom/var(--w) var(--l),
+    linear-gradient(var(--corner) 0 0) right bottom/var(--l) var(--w),linear-gradient(var(--corner) 0 0) right bottom/var(--w) var(--l);
+  background-repeat:no-repeat}
+/* Desktop: 24px outside the column, which stops growing at --max on wide screens */
+@media (min-width:900px){.frame{inset:var(--s6) max(calc(var(--gutter) - 1.5rem),calc((100% - var(--max)) / 2 - 1.5rem));--l:2rem}}
+
+/* ---------- 1. Hero: the first screen ---------- */
+/* overflow:clip crops like hidden but is not a scroll container, so view timelines inside follow the page */
+.hero{position:relative;overflow:hidden;overflow:clip;isolation:isolate;background:var(--screen);color:var(--screen-ink);--focus:var(--screen-accent);padding:var(--s5) 0 var(--s7)}
+.hero-grid{position:relative;display:grid;gap:var(--s5)}
+.hero-label{color:var(--screen-accent);padding-top:var(--s4)}
+.hero h1{font:400 var(--fs-display)/1.04 var(--serif);letter-spacing:-.022em;text-wrap:balance}
+.hero h1 .h1-q{display:block}
+.hero h1 .turn{color:var(--screen-accent)}
+.hero-foot{display:grid;gap:var(--s5)}
+.positioning{font-size:clamp(1.0625rem,.95rem + .5vw,1.3125rem);line-height:1.5;color:var(--screen-muted);max-width:34ch;text-wrap:pretty}
+.hero-actions{display:grid;gap:var(--s3)}
+@media (min-width:600px){.hero-actions{display:flex;flex-wrap:wrap}}
+.reassure{font-size:var(--fs-small);color:var(--screen-muted);margin-top:calc(var(--s2) * -1)}
+@media (max-width:359.98px){.hero{padding-top:var(--s3)}.hero-grid{gap:var(--s4)}.hero-actions .btn{padding-inline:1rem;font-size:.9375rem}.hero-actions .btn svg{display:none}}
+/* Portrait: only with a real photo (CONFIG.photo), or as a dashed box under ?preview=slots */
+.hero-portrait{position:relative;margin:0;aspect-ratio:4/5;overflow:hidden;overflow:clip;border-radius:2px;background:#1A231F}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+@media (max-width:899.98px){
+  .hero-portrait{grid-row:1;justify-self:end;width:4.5rem}
+  .hero-label{grid-row:1;align-self:center}
+}
+@media (min-width:900px){
+  .hero{min-height:min(calc(100svh - var(--head-h)),56rem);display:grid;align-content:center;padding:var(--s8) 0}
+  .hero-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);row-gap:var(--s6);align-items:end}
+  .hero-label,.hero h1{grid-column:1/-1}
+  .hero-label{grid-row:1}.hero h1{grid-row:2}.hero-foot{grid-row:3;grid-column:1/7}
+  .hero-portrait{grid-column:10/13;grid-row:2/4;align-self:end}
+  .hero.has-portrait h1{grid-column:1/9}
+  /* With no portrait, the foot steps across to the column-8 axis: a Z-read from the italic turn
+     down to the buttons, instead of everything pinned to the left corner */
+}
+@media (min-width:1100px){.hero:not(.has-portrait) .hero-grid{row-gap:var(--s5)}.hero:not(.has-portrait) .hero-foot{grid-column:7/13;align-self:start}}
+
+/* ---------- 2. Intro statement and 3. the credits roll ---------- */
+.intro{padding-bottom:0}
+.intro .statement{max-width:32ch}
+.credits{padding-top:var(--s8)}
+.proof-strip{display:grid;gap:var(--s5)}
+.proof-strip li{display:grid;gap:var(--s1)}
+.ps-k{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ps-c{font:400 clamp(1.25rem,1.1rem + .6vw,1.625rem)/1.3 var(--serif);letter-spacing:-.005em;text-wrap:balance}
+.ps-n{font-variant-numeric:lining-nums tabular-nums;margin-right:.3em}
+/* Desktop: set like end credits. The role ends on the column-8 axis, the credit reads from it. */
+@media (min-width:900px){
+  .credits .scene{margin-bottom:var(--s7)}
+  .proof-strip{gap:var(--s4)}
+  .proof-strip li{grid-template-columns:calc((100% + var(--s5)) / 12 * 7 - var(--s5)) 1fr;column-gap:var(--s5);align-items:baseline}
+  .ps-k{text-align:right}
+}
+
+/* ---------- 4. The problem ---------- */
+.finds-q{margin-top:var(--s8)}
+.finds{margin-top:var(--s6)}
+.finds li{display:grid;grid-template-columns:2.5rem 1fr;gap:var(--s3);padding-block:var(--s4);border-top:1px solid var(--hairline)}
+.finds li:last-child{border-bottom:1px solid var(--hairline)}
+.finds .n,.step-n{font:500 var(--fs-label)/1 var(--mono);letter-spacing:.1em;color:var(--accent);padding-top:.7em}
+.close{margin-top:var(--s8);display:grid;gap:var(--s6)}
+@media (min-width:900px){
+  .finds-q,.finds{margin-left:calc((100% + var(--s5)) / 12 * 2)}
+  .finds li{grid-template-columns:4rem 1fr;max-width:46rem}
+  .close{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5)}
+  .close > .body{grid-column:8/13;grid-row:1}
+  /* The lit line then runs wide underneath: the one big beat of the section */
+  .close > .statement{grid-column:1/11;grid-row:2;max-width:24ch}
+}
+/* Desktop: a title on the left holds its place while the list or form reads on the right */
+@media (min-width:900px){
+  .h2{max-width:20ch}
+  #faq .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);align-items:start}
+  #faq .scene{grid-column:1/-1}
+  #faq .h2{grid-column:1/5;position:sticky;top:calc(var(--head-h) + 1.5rem)}
+  #faq .faq,#faq .faq-more{grid-column:5/13;margin-left:0}
+  #faq .faq{margin-top:0}
+  .contact-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);align-items:start}
+  .contact-head .h2{grid-column:1/8;grid-row:1/3}
+  .contact-head .statement{grid-column:8/13;margin-top:.5rem}
+  .contact-head .body{grid-column:8/13}
+}
+
+/* ---------- 5. What's included: a two-column list with hairlines, no cards ---------- */
+.benefits{margin-top:var(--s8);display:grid;border-top:1px solid var(--hairline)}
+.benefit{display:grid;gap:var(--s2);padding-block:var(--s4) var(--s5);border-bottom:1px solid var(--hairline)}
+.b-name{font:400 1.375rem/1.25 var(--serif);letter-spacing:-.005em}
+.benefit p{color:var(--muted);max-width:34rem}
+@media (min-width:760px){
+  .benefits{grid-template-columns:1fr 1fr;column-gap:var(--s7)}
+  .benefit:nth-child(-n+2){border-top:0}
+}
+/* Wide screens: three across, so the six services read as two calm rows */
+@media (min-width:1100px){.benefits{grid-template-columns:repeat(3,1fr);column-gap:var(--s6)}.benefit:nth-child(3){border-top:0}}
+.services-close{margin-top:var(--s8)}
+/* The monthly reporting promise: body size in ink, on the column-8 axis, not small print */
+.honest{margin-top:var(--s6);max-width:34rem;color:var(--ink)}
+@media (min-width:900px){.honest{margin-left:calc((100% + var(--s5)) / 12 * 7)}}
+
+/* ---------- 6. About ---------- */
+.about-grid{display:grid;gap:var(--s7);margin-top:var(--s8);align-items:start}
+.about-body{display:grid;gap:var(--s4);max-width:38rem;color:var(--muted)}
+.about-name{font:400 var(--fs-lead)/1.4 var(--serif);color:var(--ink)}
+.about-name,.about-body .first{font-size:clamp(1.3125rem,1.2rem + .5vw,1.625rem)}
+.about-body .first{font-family:var(--serif);line-height:1.4;color:var(--ink)}
+.about-body .statement{margin-block:var(--s5);max-width:24ch}
+/* The About column is narrow on desktop, so its lit line stops at 44px */
+.about-body .statement.lit{font-size:min(var(--fs-title),2.75rem);max-width:none}
+.about-body p:not(.statement):not(.about-name):not(.first){text-wrap:pretty}
+/* Desktop: the title holds its place on the left while the story reads on the right */
+@media (min-width:900px){
+  #about .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);align-items:start}
+  #about .scene,#about #slot-gallery{grid-column:1/-1}
+  #about .h2{grid-column:1/7;position:sticky;top:calc(var(--head-h) + 1.5rem)}
+  .about-grid{grid-column:8/13;margin-top:0;gap:var(--s6)}
+  .about-grid.has-portrait > :first-child{width:min(100%,20rem)}
+}
+.about-meta{display:grid;gap:.35rem;color:var(--muted);font-size:var(--fs-small)}
+.about-meta:not(:has(> :not([hidden]))){display:none}
+.creds{display:grid;gap:.4rem;margin-top:.4rem}
+.nudge{font-style:italic;font-family:var(--serif);font-size:1.125rem}
+.about-actions{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s2)}
+/* Optional 4:5 portrait */
+.portrait-frame{position:relative;width:min(100%,24rem);aspect-ratio:4/5;border-radius:2px;overflow:hidden;overflow:clip;background:var(--raised)}
+.portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;scale:1.08}
+/* Optional gallery as a contact sheet: 3:2 frames, hairlines, frame numbers */
+.gallery{margin-top:var(--s8);display:grid;grid-auto-flow:column;grid-auto-columns:min(82%,22rem);gap:var(--s4);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding-bottom:var(--s3);counter-reset:fr}
+.gallery > li{scroll-snap-align:start}
+.gallery figure{display:grid;gap:.6rem;align-content:start;padding:.5rem;border:1px solid var(--hairline)}
+.gallery figure::before{counter-increment:fr;content:counter(fr,decimal-leading-zero) "A" / "";font:500 var(--fs-label)/1 var(--mono);letter-spacing:.1em;color:var(--accent)}
+.gallery img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:var(--raised)}
+.gallery figcaption{font-size:var(--fs-small);color:var(--muted)}
+.gallery .ph{border-radius:2px}
+@media (min-width:900px){.gallery{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}}
+
+/* ---------- 7. How it works: a timeline that draws itself ---------- */
+.steps{margin-top:var(--s8);display:grid}
+.step{position:relative;padding:0 0 var(--s6) 3rem;display:grid;gap:var(--s2);align-content:start}
+.step-n{position:absolute;left:0;top:.2rem;padding:0}
+.step::after{content:"";position:absolute;left:.45rem;top:1.6rem;bottom:.4rem;width:1px;background:var(--accent);opacity:.55}
+.step:last-child{padding-bottom:0}
+.step:last-child::after{display:none}
+.step h3{font:400 2rem/1.15 var(--serif);letter-spacing:-.01em}
+.step p{color:var(--muted);max-width:30rem}
+@media (min-width:900px){
+  .steps{grid-template-columns:repeat(3,1fr);gap:var(--s6)}
+  .step{padding:var(--s7) 0 0}
+  .step-n{top:0}
+  .step::after{left:0;right:-1.5rem;top:1.5rem;bottom:auto;width:auto;height:1px}
+}
+.how-close{margin-top:var(--s8)}
+
+/* ---------- 8. The work ---------- */
+/* No illustration: the type carries it, on the column-8 axis like the other secondary text */
+.cs-empty{margin-top:var(--s7);display:grid}
+.cs-empty-copy{display:grid;gap:var(--s4);max-width:36rem}
+.cs-empty .h3{color:var(--ink);font-size:var(--fs-statement);line-height:1.2}
+.cs-empty p{color:var(--muted)}
+/* Desktop: the title on the left, the copy beside it on the column-8 axis; filled slots run full width */
+@media (min-width:900px){
+  #case-studies .wrap{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5);align-items:start}
+  #case-studies .wrap > *{grid-column:1/-1}
+  #case-studies .wrap > .h2{grid-column:1/8;grid-row:2}
+  #case-studies .wrap > .cs-empty{grid-column:8/13;grid-row:2;margin-top:.6rem}
+}
+.slot{margin-top:var(--s8)}
+.slot > .h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.625rem)}
+.slot-intro{margin-top:.5rem;color:var(--muted);max-width:56ch}
+.slot-list{margin-top:var(--s5);display:grid;gap:var(--s5)}
+@media (min-width:760px){.slot-list.two{grid-template-columns:1fr 1fr;column-gap:var(--s7)}.slot-list.two:has(> :only-child){grid-template-columns:1fr}}
+/* Profiles I manage: hairline frames that scroll sideways */
+.pc-scroll{margin-top:var(--s5);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding-inline:var(--gutter);padding:.25rem var(--gutter) .9rem;margin-inline:calc(var(--gutter)*-1)}
+.pc-list{display:grid;grid-auto-flow:column;grid-auto-columns:min(84%,20rem);gap:var(--s4);margin:0}
+@media (min-width:900px){.pc-scroll{padding-inline:0;margin-inline:0}.pc-list{grid-auto-columns:20rem}}
+.pc{scroll-snap-align:start;border:1px solid var(--rule);border-radius:2px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;background:var(--bg)}
+.pc-cover{height:3.5rem;background:var(--screen)}
+.pc-body{padding:0 1.25rem 1.35rem;display:grid;gap:.5rem;align-content:start}
+.pc-av{width:4.25rem;height:4.25rem;margin-top:-2.1rem;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:var(--raised);color:var(--accent);font:400 1.5rem/1 var(--serif);box-shadow:0 0 0 4px var(--bg)}
+.pc-av img{width:100%;height:100%;object-fit:cover}
+.pc-av svg{width:2.2rem;height:2.2rem}
+.pc-name{font:400 1.25rem/1.25 var(--serif)}
+.pc-meta{font-size:var(--fs-small);color:var(--muted)}
+.pc-heads{display:grid;gap:.6rem;padding-top:.85rem;margin-top:.2rem;border-top:1px solid var(--hairline)}
+.pc-heads dt{font:500 var(--fs-label)/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.pc-before dd{font-size:var(--fs-small);color:var(--muted)}
+.pc-after dd{font:400 1.08rem/1.4 var(--serif)}
+.pc-hl{padding-top:.75rem;border-top:1px solid var(--hairline);font-size:var(--fs-small);display:grid;gap:.2rem}
+.pc-when{font-size:var(--fs-label);color:var(--muted);font-variant-numeric:tabular-nums}
+.pc-perm{font-size:var(--fs-label);color:var(--muted)}
+/* Case studies: picture, title, who, then challenge, what I did and outcome */
+.cs-list{display:grid;gap:var(--s8)}
+.cs{display:grid;gap:var(--s4);align-content:start;padding-top:var(--s5);border-top:1px solid var(--hairline)}
+.cs-img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:var(--raised)}
+.cs-body{display:grid;gap:var(--s4);align-content:start}
+.cs-who{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.cs dl{display:grid;gap:var(--s4)}
+.cs dt{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cs dd{color:var(--muted);margin-top:.3rem}
+.cs dl > div:last-child dd{color:var(--ink)}
+.cs blockquote{font:400 var(--fs-h3)/1.3 var(--serif);max-width:30ch}
+/* Desktop: the first case study runs full width with its three parts side by side; the rest pair up */
+@media (min-width:900px){.cs-list{grid-template-columns:1fr 1fr;column-gap:var(--s7)}.cs-list > .cs:first-child{grid-column:1/-1}.cs-list > .cs:first-child dl{grid-template-columns:repeat(3,1fr);column-gap:var(--s6)}}
+/* Results, quotes, logos */
+.res{display:grid;gap:.4rem;padding-top:var(--s4);border-top:1px solid var(--hairline)}
+.res-r{font:400 1.375rem/1.3 var(--serif)}
+.res-m{font-size:var(--fs-small);color:var(--muted);font-variant-numeric:tabular-nums}
+.quote{display:grid;gap:var(--s4)}
+.quote blockquote{font:400 var(--fs-h3)/1.3 var(--serif);max-width:30ch}
+.slot-list.two > .quote:only-child blockquote{font-size:var(--fs-statement)}
+.quote figcaption{font:500 var(--fs-label)/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.quote figcaption strong{color:var(--ink);font-weight:500}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));gap:var(--s3)}
+.logos li{display:grid;place-items:center;min-height:4.5rem;padding:.75rem 1.25rem}
+.logos img{height:2.75rem;width:auto;max-width:10rem;object-fit:contain;filter:grayscale(1);opacity:.75;transition:opacity var(--t-fast) var(--ease),filter var(--t-fast) var(--ease)}
+.logos li:hover img{filter:none;opacity:1}
+.logo-name{font-weight:600;color:var(--muted)}
+
+/* ---------- 9. The check block: the second screen, a bookend to the hero ---------- */
+.band{position:relative;background:var(--screen);color:var(--screen-ink);--focus:var(--screen-accent);overflow:clip;isolation:isolate}
+.band .scene{color:var(--screen-muted);border-top-color:var(--screen-line)}
+.band .scene-n,.band .turn{color:var(--screen-accent)}
+.band .lede{color:var(--screen-muted)}
+.band .lede strong{font-weight:600;color:var(--screen-ink)}
+.teaser-grid{display:grid;gap:var(--s7);align-items:center}
+@media (min-width:960px){.teaser-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5)}.teaser-copy{grid-column:1/7}.preview-wrap{grid-column:8/13}}
+.teaser-copy .lede{margin-top:var(--s5);max-width:34rem}
+.preview-wrap{position:relative;max-width:31rem;width:100%;justify-self:center;--focus:#7A5216}
+/* The preview stays paper in both modes, like a printed card held up to the screen */
+.preview{position:relative;color:#141D18;background:#FFFDF8;border-radius:16px;padding:1.5rem 1.4rem 1.25rem}
+.pv-top{display:flex;justify-content:space-between;font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#545C56}
+.pv-bar{height:2px;background:rgba(20,29,24,.12);margin:.75rem 0 1.25rem}
+.pv-bar>span{display:block;height:100%;width:12.5%;background:#7A5216}
+.pv-q{font:400 clamp(1.25rem,1.1rem + .5vw,1.5rem)/1.3 var(--serif);text-wrap:balance}
+.pv-hint{margin-top:.8rem;font-size:var(--fs-small);color:#545C56}
+.pv-scale{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-top:1rem}
+.pv-scale a{display:grid;place-items:center;height:3.25rem;border:1px solid #878D88;border-radius:999px;font:600 1rem/1 var(--sans);font-variant-numeric:tabular-nums;color:#141D18;text-decoration:none;-webkit-tap-highlight-color:transparent;transition:background-color var(--t-fast) var(--ease),color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+@media (hover:hover) and (pointer:fine){.pv-scale a:hover{background:#141D18;border-color:#141D18;color:#F6F3EC}}
+.pv-ends{display:flex;justify-content:space-between;font-size:var(--fs-label);color:#545C56;margin-top:.5rem}
+/* Dark mode: the card becomes a raised dark surface, so it no longer glows as a white slab */
+@media (prefers-color-scheme:dark){
+  .preview-wrap{--focus:var(--accent)}
+  .preview{background:var(--raised);color:var(--ink);box-shadow:inset 0 0 0 1px var(--hairline)}
+  .pv-top,.pv-hint,.pv-ends{color:var(--muted)}
+  .pv-bar{background:var(--hairline)}
+  .pv-bar>span{background:var(--accent)}
+  .pv-scale a{border-color:var(--control);color:var(--ink)}
+}
+@media (prefers-color-scheme:dark) and (hover:hover) and (pointer:fine){.pv-scale a:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}}
+@media (max-width:359.98px){.preview{padding:1.25rem 1rem 1.1rem}.pv-scale{gap:.3rem}}
+
+/* ---------- 10. Questions: one hairline list ---------- */
+.faq{margin-top:var(--s7);border-top:1px solid var(--hairline);max-width:52rem}
+@media (min-width:900px){.faq{margin-left:calc((100% + var(--s5)) / 12 * 2)}}
+.faq details{border-bottom:1px solid var(--hairline)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.25rem;padding:1.25rem 0;font:400 clamp(1.1875rem,1.1rem + .45vw,1.5rem)/1.35 var(--serif);min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+/* A 1.5px plus that turns into a minus */
+.faq summary::after{content:"";flex:none;width:.9rem;height:.9rem;background:linear-gradient(currentColor,currentColor) center/100% 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 100% no-repeat;color:var(--accent);transition:background-size var(--t-base) var(--ease)}
+.faq details[open] summary::after{background-size:100% 1.5px,1.5px 0}
+.faq .a{padding:0 0 1.5rem;color:var(--muted);max-width:62ch;display:grid;gap:.7rem}
+@media (prefers-reduced-motion:no-preference){.faq details[open] .a{animation:faq-open 260ms var(--ease-out)}@keyframes faq-open{from{opacity:0;transform:translateY(-6px)}}}
+.faq-more{margin-top:var(--s5);color:var(--muted)}
+@media (min-width:900px){.faq-more{margin-left:calc((100% + var(--s5)) / 12 * 2)}}
+
+/* ---------- 11. Contact ---------- */
+.contact-head .statement{margin-top:var(--s6);max-width:36ch;font-size:clamp(1.3125rem,1.15rem + .8vw,1.75rem);line-height:1.3}
+.contact-head .body{margin-top:var(--s5)}
+.contact-grid{display:grid;gap:var(--s7);margin-top:var(--s8);align-items:start}
+@media (min-width:900px){.contact-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5)}.contact-panel{grid-column:1/7}.direct{grid-column:8/13}}
+/* The form is the only raised card on the page: hairline, no shadow */
+.contact-panel{background:var(--raised);border:1px solid var(--hairline);border-radius:16px;padding:clamp(1.25rem,4.5vw,2.5rem)}
+.contact-panel noscript p + p{margin-top:.75rem}
+.contact-panel noscript .tap{overflow-wrap:anywhere}
+.form-h{font:400 clamp(1.375rem,1.2rem + .6vw,1.75rem)/1.25 var(--serif)}
+.field{display:grid;gap:.4rem;margin-top:1.4rem}
+.field label{font-weight:600}
+.help{font-size:var(--fs-small);color:var(--muted)}
+.input{width:100%;min-height:3.25rem;padding:.75rem .95rem;border:1px solid var(--control);border-radius:10px;background:var(--raised);color:var(--ink);caret-color:var(--accent);font:inherit;font-size:1.0625rem;line-height:1.4;transition:border-color var(--t-fast) var(--ease)}
+textarea.input{min-height:7.5rem;resize:vertical}
+.input::placeholder{color:var(--placeholder);opacity:1}
+@media (hover:hover) and (pointer:fine){.input:hover{border-color:var(--ink)}}
+.input:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-color:var(--ink)}
+.input[aria-invalid="true"]{border-color:var(--error);border-width:2px}
+.field-err{color:var(--error);font-size:var(--fs-small);font-weight:600}
+@media (prefers-reduced-motion:no-preference){.field-err:not([hidden]){animation:err-in 200ms var(--ease-out) both}@keyframes err-in{from{opacity:0;translate:0 -4px}}}
+.suggest{font-size:var(--fs-small)}
+.suggest button{font:inherit;font-weight:600;background:none;border:0;padding:.3rem .4rem;margin-inline:-.1rem;color:var(--ink);text-decoration:underline;cursor:pointer;display:inline-flex;align-items:center;min-height:44px;vertical-align:middle;border-radius:8px}
+.privacy-line{margin-top:1.5rem;font-size:var(--fs-small);color:var(--muted)}
+.send{margin-top:1.25rem}
+.reply-time{margin-top:.9rem;font-size:var(--fs-small);color:var(--muted)}
+.status{margin-top:1rem;font-size:var(--fs-small);font-weight:600}
+.status:empty{display:none}
+.status.is-error{color:var(--error)}
+.fallback{margin-top:1rem;padding:1.15rem;border-radius:10px;border:1px solid var(--control);display:grid;gap:.9rem;justify-items:start}
+.cut-note{font-weight:600}
+.copy-status{font-size:var(--fs-small);color:var(--muted)}
+.copy-status:empty{display:none}
+.input{scroll-margin-block:6rem}
+.done{display:grid;gap:.6rem;padding-top:var(--s2)}
+.done h3{font:400 clamp(1.5rem,1.3rem + .8vw,2rem)/1.2 var(--serif);outline:none}
+@media (prefers-reduced-motion:no-preference){.done:not([hidden]){animation:fade-in 280ms var(--ease-out) both}}
+@keyframes fade-in{from{opacity:0}}
+.hp{display:none!important}
+/* Rather not fill in a form: a plain text column, not a card */
+.direct{display:grid;gap:var(--s3);align-content:start}
+.direct .h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.625rem)}
+.direct p{color:var(--muted)}
+.direct-links{display:grid;gap:0;margin-top:var(--s2);border-top:1px solid var(--hairline)}
+.direct-links a{display:flex;align-items:center;gap:.6rem;min-height:3.25rem;border-bottom:1px solid var(--hairline);text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.direct-links a:hover{text-decoration:underline}
+/* Links that stand alone on their line get a full thumb-sized tap area */
+.tap,.foot-meta a{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---------- Footer: the screen again, unframed (only the hero and the check block carry corners) ---------- */
+.site-foot{position:relative;background:var(--screen);color:var(--screen-muted);--focus:var(--screen-accent);padding-block:var(--s8) calc(var(--s7) + env(safe-area-inset-bottom));font-size:var(--fs-small)}
+.site-foot a{color:var(--screen-ink)}
+.site-foot strong{color:var(--screen-ink);font-weight:600}
+.foot-grid{display:grid;gap:var(--s6)}
+@media (min-width:860px){.foot-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s5)}.foot-grid > :first-child{grid-column:1/6}.foot-meta{grid-column:8/13}}
+.foot-meta{display:grid;gap:.25rem}
+.foot-meta p{display:grid;grid-template-columns:6.5rem 1fr;align-items:center;gap:var(--s3)}
+.foot-meta .role{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--screen-muted)}
+.foot-meta .credit{font:400 1.0625rem/1.35 var(--serif);color:var(--screen-ink)}
+.foot-meta a{word-break:break-all}
+.foot-base{margin-top:var(--s7);padding-top:var(--s4);border-top:1px solid var(--screen-line);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;justify-content:space-between}
+.foot-name{font-family:var(--serif);font-size:1rem}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 1.25rem}
+.foot-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+
+/* ---------- Phone action bar + setup bar ---------- */
+/* One brass pill plus a text link: a slim bar, so it never becomes the loudest thing on the page */
+.sticky-cta{position:fixed;left:0;right:0;bottom:var(--setup-h);z-index:30;display:grid;grid-template-columns:1fr auto;align-items:center;gap:.75rem;padding:.45rem var(--gutter) calc(.45rem + env(safe-area-inset-bottom));background:var(--screen);border-top:1px solid var(--screen-line);--focus:var(--screen-accent);transform:translateY(105%);visibility:hidden;transition:transform var(--t-base) var(--ease),visibility 0s linear var(--t-base)}
+.sticky-cta.show{transform:none;visibility:visible;transition-delay:0s}
+.sticky-cta .btn{min-height:2.75rem;padding-block:.55rem;padding-inline:.75rem;font-size:1rem}
+.sticky-cta .btn-ghost{border-color:transparent;padding-inline:.5rem;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+@media (min-width:900px){.sticky-cta{display:none}}
+@media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
+.setup{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--setup-bg);color:var(--setup-ink);border-top:2px solid #C9971F;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom));font-size:var(--fs-small);line-height:1.4}
+.setup strong{font-weight:800}
+
+/* ---------- Preview of empty slots (only with ?preview=slots in the address) ---------- */
+.ph-banner{padding:.8rem var(--gutter);background:var(--raised);color:var(--ink);border-bottom:1.5px dashed var(--accent);font-size:var(--fs-small);text-align:center}
+.ph{display:grid;place-items:center;align-content:center;gap:.35rem;text-align:center;padding:1.25rem;min-height:7rem;border:1.5px dashed var(--control);border-radius:2px;color:var(--accent);font:500 var(--fs-label)/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.ph small{color:var(--muted);font-size:var(--fs-label);text-transform:none;letter-spacing:0;font-family:var(--sans)}
+.ph-portrait{width:min(100%,24rem);aspect-ratio:4/5}
+.ph-wide{aspect-ratio:3/2;min-height:0}
+.ph-cs{aspect-ratio:16/10;min-height:0;max-width:40rem}
+.ph-logo{min-height:4.5rem;padding:.75rem}
+.ph-card{min-height:16rem;place-items:stretch;align-content:start;text-align:left;padding:1.25rem;gap:.6rem}
+.ph-card span{display:block;padding:.45rem .6rem;border:1px dashed var(--control)}
+.ph-ring{display:grid;place-items:center;border:1.5px dashed var(--screen-control);background:transparent}
+.ph-tag{padding:.5rem;text-align:center;color:var(--screen-muted);font:500 .625rem/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:899.98px){.hero-portrait.ph-ring{width:6.5rem}}
+
+/* ---------- Motion. Transform and opacity only. The resting state is the finished page, so
+   JavaScript off, Firefox and reduced motion all show everything. ---------- */
+@media (prefers-reduced-motion:no-preference){
+  /* Once, on load: the viewfinder settles and the headline's three phrases rise into place */
+  .frame{animation:settle-frame 1100ms var(--ease-out) both}
+  @keyframes settle-frame{from{transform:scale(1.035);opacity:0}}
+  .hero h1 .ln,.hero h1 .turn,.hero h1 .h1-q{animation:settle 700ms var(--ease-out-expo) both}
+  .hero h1 .ln{display:inline-block}
+  .hero h1 .turn{animation-delay:70ms}
+  .hero h1 .h1-q{animation-delay:140ms}
+  @keyframes settle{from{transform:translateY(.28em)}}
+  .hero .turn::after{animation:draw 900ms var(--ease-out) 350ms both}
+  @keyframes draw{from{transform:scaleX(0)}}
+  /* Section headings: opacity only. Their italic turn underlines itself as the heading arrives. */
+  .will-animate .rv-on{opacity:0;transition:opacity 400ms var(--ease-out)}
+  .will-animate .rv-on.in{opacity:1}
+  .will-animate .rv-on .turn::after{transform:scaleX(0);transition:transform 900ms var(--ease-out) 350ms}
+  .will-animate .rv-on.in .turn::after{transform:none}
+}
+/* Scroll-driven moments (six rules in all): the reading line, the lit lines, the process line,
+   the check preview and the About portrait. Each runs only while its element is on screen. */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    /* Lit lines: the key clause lights word by word as it crosses the screen. The script splits
+       the words only when motion is allowed. Ink at .5 is 3.43:1 light, 4.79:1 dark (large text). */
+    .lit{view-timeline:--lit block;view-timeline-inset:0}
+    .lit .w{--a:calc(.18 + var(--i) / var(--n) * .32);--b:calc(var(--a) + .06);animation:w-lit linear both;animation-timeline:--lit;animation-range:cover calc(var(--a) * 100%) cover calc(var(--b) * 100%)}
+    .steps{view-timeline:--steps block}
+    .step::after{transform-origin:50% 0;animation:draw-y linear both;animation-timeline:--steps;animation-range:entry 20% cover 45%}
+    @keyframes draw-y{from{transform:scaleY(0)}}
+    @keyframes draw-x{from{transform:scaleX(0)}}
+    @media (min-width:900px){.step::after{transform-origin:0 50%;animation-name:draw-x}}
+    .preview-wrap{view-timeline:--pv block}
+    .preview{animation:pv-rise linear both;animation-timeline:--pv;animation-range:entry 0% cover 40%}
+    @keyframes pv-rise{from{translate:0 32px}}
+    .portrait-frame img{animation:par-portrait linear both;animation-timeline:view(block);animation-range:cover 0% cover 100%}
+    @keyframes par-portrait{from{translate:0 12px}to{translate:0 -12px}}
+  }
+  /* Browsers without scroll timelines (Firefox today): one passive script writes --p on each lit line */
+  .raf-scrub .lit .w{--a:calc(.18 + var(--i) / var(--n) * .32);--b:calc(var(--a) + .06);animation:w-lit 1s linear both paused;animation-delay:calc(clamp(0, (var(--p, 0) - var(--a)) / (var(--b) - var(--a)), 1) * -1s)}
+}
+@keyframes w-lit{from{opacity:.5}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head" id="site-head">
+  <span class="head-progress" aria-hidden="true"></span>
+  <div class="wrap">
+    <!-- The name here is what shows before the script runs, or with JavaScript off. Keep it the same as CONFIG.name. -->
+    <a class="brand" href="#top"><span data-cfg="brandName">Raymond Shaahu</span></a>
+    <nav class="head-nav" aria-label="Main">
+      <a class="head-sec" href="#services">Services</a>
+      <a class="head-sec" href="#about">About</a>
+      <a class="head-sec" href="#how">Process</a>
+      <a class="head-sec" href="#faq">FAQ</a>
+      <a class="head-link" href="check/">LinkedIn check</a>
+      <a class="head-cta" href="#contact">Discuss your LinkedIn</a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-haspopup="dialog" aria-controls="menu" aria-expanded="false" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 9h16M4 15h16"/></svg>
+        Menu
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. HERO: the first screen, inside the viewfinder -->
+  <section class="hero" aria-labelledby="hero-title">
+    <span class="frame" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <p class="label hero-label">LinkedIn personal branding</p>
+      <h1 id="hero-title"><span class="ln">You’re impressive</span> <em class="turn">in person.</em> <span class="h1-q">Does your LinkedIn say the same?</span></h1>
+      <div class="hero-foot">
+        <p class="positioning">You’ve spent years building your business, expertise and reputation. But when a potential client, partner or investor looks you up, does your LinkedIn reflect the person they’ll meet?</p>
+        <div class="hero-actions">
+          <a class="btn btn-brass" href="#contact">Let’s talk about your LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="check/">Take the free LinkedIn check</a>
+        </div>
+        <p class="reassure">Nothing goes out in your name without your approval.</p>
+      </div>
+      <!-- PHOTO: fill CONFIG.photo and a 4:5 portrait shows here. Nothing shows until then. -->
+      <figure class="hero-portrait" data-avatar="hero" data-needs="photo" hidden></figure>
+    </div>
+  </section>
+
+  <!-- 2. WHAT I DO -->
+  <section class="intro" aria-label="What I do">
+    <div class="wrap">
+      <p class="statement"><span class="lead-in">I help founders, business owners and senior executives turn their experience into LinkedIn content that builds credibility and keeps them visible to the right people.</span> <strong>Without having to write a single post themselves.</strong></p>
+    </div>
+  </section>
+
+  <!-- 3. ACHIEVEMENTS as end credits: drawn from CONFIG.achievements. This copy is only what
+       browsers without JavaScript see, so keep it the same as CONFIG. -->
+  <section class="credits" aria-labelledby="credits-title">
+    <div class="wrap">
+      <p class="scene" id="credits-title"><span class="scene-n" aria-hidden="true">01</span>Background and experience</p>
+      <ul class="proof-strip" id="proof-strip" aria-label="Background and experience">
+        <li><span class="ps-k">Profiles</span><span class="ps-c"><span class="ps-n">30+</span><span class="ps-v">professional profiles managed</span></span></li>
+        <li><span class="ps-k">Credits</span><span class="ps-c"><span class="ps-v">Production credits on a Netflix series</span></span></li>
+        <li><span class="ps-k">Background</span><span class="ps-c"><span class="ps-v">Film, television and editorial production</span></span></li>
+        <li><span class="ps-k">Worked with</span><span class="ps-c"><span class="ps-v">Senior leadership figures</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. THE PROBLEM -->
+  <section id="problem" aria-labelledby="problem-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">02</span>The problem</p>
+      <div class="split">
+        <h2 class="h2 rv" id="problem-title">You’ve built the reputation. But is LinkedIn <em class="turn">doing it justice?</em></h2>
+        <div class="body">
+          <p class="first">Think about the last time someone recommended a business to you. Chances are, you looked them up before getting in touch.</p>
+          <p>Your potential clients do exactly the same. They hear your name, get an introduction, or meet you at an event. <strong>Then they look you up on LinkedIn.</strong></p>
+        </div>
+      </div>
+      <p class="statement finds-q">And what do they find?</p>
+      <ol class="finds">
+        <li><span class="n" aria-hidden="true">01</span><h3 class="h3">An outdated profile that undersells your experience.</h3></li>
+        <li><span class="n" aria-hidden="true">02</span><h3 class="h3">A few occasional posts that reveal little about how you think.</h3></li>
+        <li><span class="n" aria-hidden="true">03</span><h3 class="h3">Or no real sense of the person behind the business.</h3></li>
+      </ol>
+      <div class="close">
+        <div class="body"><p>You’re busy running a company, leading people and serving clients. You have plenty worth sharing, but writing LinkedIn posts rarely makes the top of the list.</p></div>
+        <p class="statement lit" data-light><span class="lead-in">The problem isn’t that you have nothing worth saying.</span> <strong>It’s that nobody is helping you say it.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHAT I TAKE CARE OF (Raymond's own wording, 13/11/2026) -->
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">03</span>What’s included</p>
+      <div class="split">
+        <h2 class="h2 rv" id="services-title">Your expertise. Your voice. <em class="turn">My responsibility.</em></h2>
+        <div class="body">
+          <p class="first">I get to know you and your business, draw out the stories and opinions behind your experience, and turn them into content that <strong>sounds like you</strong>, not a generic LinkedIn personality.</p>
+          <p>I handle the strategy, writing and content coordination. You stay involved in the ideas and <strong>approve what goes live</strong>, without having to build a content operation yourself.</p>
+        </div>
+      </div>
+      <ul class="benefits" aria-label="What’s included">
+        <li class="benefit"><h3 class="b-name">Personal brand positioning</h3><p>Clarify what you want to be known for and who you want to reach.</p></li>
+        <li class="benefit"><h3 class="b-name">Profile optimisation</h3><p>Make your headline, About section and messaging reflect your experience.</p></li>
+        <li class="benefit"><h3 class="b-name">Content discovery</h3><p>Use focused conversations and check-ins to uncover stories, insights and opinions.</p></li>
+        <li class="benefit"><h3 class="b-name">Content writing</h3><p>Create original posts in your natural voice, with your review and approval.</p></li>
+        <li class="benefit"><h3 class="b-name">Content management</h3><p>Coordinate planning, drafts, revisions and scheduling.</p></li>
+        <li class="benefit"><h3 class="b-name">Performance refinement</h3><p>Review what resonates and adjust the approach over time.</p></li>
+      </ul>
+      <p class="statement quiet services-close"><span class="lead-in">No recycled industry commentary. No one-size-fits-all posts.</span> <strong>Just a professional presence that reflects you.</strong></p>
+      <p class="honest">At the start we agree what you want LinkedIn to do for you. Every month you see what went out, what landed and what we’ll sharpen next.</p>
+    </div>
+  </section>
+
+  <!-- 6. WHO I AM -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">04</span>About</p>
+      <h2 class="h2 rv" id="about-title"><em class="turn">A storyteller first.</em> A LinkedIn specialist by design.</h2>
+      <div class="about-grid">
+        <!-- PORTRAIT: fill CONFIG.portrait and a 4:5 photo shows here. With only CONFIG.photo, a round photo shows. -->
+        <span class="avatar avatar-lg" data-avatar="photo" data-needs-any="name photo" hidden></span>
+        <div class="about-body">
+          <p class="about-name">Hi, I’m <span data-cfg="name">Raymond Shaahu</span>.</p>
+          <p class="first">My background is in film, television and editorial production, including work with Netflix and <strong>production credits on a Netflix series</strong>.</p>
+          <p>That experience taught me to ask better questions, recognise the details that matter and bring someone’s story to life.</p>
+          <p>I now apply that approach to executive LinkedIn content. My work has included managing <strong>more than 30 professional profiles</strong> and working with senior leadership figures to translate their expertise into content that feels genuinely theirs.</p>
+          <p>I don’t start with a template. <strong>I start with a conversation</strong> to understand how you think, what you believe and what makes your perspective different.</p>
+          <p class="statement lit" data-light><span class="lead-in">Your personal brand shouldn’t be a manufactured version of you.</span> <strong>It should be the best representation of who you already are.</strong></p>
+          <!-- BIO: fill CONFIG.bio and it appears here. CREDENTIALS: fill CONFIG.credentials. -->
+          <p data-cfg="bio" data-needs="bio" hidden></p>
+          <div class="about-meta">
+            <p data-cfg="yearsExperience" data-needs="yearsExperience" hidden></p>
+            <p data-needs="location" hidden>Based in <span data-cfg="location"></span></p>
+          </div>
+          <div id="slot-credentials" hidden>
+            <h3 class="small" style="font-weight:600;color:var(--ink)">Qualifications and memberships</h3>
+            <ul class="slot-list creds"></ul>
+          </div>
+          <p>Today I manage LinkedIn for senior leaders and a growing list of clients, and the work is already bringing them visibility, conversations and opportunities.</p>
+          <p class="nudge" data-needs="linkedinUrl" hidden>See the kind of presence I build, starting with my own.</p>
+          <div class="about-actions">
+            <a class="btn btn-quiet" data-cfg-href="linkedinUrl" data-needs="linkedinUrl" hidden target="_blank" rel="noopener noreferrer">
+              <svg class="in-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="8" r="1.35" fill="currentColor"/><rect x="6.85" y="10.3" width="2.3" height="7.2" rx=".4" fill="currentColor"/><path d="M11.2 10.3h2.2v1.05c.5-.78 1.4-1.25 2.5-1.25 1.95 0 3 1.25 3 3.45v3.95h-2.3v-3.7c0-1.15-.48-1.75-1.38-1.75-.95 0-1.72.68-1.72 1.9v3.55h-2.3z" fill="currentColor"/></svg>
+              See my LinkedIn profile
+              <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- GALLERY: fill CONFIG.gallery and your working or speaking photos appear here as a contact sheet -->
+      <div id="slot-gallery" hidden>
+        <ul class="slot-list gallery" aria-label="Photos of Raymond at work"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. HOW IT WORKS (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">05</span>How it works</p>
+      <h2 class="h2 rv" id="how-title">A simple process that <em class="turn">respects your time.</em></h2>
+      <ol class="steps">
+        <li class="step"><span class="step-n" aria-hidden="true">01</span><h3>We talk</h3><p>We discuss your goals, audience and experience. I learn how you speak and what you want to be known for.</p></li>
+        <li class="step"><span class="step-n" aria-hidden="true">02</span><h3>I create</h3><p>I shape the strategy, refine your profile where needed and draft content for you to review. <strong>Nothing is published without your approval.</strong></p></li>
+        <li class="step"><span class="step-n" aria-hidden="true">03</span><h3>I manage</h3><p>I coordinate the ongoing content calendar and publishing process, with focused check-ins to capture fresh ideas and review progress.</p></li>
+      </ol>
+      <p class="statement quiet how-close"><span class="lead-in">You bring the expertise.</span> <strong>I take care of turning it into a consistent LinkedIn presence.</strong></p>
+    </div>
+  </section>
+
+  <!-- 8. THE WORK. Every block below is driven by CONFIG (accounts, caseStudies, results,
+       testimonials, clientLogos) and stays hidden until it holds real, permitted entries.
+       While none of them has anything, the "Real clients. Real results." block shows instead.
+       Never write example content. -->
+  <section id="case-studies" aria-labelledby="cs-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">06</span>The work</p>
+      <h2 class="h2 rv" id="cs-title">The work <em class="turn">speaks for itself</em></h2>
+      <div class="cs-empty" id="cs-empty">
+        <div class="cs-empty-copy">
+          <h3 class="h3">Real clients. Real results.</h3>
+          <p>I already work with an established list of clients and senior leaders. Much of that work is confidential, so when we speak I’ll walk you through examples and the difference it has made for them.</p>
+        </div>
+      </div>
+
+      <div class="slot" id="slot-accounts" hidden>
+        <h3 class="h3">Profiles I manage</h3>
+        <p class="slot-intro">A few of the profiles I look after, shared with their permission.</p>
+        <div class="pc-scroll"><ul class="slot-list pc-list"></ul></div>
+      </div>
+      <div class="slot" id="slot-cases" hidden>
+        <h3 class="h3">Case studies</h3>
+        <ul class="slot-list cs-list" id="cs-list"></ul>
+      </div>
+      <div class="slot" id="slot-results" hidden>
+        <h3 class="h3">Recent results</h3>
+        <ul class="slot-list two"></ul>
+      </div>
+      <div class="slot" id="slot-testimonials" hidden>
+        <h3 class="h3">What clients say</h3>
+        <div class="slot-list two"></div>
+      </div>
+      <div class="slot" id="slot-logos" hidden>
+        <h3 class="h3">Businesses I’ve worked with</h3>
+        <ul class="slot-list logos"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CHECK TEASER: the second screen. Tapping a number starts the check. -->
+  <section id="check-teaser" class="band" aria-labelledby="teaser-title">
+    <span class="frame" aria-hidden="true"></span>
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">07</span>Not ready to talk yet?</p>
+      <div class="teaser-grid">
+        <div class="teaser-copy">
+          <h2 class="h2" id="teaser-title">Take the free <em class="turn">LinkedIn check</em></h2>
+          <p class="lede">Eight blunt statements about LinkedIn at the top of a company. Say how true each one is for you, then see your score and your three biggest gaps straight away, <strong>with no email needed</strong>.</p>
+        </div>
+        <div class="preview-wrap">
+          <div class="preview" role="group" aria-labelledby="pv-q" aria-describedby="pv-hint">
+            <div class="pv-top" aria-hidden="true"><span>Your profile</span><span>1 of 8</span></div>
+            <div class="pv-bar" aria-hidden="true"><span></span></div>
+            <p class="pv-q" id="pv-q">Buyers and investors look me up, and my profile undersells what I’ve built.</p>
+            <p class="pv-hint" id="pv-hint">How true is this for you? Tap a number to start the check.</p>
+            <div class="pv-scale">
+              <a href="check/?a1=1" aria-label="1, Not true for me">1</a>
+              <a href="check/?a1=2" aria-label="2, Rarely true">2</a>
+              <a href="check/?a1=3" aria-label="3, Partly true">3</a>
+              <a href="check/?a1=4" aria-label="4, Mostly true">4</a>
+              <a href="check/?a1=5" aria-label="5, Very true for me">5</a>
+            </div>
+            <div class="pv-ends" aria-hidden="true"><span>Not true for me</span><span>Very true for me</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">08</span>Questions</p>
+      <h2 class="h2 rv" id="faq-title">Straight <em class="turn">answers</em></h2>
+      <div class="faq">
+        <details>
+          <summary>How much of my time will it take?</summary>
+          <div class="a"><p>More at the start, much less after. The first conversation needs a proper block of your time, because everything I write comes from it. After that it’s mostly reading drafts and approving them, plus a short catch-up when something’s worth writing about.</p></div>
+        </details>
+        <details>
+          <summary>Will it sound like me?</summary>
+          <div class="a"><p>That’s the job. I work from how you actually talk: your opinions, your stories, the phrases you use with clients. Expect more back and forth in the first few weeks while I learn how you like things said. If a draft doesn’t sound like you, send it back.</p></div>
+        </details>
+        <details>
+          <summary>Do I approve everything before it goes out?</summary>
+          <div class="a"><p><strong>Yes.</strong> Every post comes to you as a draft. Edit it, send it back or approve it. If you don’t like a post, it doesn’t go out, and nothing is published in your name without your yes.</p></div>
+        </details>
+        <details>
+          <summary>Is what I tell you kept confidential?</summary>
+          <div class="a"><p><strong>Yes.</strong> What you tell me in our conversations stays between us. I don’t name clients or share anything about our work together unless you’ve agreed to it in writing.</p></div>
+        </details>
+        <details>
+          <summary>Do you need my LinkedIn password?</summary>
+          <div class="a"><p><strong>No, never.</strong> For your personal profile, I write drafts, you approve them, and either you post them or a scheduling tool you’ve connected yourself does. For a company page, you add me as an admin in LinkedIn’s own settings and can remove me whenever you like.</p><p><a class="tap" href="privacy/#access">How account access works, step by step</a></p></div>
+        </details>
+        <details>
+          <summary>Why aren’t prices on this page?</summary>
+          <div class="a"><p>Because it depends on what you need. Most people want their own profile looked after, and some want their company page too. After we’ve talked, I’ll give you a price in writing before you agree to anything.</p></div>
+        </details>
+        <details data-needs="contractTerms" hidden>
+          <summary>How long do I have to sign up for?</summary>
+          <div class="a"><p><span data-cfg="contractTerms"></span> You’ll get the full terms in writing before you agree to anything.</p></div>
+        </details>
+        <details>
+          <summary>What results should I expect?</summary>
+          <div class="a"><p>A profile that finally matches the person people meet, and a steady stream of posts that show how you think. That is what brings the right people into your messages: clients, partners, investors and senior hires. Each month I show you what’s working and sharpen what isn’t, against the goals we set at the start.</p></div>
+        </details>
+        <details>
+          <summary>What if my LinkedIn already works?</summary>
+          <div class="a"><p>Then let’s make it work harder. The <a href="check/">free LinkedIn check</a> shows where you’re already strong and where there’s more to gain.</p></div>
+        </details>
+      </div>
+      <p class="faq-more" data-needs="email" hidden>Still have a question? <a class="tap-in" data-cfg-mailto href="#">Email me</a></p>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CALL TO ACTION AND CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">09</span>Contact</p>
+      <div class="contact-head">
+        <h2 class="h2 rv" id="contact-title">You’ve built something <em class="turn">worth talking about.</em></h2>
+        <p class="statement"><span class="lead-in">Your experience, ideas and reputation deserve to be represented properly online. You don’t need another task on your list.</span> <strong>You need someone who can draw out what matters and communicate it well.</strong></p>
+        <div class="body">
+          <p>Let’s talk about where your LinkedIn stands today and what a more considered presence could look like.</p>
+          <p>Prefer to start with a quick assessment? <a href="check/">Take the free 2-minute LinkedIn check</a></p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-panel" id="contact-panel">
+          <p class="sr-only" id="announce" aria-live="polite" aria-atomic="true"></p>
+
+          <!-- NO-JAVASCRIPT MESSAGE: shows your email and LinkedIn if the visitor's browser has JavaScript
+               off. If you change your email or LinkedIn link in CONFIG, change them here too (both
+               places on each line). -->
+          <noscript>
+            <p><strong>This form needs JavaScript, which is switched off in your browser.</strong></p>
+            <p>Email me instead: <a class="tap" href="mailto:raymond.shaahu@gmail.com">raymond.shaahu@gmail.com</a></p>
+            <p>Or message me on LinkedIn: <a class="tap" href="https://www.linkedin.com/in/raymondshaahu/" target="_blank" rel="noopener noreferrer">linkedin.com/in/raymondshaahu</a></p>
+          </noscript>
+
+          <div id="enquiry-body" hidden>
+            <h3 class="form-h">Send me a short note</h3>
+            <form id="enquiry-form" novalidate>
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input class="input" id="f-name" name="name" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" required>
+                <p class="field-err" id="e-name" hidden>Please add your name.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">Work email</label>
+                <p class="help" id="h-email">I’ll only use this to reply.</p>
+                <input class="input" id="f-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="next" placeholder="name@company.co.uk" required aria-describedby="h-email">
+                <p class="suggest" id="s-email" hidden>Did you mean <button type="button" id="s-email-btn"></button>?</p>
+                <p class="field-err" id="e-email" hidden>Please check your email address. It should look like name@company.co.uk.</p>
+              </div>
+              <div class="field">
+                <label for="f-company">Company</label>
+                <input class="input" id="f-company" name="company" type="text" autocomplete="organization" autocapitalize="words" enterkeyhint="next" required>
+                <p class="field-err" id="e-company" hidden>Please add your company name.</p>
+              </div>
+              <div class="field">
+                <label for="f-role">Your role</label>
+                <input class="input" id="f-role" name="role" type="text" autocomplete="organization-title" autocapitalize="sentences" enterkeyhint="next" placeholder="For example: founder or CEO" required>
+                <p class="field-err" id="e-role" hidden>Please add your role.</p>
+              </div>
+              <div class="field">
+                <label for="f-message">Anything you’d like me to know? (optional)</label>
+                <textarea class="input" id="f-message" name="message" rows="4" maxlength="2000" enterkeyhint="enter"></textarea>
+              </div>
+              <!-- Spam trap (Web3Forms honeypot). People never see or tick it. -->
+              <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <p class="privacy-line">Only I read this, and I’ll use it to reply to you and nothing else.<span data-needs="web3formsKey" hidden> It reaches me through Web3Forms, a form service.</span> <a class="tap-in" href="privacy/">How your information is handled</a></p>
+              <button class="btn btn-block send" type="submit" id="send">Send my enquiry</button>
+              <p class="reply-time" data-needs="responseTime" hidden>I reply <span data-cfg="responseTime"></span>.</p>
+              <p class="status" id="form-status" role="status" aria-live="polite"></p>
+              <div class="fallback" id="fallback" hidden>
+                <p id="fallback-text"></p>
+                <p class="cut-note" id="fallback-cut" hidden></p>
+                <button class="btn btn-quiet" type="button" id="copy-msg" hidden>Copy my message</button>
+                <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+                <a class="btn btn-quiet" id="mailto-btn" href="#">Email it instead</a>
+              </div>
+            </form>
+          </div>
+          <div class="done" id="done" hidden>
+            <h3 id="done-h" tabindex="-1"></h3>
+            <p id="done-t"></p>
+          </div>
+        </div>
+
+        <div class="direct" data-needs-any="email linkedinUrl" hidden>
+          <h3 class="h3">Rather not fill in a form?</h3>
+          <p>Email me or send me a message on LinkedIn. Either reaches me directly.</p>
+          <div class="direct-links">
+            <a data-cfg-mailto data-show-email data-needs="email" hidden href="#"></a>
+            <a data-cfg-href="linkedinUrl" data-needs="linkedinUrl" hidden target="_blank" rel="noopener noreferrer">
+              <svg class="in-glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="8" r="1.35" fill="currentColor"/><rect x="6.85" y="10.3" width="2.3" height="7.2" rx=".4" fill="currentColor"/><path d="M11.2 10.3h2.2v1.05c.5-.78 1.4-1.25 2.5-1.25 1.95 0 3 1.25 3 3.45v3.95h-2.3v-3.7c0-1.15-.48-1.75-1.38-1.75-.95 0-1.72.68-1.72 1.9v3.55h-2.3z" fill="currentColor"/></svg>
+              Message me on LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p><strong>Your privacy.</strong> Only I read what you send, and I only use it to reply to you. I never sell it, and I’ll delete my copy whenever you ask. This site sets no tracking cookies.<span data-needs="posthogKey" hidden> Anonymous usage analytics (PostHog, hosted in the EU) show me how the site is used, and never record what you type.</span></p>
+        <p style="margin-top:.6rem"><a class="tap" href="privacy/">Privacy notice and how account access works</a></p>
+      </div>
+      <div class="foot-meta">
+        <p data-needs="email" hidden><span class="role">Email</span><a class="credit" data-cfg-mailto data-show-email href="#"></a></p>
+        <p data-needs="linkedinUrl" hidden><span class="role">LinkedIn</span><a class="credit" data-cfg-href="linkedinUrl" target="_blank" rel="noopener noreferrer">LinkedIn profile<span class="sr-only"> (opens in a new tab)</span></a></p>
+        <p data-needs="location" hidden><span class="role">Based in</span><span class="credit" data-cfg="location"></span></p>
+        <p data-cfg="companyDetails" data-needs="companyDetails" hidden></p>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p class="foot-name" data-needs="brandName" hidden>© <span data-cfg="year"></span> <span data-cfg="brandName"></span></p>
+      <div class="foot-links">
+        <a href="check/">LinkedIn check</a>
+        <a href="privacy/">Privacy</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="sticky-cta" id="sticky" aria-label="Quick actions" hidden>
+  <a class="btn btn-brass" href="#contact" aria-label="Let’s talk about your LinkedIn">Let’s talk</a>
+  <a class="btn btn-ghost" href="check/">Take the check</a>
+</nav>
+
+<!-- Phone and tablet menu. Opened by the Menu button in the header (the script shows the button). -->
+<dialog class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="menu-in">
+    <div class="menu-top">
+      <p class="menu-title" id="menu-title">Menu</p>
+      <button class="menu-close" type="button" id="menu-close">
+        Close
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Sections">
+      <ul class="menu-links">
+        <li><a href="#services">What’s included</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#case-studies">The work</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-actions">
+      <a class="btn btn-brass" href="#contact">Let’s talk about your LinkedIn</a>
+      <a class="btn btn-ghost" href="check/">Take the free LinkedIn check</a>
+    </div>
+    <a class="menu-up" href="#top">Back to top</a>
+  </div>
+</dialog>
+
+<a class="to-top" id="to-top" href="#top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<div class="setup" id="setup" role="status" hidden></div>
+
+<script>
+/* =========================================================================
+   CONFIG: everything about you lives here.
+   The SAME block is in all three pages: index.html, check/index.html and
+   privacy/index.html. Change it here, then copy it to the other two, or run
+   "node tools/sync-config.mjs" from the project folder to copy it for you.
+   Fill in each value between the quote marks, save the file, then publish.
+   Leave a value as "" (or [] for lists) if you do not have it yet.
+   Anything left empty stays hidden on the page.
+   Never put sample, made-up or "for now" text in here: visitors would see it.
+   Step-by-step help is in HANDOVER.md.
+   To see where every empty photo and proof space sits, open the main page with
+   ?preview=slots on the end of its address. Visitors never see those boxes.
+   ========================================================================= */
+const CONFIG = {
+  // Your full name, exactly as it appears on your LinkedIn profile.
+  name: "Raymond Shaahu",
+
+  // Your first name. Leave empty to use the first word of name.
+  firstName: "",
+
+  // Your trading or business name for the header and footer. Leave empty to use your name.
+  businessName: "",
+
+  // The full web address of your own LinkedIn profile, starting https://www.linkedin.com/in/
+  linkedinUrl: "https://www.linkedin.com/in/raymondshaahu/",
+
+  // Your photo: a square JPG, about 800 by 800 pixels and under about 120 KB, saved in the
+  // site folder (for example "photo.jpg"). It shows in the main page hero, in About, in the
+  // footer and in the header of the other two pages. The check and privacy pages sit one folder
+  // down, so they look for it as "../photo.jpg" automatically.
+  // Leave empty and the pages show your initials in a circle instead.
+  photo: "",
+
+  // Optional: a taller portrait for the About section, 4:5 shape (about 1000 by 1250 pixels,
+  // under about 180 KB), saved in the site folder (for example "portrait.jpg"). When filled, it
+  // replaces the round photo in About. portraitAlt describes it in a few words, for example
+  // "Raymond Shaahu at his desk". Leave both empty to keep the round photo.
+  portrait: "",
+  portraitAlt: "",
+
+  // The email address that receives enquiries and is shown on the page.
+  email: "raymond.shaahu@gmail.com",
+
+  // Your free Web3Forms access key (see HANDOVER.md). It is safe to publish.
+  // Leave empty and the forms open the visitor's own email app instead.
+  web3formsKey: "",
+
+  // The town or city you work from. Shown in the About section and footer.
+  location: "",
+
+  // How quickly you ALWAYS reply, written to follow the words "I reply".
+  // Only fill this in if you meet it every single time.
+  responseTime: "",
+
+  // Your real terms in one or two plain sentences, such as minimum term and notice period.
+  // Filling this also switches on the "How long do I have to sign up for?" question.
+  contractTerms: "",
+
+  // Optional, only if true and checkable: how long you have worked in LinkedIn, marketing or a related field.
+  yearsExperience: "",
+
+  // Two to four sentences in your own words: what you did before, why you started this, who you work best with.
+  bio: "",
+
+  // Qualifications or memberships you actually hold, written as the issuing body writes them.
+  // Each one looks like: { name: "", issuer: "" }
+  credentials: [],
+
+  /* ACHIEVEMENTS. The strip under the main page hero. True, checkable facts only, all taken
+     from your own words. Each one looks like:
+       { kicker: "", value: "", label: "" }
+     kicker  One or two words in small capitals above the fact, for example "Background".
+     value   Optional. A short figure shown large, for example "30+". Leave "" for none.
+     label   The fact itself, in a few words.
+     Delete a line to remove it. An empty list [] hides the strip. */
+  achievements: [
+    { kicker: "Profiles", value: "30+", label: "professional profiles managed" },
+    { kicker: "Credits", value: "", label: "Production credits on a Netflix series" },
+    { kicker: "Background", value: "", label: "Film, television and editorial production" },
+    { kicker: "Worked with", value: "", label: "Senior leadership figures" }
+  ],
+
+  /* PROFILES I MANAGE. Cards in "The work speaks for itself", drawn like a LinkedIn profile.
+     Only add someone who has agreed IN WRITING to be shown. Start from this empty shape:
+       { role: "", sector: "", name: "", photo: "", headlineBefore: "", headlineAfter: "",
+         highlight: "", period: "", profileUrl: "", permission: false }
+     Field by field:
+       role            Their job, for example "Founder and CEO".
+       sector          Their field, for example "Professional services".
+       name            Optional. Only if they agreed to be named.
+       photo           Optional, only with their agreement. A square JPG, about 288 by 288
+                       pixels, saved in the site folder. No name and no photo shows a plain
+                       person outline; a name with no photo shows their initials.
+       headlineBefore  Optional. Their LinkedIn headline before you started.
+       headlineAfter   Optional. Their headline now.
+       highlight       Optional. One thing that changed, in a few words. If it has a number in
+                       it, it only shows when period is filled in too.
+       period          The dates it covers, as DD/MM/YYYY to DD/MM/YYYY.
+       profileUrl      Optional. Their LinkedIn address, starting https://
+       permission      Type true (no quote marks) ONLY with written agreement.
+     A card only shows when permission is true and role and sector are both filled in. */
+  accounts: [],
+
+  /* GALLERY. Optional photos of you at work, speaking or on set, shown under About. Only
+     photos you own the rights to, with no other company's logos in them. Each one:
+       { file: "", alt: "", caption: "", width: 1600, height: 1067 }
+     file is a landscape JPG saved in the site folder (3:2 shape, about 1600 by 1067 pixels,
+     under about 250 KB). alt says what is in the picture. caption is optional.
+     A photo only shows when file and alt are both filled in. */
+  gallery: [],
+
+  /* CASE STUDIES. Shown in the "The work speaks for itself" section of the main page.
+     While this list is empty, the page shows the "Real clients. Real results." block.
+     Each case study goes between the square brackets, inside curly brackets, with a comma
+     between case studies. Start from this empty shape:
+       { title: "", who: "", challenge: "", whatIDid: "", outcome: "", quote: "",
+         image: "", imageAlt: "", permission: false }
+     Field by field:
+       title      A short heading, for example "A quiet profile brought back to life".
+       who        An anonymised description of the client, for example
+                  "Managing director, professional services firm". No names unless they agreed.
+       challenge  One or two sentences: where they were before you started.
+       whatIDid   One or two sentences: what you actually did.
+       outcome    One or two sentences: what changed. Only what really happened, in their terms,
+                  with dates if you give numbers. No estimates, no rounding up.
+       quote      Optional. Their exact words, with their permission. Trim if you like, never reword.
+       image      Optional. A landscape picture (16:10 shape, about 1600 by 1000 pixels, under
+                  about 250 KB) saved in the site folder, for example a profile screenshot the
+                  client agreed you can show.
+       imageAlt   What the picture shows, in a few words. Needed whenever image is filled in.
+       permission Type true (no quote marks) ONLY when the client has agreed in writing that you
+                  can publish this. Anything else keeps the case study hidden.
+     A case study only shows when permission is true and title, who, challenge, whatIDid and
+     outcome are all filled in. Never write an example or a made-up case study. */
+  caseStudies: [],
+
+  // Real client quotes with their written permission. Trim them if you like, never reword them.
+  // Each one looks like: { quote: "", name: "", role: "", company: "", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  testimonials: [],
+
+  // Real outcomes a named client has agreed you can share, with the dates they cover.
+  // Each one looks like: { client: "", result: "", period: "DD/MM/YYYY to DD/MM/YYYY", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  results: [],
+
+  // Logos of clients who have said you can show them. Save the logo file in the site folder
+  // (SVG is best, otherwise a PNG about 320 by 96 pixels).
+  // Each one looks like: { name: "", logoFile: "", alt: "", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  clientLogos: [],
+
+  // Trading name, plus company number and registered office address if you are a limited company.
+  companyDetails: "",
+
+  /* USAGE ANALYTICS (PostHog). Shows how people use the site: which pages and sections they see,
+     where they leave, and where they give up on the form or the check. Off until you add a key.
+       posthogKey   Your own PostHog project token, from your own free EU account (HANDOVER.md,
+                    "Usage tracking with PostHog"). It is safe to publish. Leave "" and nothing
+                    loads and nothing is sent.
+       posthogHost  Where events go. Keep the EU address unless PostHog tells you otherwise.
+       replay       true records anonymous replays of visits, with everything typed hidden.
+                    false switches replays off. */
+  analytics: { posthogKey: "", posthogHost: "https://eu.i.posthog.com", replay: true },
+
+  // The web address of the main page once published (used in lead emails and the QR code).
+  siteUrl: "https://stevehill-oss.github.io/linkedin-growth-check/"
+};
+
+/* ===== ANALYTICS BLOCK START ===== */
+/* =========================================================================
+   USAGE ANALYTICS (PostHog). The SAME block is in all three pages.
+   Switched off while CONFIG.analytics.posthogKey is empty: then nothing loads,
+   no listener is added and nothing is sent. With a key, PostHog loads only
+   after the page has finished loading, in idle time, and never when the
+   browser sends Global Privacy Control or Do Not Track, or after the visitor
+   turned it off on the privacy page. Events carry names, numbers and fixed
+   labels only, never anything a visitor typed. HANDOVER.md, "Usage tracking
+   with PostHog", explains it.
+   ========================================================================= */
+const ANALYTICS = (function () {
+  "use strict";
+  const A = (typeof CONFIG === "object" && CONFIG && CONFIG.analytics) || {};
+  const key = typeof A.posthogKey === "string" ? A.posthogKey.trim() : "";
+  const rawHost = typeof A.posthogHost === "string" ? A.posthogHost.trim().replace(/\/+$/, "") : "";
+  const host = /^https:\/\/[a-z0-9.-]+$/i.test(rawHost) ? rawHost : "https://eu.i.posthog.com";
+  const replay = A.replay === true;
+  const OFF_KEY = "lgc-analytics-off";
+  const nav = window.navigator || {};
+  const gpc = nav.globalPrivacyControl === true;
+  const dnt = [nav.doNotTrack, window.doNotTrack, nav.msDoNotTrack].some((v) => v === "1" || v === "yes");
+  let off = false;
+  try { off = window.localStorage.getItem(OFF_KEY) === "1"; } catch (e) { /* storage blocked: no saved choice */ }
+  const on = !!key && !gpc && !dnt && !off;
+  const path = window.location.pathname;
+  const PAGE = /\/check\/(index\.html)?$/.test(path) ? "check" : (/\/privacy\/(index\.html)?$/.test(path) ? "privacy" : "main");
+  const SRC = new URLSearchParams(window.location.search).get("src") === "qr" ? "qr" : "direct";
+  const mq = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+  function common() {
+    const w = window.innerWidth || document.documentElement.clientWidth || 0;
+    return { page: PAGE, src: SRC, device: w < 600 ? "phone" : (w < 1024 ? "tablet" : "desktop"),
+      theme: mq("(prefers-color-scheme: dark)") ? "dark" : "light", reduced_motion: mq("(prefers-reduced-motion: reduce)") };
+  }
+  /* Only numbers, true or false, and short fixed labels get through. Anything else is dropped. */
+  function clean(props) {
+    const out = {};
+    Object.keys(props || {}).forEach((k) => {
+      const v = props[k];
+      if (typeof v === "number" && isFinite(v)) out[k] = v;
+      else if (typeof v === "boolean") out[k] = v;
+      else if (typeof v === "string" && /^[a-z0-9_ ./#-]{0,48}$/i.test(v)) out[k] = v;
+    });
+    return out;
+  }
+  /* Last safety net on every event: email addresses, mailto links and LinkedIn profile links are
+     removed wherever they appear. Replay snapshots are left alone: replay masks every input. */
+  const PII = /[^\s@<>"'=:/]+@[^\s@<>"']+\.[a-z]{2,}|mailto:|linkedin\.com\/in\//i;
+  const KEEP = /^(\$session_id|\$window_id|distinct_id|\$device_id|token|uuid|\$insert_id)$/;
+  function scrub(v, depth) {
+    if (typeof v === "string") return PII.test(v) ? "[removed]" : v;
+    if (!v || typeof v !== "object" || depth > 5) return v;
+    if (Array.isArray(v)) return v.map((x) => scrub(x, depth + 1));
+    Object.keys(v).forEach((k) => { if (!KEEP.test(k)) v[k] = scrub(v[k], depth + 1); });
+    return v;
+  }
+  function beforeSend(ev) {
+    if (!ev || off) return null;
+    if (ev.event === "$snapshot") return ev;
+    ev.properties = Object.assign(scrub(ev.properties || {}, 0), common());
+    if (ev.$set) ev.$set = scrub(ev.$set, 0);
+    if (ev.$set_once) ev.$set_once = scrub(ev.$set_once, 0);
+    return ev;
+  }
+
+  let ph = null, started = false;
+  const queue = [];
+  function send(event, props, opts, ts) {
+    try {
+      const o = {};
+      if (ts) o.timestamp = ts;
+      if (opts && opts.leaving) { o.transport = "sendBeacon"; o.send_instantly = true; }
+      ph.capture(event, props, o);
+    } catch (e) { /* analytics must never break the page */ }
+  }
+  /* track(event, props): a no-op unless analytics is switched on. Before PostHog has loaded, up to
+     40 events (names and the cleaned labels only) wait in memory, with the time they happened. */
+  function track(event, props, opts) {
+    if (!on || off || !/^[a-z0-9_]{1,40}$/.test(event)) return;
+    const p = clean(props);
+    if (ph) send(event, p, opts);
+    else if (queue.length < 40) queue.push([event, p, opts, new Date()]);
+  }
+  function flush() { while (queue.length) { const q = queue.shift(); send(q[0], q[1], q[2], q[3]); } }
+
+  function load() {
+    if (!on || off || started) return;
+    started = true;
+    /* PostHog's own browser snippet, word for word from posthog.com/docs/libraries/js (checked 15/11/2026).
+       It adds one script tag for array.js from the matching "-assets" host. */
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    window.posthog.init(key, {
+      api_host: host,
+      defaults: "2026-08-30",
+      /* No cookies: PostHog keeps its random ID in this browser tab only, cleared when it closes */
+      persistence: "sessionStorage",
+      capture_pageview: true,
+      capture_pageleave: true,
+      respect_dnt: true,
+      person_profiles: "identified_only",
+      /* Clicks on links and buttons only, with no element text and no attributes such as href */
+      autocapture: { dom_event_allowlist: ["click", "submit"], element_allowlist: ["a", "button"],
+        css_selector_ignorelist: [".ph-no-autocapture", "[data-ph-no-autocapture]", ".ph-no-capture", "#fallback", "#done", "#s-email", "#announce"] },
+      mask_all_text: true,
+      mask_all_element_attributes: true,
+      mask_personal_data_properties: true,
+      capture_dead_clicks: false,
+      capture_exceptions: false,
+      disable_surveys: true,
+      disable_product_tours: true,
+      disable_conversations: true,
+      disable_web_experiments: true,
+      disable_session_recording: !replay,
+      /* Replays: every input and textarea is masked, and the parts that repeat what a visitor typed
+         (the thank-you line, the email suggestion, the email fallback, the spoken announcements)
+         are left out of the recording altogether */
+      session_recording: { maskAllInputs: true, maskTextSelector: "input, textarea, .ph-mask",
+        blockSelector: "#done, #fallback, #s-email, #announce, .status-jump" },
+      before_send: beforeSend,
+      loaded: (inst) => { ph = inst; flush(); }
+    });
+  }
+
+  /* Leaving the page: phones often never fire pagehide, so a hidden tab counts as leaving too */
+  const leaveFns = [];
+  function onLeave(fn) { if (on) leaveFns.push(fn); }
+  function leaving() { leaveFns.forEach((fn) => { try { fn(); } catch (e) { /* keep going */ } }); }
+
+  if (on) {
+    const idle = () => (window.requestIdleCallback ? window.requestIdleCallback(load, { timeout: 4000 }) : window.setTimeout(load, 1500));
+    if (document.readyState === "complete") idle(); else window.addEventListener("load", idle, { once: true });
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") leaving(); });
+    window.addEventListener("pagehide", leaving);
+
+    /* Scroll depth: 25, 50, 75 and 90 percent of the page seen, once each */
+    const marks = [25, 50, 75, 90];
+    let tick = false;
+    const depth = () => {
+      tick = false;
+      const el = document.documentElement;
+      const pct = ((window.scrollY + window.innerHeight) / Math.max(1, el.scrollHeight)) * 100;
+      while (marks.length && pct >= marks[0]) track("scroll_depth", { percent: marks.shift() });
+      if (!marks.length) window.removeEventListener("scroll", onScroll);
+    };
+    const onScroll = () => { if (!tick) { tick = true; window.requestAnimationFrame(depth); } };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    /* Engaged time: time the page is on screen, where a pause of more than 30 seconds with no
+       scroll, tap or key press counts as 30 seconds. Sent each time the visitor leaves. */
+    const CAP = 30000;
+    let last = Date.now(), engaged = 0;
+    const active = () => { const n = Date.now(); if (document.visibilityState === "visible") engaged += Math.min(n - last, CAP); last = n; };
+    ["pointerdown", "keydown", "scroll", "touchstart", "wheel"].forEach((t) => window.addEventListener(t, active, { passive: true, capture: true }));
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") last = Date.now(); });
+    leaveFns.push(() => {
+      active();
+      const s = Math.round(engaged / 1000);
+      engaged = 0;
+      if (s > 0) track("page_engaged", { engaged_seconds: s }, { leaving: true });
+    });
+  }
+
+  /* The privacy page's "Turn off analytics on this device" control */
+  function optOut() {
+    if (ph) {
+      try { ph.capture("analytics_opt_out", clean({}), { transport: "sendBeacon", send_instantly: true }); } catch (e) { /* ignore */ }
+      try { ph.opt_out_capturing(); ph.stopSessionRecording(); } catch (e) { /* ignore */ }
+    }
+    off = true;
+    queue.length = 0;
+    try { window.localStorage.setItem(OFF_KEY, "1"); return true; } catch (e) { return false; }
+  }
+  function optIn() {
+    try {
+      window.localStorage.removeItem(OFF_KEY);
+      /* PostHog keeps its own opt-out note; it goes too, so analytics really comes back */
+      Object.keys(window.localStorage).forEach((k) => { if (k.indexOf("__ph_opt_in_out_") === 0) window.localStorage.removeItem(k); });
+      return true;
+    } catch (e) { return false; }
+  }
+  return { track: track, onLeave: onLeave, on: on, keySet: !!key, replay: !!key && replay, gpc: gpc, dnt: dnt,
+    isOff: () => off, optOut: optOut, optIn: optIn };
+})();
+/* ===== ANALYTICS BLOCK END ===== */
+
+/* =========================================================================
+   WORDS USED BY THE ENQUIRY FORM. Edit wording here if you need to.
+   ========================================================================= */
+const COPY = {
+  form: {
+    error: "A couple of things need fixing before this can send. They’re marked above.",
+    sending: "Sending…",
+    sendButton: "Send my enquiry",
+    successHeading: "Sent. Thank you, {visitorFirstName}.",
+    successText: "I’ll read your note and reply by email to arrange a time to talk. If you can’t see my reply, check your junk folder or email me at {email}.",
+    successTextNoEmail: "I’ll read your note and reply by email to arrange a time to talk. If you can’t see my reply, check your junk folder.",
+    failText: "Sorry, that didn’t send. Tap below to email it to me instead. Everything is already filled in.",
+    failButton: "Email it instead",
+    mailText: "Your email app should open with everything filled in. Press send there and it comes straight to me. If nothing opened, tap below.",
+    mailButton: "Open my email app",
+    /* Added to a long message in the email-app version only, which has to stay short */
+    mailShortened: "(shortened)",
+    /* Shown above the email button only when the message had to be shortened */
+    mailCutNote: "Your message was too long for an email link, so the end has been cut. Copy it here, then paste the full message into the email before you send it.",
+    mailTextCut: "Nearly there. Everything else is already filled in, and the button at the bottom opens your email app.",
+    copied: "Copied. Paste it into the email in place of the shortened message.",
+    copyFailed: "Your browser wouldn’t copy it. Your message is still in the box above, so you can copy it from there.",
+    notReady: "Sorry, this form can’t send yet. Please try again later."
+  },
+  leadSubject: "LinkedIn enquiry: {visitorName}, {role}, {company}",
+  leadBody: [
+    "New enquiry from {visitorName}", "",
+    "Role: {role}", "Company: {company}", "Email: {visitorEmail}", "",
+    "Message:", "{message}", "",
+    "Sent on {sentDate}", "Came from: {source}"
+  ],
+  /* Labels for the dashed boxes in preview mode (?preview=slots). Never real content. */
+  preview: {
+    banner: "Preview of the empty spaces. Dashed boxes show where photos, profiles, case studies and client proof go once they are added. Visitors never see them.",
+    heroPhoto: "Photo of Raymond goes here",
+    portrait: "Portrait of Raymond goes here",
+    portraitNote: "Optional. Replaces the round photo.",
+    gallery: ["Photo of Raymond at work goes here", "Photo of Raymond speaking or on set goes here"],
+    galleryNote: "Optional gallery photo",
+    account: ["Client photo or initials", "Name, only with their permission", "Role and sector", "Headline before", "Headline now", "One highlight, with its dates"],
+    caseImage: "Case study image",
+    caseText: ["Case study: client role and sector", "The challenge", "What I did", "The outcome, with dates"],
+    result: "Result: what changed, with the dates it covers",
+    quote: "Client quote, with their written permission",
+    logo: "Client logo"
+  }
+};
+
+(function () {
+  "use strict";
+  const doc = document;
+  const root = doc.documentElement;
+  const $ = (s, c) => (c || doc).querySelector(s);
+  const $$ = (s, c) => Array.prototype.slice.call((c || doc).querySelectorAll(s));
+  const reduceMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const reduced = () => reduceMQ.matches;
+  const SVGNS = "http://www.w3.org/2000/svg";
+
+  function h(tag, props) {
+    const n = doc.createElement(tag);
+    if (props) Object.keys(props).forEach((k) => {
+      const v = props[k];
+      if (v == null || v === false) return;
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else if (k.indexOf("on") === 0) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v === true ? "" : String(v));
+    });
+    for (let i = 2; i < arguments.length; i++) {
+      [].concat(arguments[i]).forEach((kid) => {
+        if (kid == null || kid === false) return;
+        n.append(kid.nodeType ? kid : String(kid));
+      });
+    }
+    return n;
+  }
+  /* A plain outline icon, drawn in the same 24 px grid and stroke as the page's other icons */
+  function icon(d) {
+    const s = doc.createElementNS(SVGNS, "svg");
+    [["viewBox", "0 0 24 24"], ["fill", "none"], ["stroke", "currentColor"], ["stroke-width", "1.6"], ["stroke-linecap", "round"],
+      ["stroke-linejoin", "round"], ["aria-hidden", "true"], ["focusable", "false"]].forEach((a) => s.setAttribute(a[0], a[1]));
+    const p = doc.createElementNS(SVGNS, "path"); p.setAttribute("d", d); s.append(p);
+    return s;
+  }
+  const PERSON = "M12 12.5a4.25 4.25 0 1 0 0-8.5 4.25 4.25 0 0 0 0 8.5zM4.5 20.5c1.3-3.7 4.1-5.6 7.5-5.6s6.2 1.9 7.5 5.6";
+  const fill = (s, map) => String(s).replace(/\{(\w+)\}/g, (m, k) => (map[k] != null ? String(map[k]) : m));
+  const pad = (n) => String(n).padStart(2, "0");
+  const today = () => { const d = new Date(); return pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear(); };
+  const params = new URLSearchParams(window.location.search);
+  /* ?preview=slots shows every empty photo and proof space as a labelled dashed box */
+  const PREVIEW = params.get("preview") === "slots";
+
+  /* ---------- Read CONFIG ---------- */
+  const str = (v) => (typeof v === "string" ? v.trim() : "");
+  const list = (v) => (Array.isArray(v) ? v.filter((x) => x && typeof x === "object") : []);
+  const num = (v, d) => (Number.isFinite(Number(v)) && Number(v) > 0 ? Math.round(Number(v)) : d);
+  const C = {};
+  ["name", "firstName", "businessName", "linkedinUrl", "photo", "portrait", "portraitAlt", "email", "web3formsKey", "location", "responseTime",
+    "contractTerms", "yearsExperience", "bio", "companyDetails", "siteUrl"].forEach((k) => { C[k] = str(CONFIG[k]); });
+  ["credentials", "achievements", "accounts", "gallery", "caseStudies", "testimonials", "results", "clientLogos"].forEach((k) => { C[k] = list(CONFIG[k]); });
+  if (!C.firstName && C.name) C.firstName = C.name.split(/\s+/)[0];
+  if (C.linkedinUrl && !/^https?:\/\//i.test(C.linkedinUrl)) C.linkedinUrl = "https://" + C.linkedinUrl.replace(/^\/+/, "");
+  const V = Object.assign({}, C, { brandName: C.businessName || C.name, year: String(new Date().getFullYear()),
+    posthogKey: ANALYTICS.keySet ? "on" : "" });
+  const filled = (k) => !!V[k];
+  const track = ANALYTICS.track;
+
+  $$("[data-cfg]").forEach((n) => { const v = V[n.getAttribute("data-cfg")]; if (v) n.textContent = v; });
+  $$("[data-needs]").forEach((n) => { n.hidden = !n.getAttribute("data-needs").split(/\s+/).every(filled); });
+  $$("[data-needs-any]").forEach((n) => { n.hidden = !n.getAttribute("data-needs-any").split(/\s+/).some(filled); });
+  $$("[data-cfg-href]").forEach((a) => { const v = V[a.getAttribute("data-cfg-href")]; if (v) a.href = v; });
+  $$("[data-cfg-mailto]").forEach((a) => {
+    if (!C.email) return;
+    a.href = "mailto:" + C.email;
+    if (a.hasAttribute("data-show-email")) a.textContent = C.email;
+  });
+  if (C.name && doc.title.indexOf(C.name) === -1) doc.title = doc.title + " | " + C.name;
+
+  /* A labelled dashed box for preview mode */
+  const ph = (cls, text, note) => h("div", { class: "ph " + (cls || "") }, h("span", { text: text }), note ? h("small", { text: note }) : null);
+  if (PREVIEW) $("#main").prepend(h("p", { class: "ph-banner", role: "note", text: COPY.preview.banner }));
+
+  /* ---------- Photo, or an initials monogram ---------- */
+  const initialsOf = (n) => { const w = str(n).split(/\s+/).filter(Boolean); return w.length ? (w[0][0] + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase() : ""; };
+  const initials = initialsOf(C.name);
+  $$("[data-avatar]").forEach((box) => {
+    const kind = box.getAttribute("data-avatar");
+    const mono = () => { box.textContent = initials; box.setAttribute("aria-hidden", "true"); };
+    box.textContent = "";
+    if (C.photo) {
+      const decor = kind === "decor";
+      /* The hero photo loads straight away; the About one waits until it is near the screen */
+      const img = h("img", { src: C.photo, alt: decor ? "" : C.name, width: 400, height: 400, decoding: "async", loading: kind === "photo" ? "lazy" : null });
+      img.addEventListener("error", () => { img.remove(); if (kind === "photo") box.hidden = true; else mono(); });
+      box.append(img);
+      if (decor) box.setAttribute("aria-hidden", "true"); else box.removeAttribute("aria-hidden");
+    } else if (kind === "photo") {
+      /* About: a 200px circle of initials reads as a placeholder, so it waits for a real photo */
+      box.hidden = true;
+    } else if (kind === "hero") {
+      /* Hero: a 4:5 portrait only with a real photo. Initials would read as a placeholder. */
+      box.hidden = true;
+      if (PREVIEW) {
+        box.hidden = false;
+        box.classList.add("ph-ring");
+        box.append(h("span", { class: "ph-tag", text: COPY.preview.heroPhoto }));
+      }
+    } else {
+      mono();
+    }
+  });
+  /* With a portrait in the hero, the headline steps back to eight columns on desktop */
+  (function heroPortrait() {
+    const box = $('[data-avatar="hero"]'), heroSec = $(".hero");
+    if (!box || !heroSec) return;
+    heroSec.classList.toggle("has-portrait", !box.hidden);
+    const img = $("img", box);
+    if (img) img.addEventListener("error", () => { box.hidden = true; heroSec.classList.remove("has-portrait"); });
+  })();
+
+  /* Optional 4:5 portrait in About, in place of the round photo */
+  (function portrait() {
+    const grid = $(".about-grid"), circle = $(".avatar-lg");
+    if (!grid || !circle) return;
+    if (C.portrait) {
+      const img = h("img", { src: C.portrait, alt: C.portraitAlt || C.name, width: 1000, height: 1250, loading: "lazy", decoding: "async" });
+      const fig = h("figure", { class: "portrait-frame" }, img);
+      img.addEventListener("error", () => { fig.remove(); grid.classList.remove("has-portrait"); circle.hidden = !C.photo; });
+      circle.hidden = true;
+      circle.before(fig);
+      grid.classList.add("has-portrait");
+    } else if (PREVIEW) {
+      circle.hidden = true;
+      circle.before(ph("ph-portrait", COPY.preview.portrait, COPY.preview.portraitNote));
+      grid.classList.add("has-portrait");
+    }
+  })();
+
+  /* ---------- Achievements as end credits (the HTML copy is replaced, so CONFIG always wins):
+     the kicker is the role, the value and label are the credit ---------- */
+  (function achievements() {
+    const ul = $("#proof-strip");
+    if (!ul) return;
+    const items = C.achievements.map((a) => ({ k: str(a.kicker), v: str(a.value), l: str(a.label) })).filter((a) => a.l);
+    ul.textContent = "";
+    items.forEach((a) => ul.append(h("li", null,
+      a.k ? h("span", { class: "ps-k", text: a.k }) : null,
+      h("span", { class: "ps-c" },
+        a.v ? h("span", { class: "ps-n", text: a.v }) : null,
+        h("span", { class: "ps-v", text: a.l })))));
+    ul.hidden = items.length === 0;
+    const sec = ul.closest("section");
+    if (sec) sec.hidden = items.length === 0;
+  })();
+
+  /* ---------- Proof slots: hidden unless they hold real, complete entries ---------- */
+  function slot(id, items, build, placeholders) {
+    const sec = doc.getElementById(id);
+    if (!sec) return 0;
+    const host = $(".slot-list", sec);
+    const nodes = items.map(build).filter(Boolean);
+    nodes.forEach((n) => host.append(n));
+    if (!nodes.length && PREVIEW && placeholders) placeholders().forEach((n) => host.append(n));
+    sec.hidden = nodes.length === 0 && !(PREVIEW && placeholders);
+    return nodes.length;
+  }
+  const isHttps = (u) => /^https:\/\/\S+$/i.test(u);
+
+  const nAccounts = slot("slot-accounts", C.accounts, (a) => {
+    if (a.permission !== true) return null;
+    const role = str(a.role), sector = str(a.sector);
+    if (!role || !sector) return null;
+    const name = str(a.name), photo = str(a.photo), before = str(a.headlineBefore), after = str(a.headlineAfter);
+    const hl = str(a.highlight), period = str(a.period), url = str(a.profileUrl);
+    /* A number never shows without the dates it covers */
+    const showHl = hl && !(/\d/.test(hl) && !period);
+    const av = h("span", { class: "pc-av", "aria-hidden": "true" });
+    const noPhoto = () => { if (name) av.textContent = initialsOf(name); else av.append(icon(PERSON)); };
+    if (photo) {
+      const img = h("img", { src: photo, alt: "", width: 144, height: 144, loading: "lazy", decoding: "async" });
+      img.addEventListener("error", () => { img.remove(); noPhoto(); });
+      av.append(img);
+    } else noPhoto();
+    const heads = (before || after) ? h("dl", { class: "pc-heads" },
+      before && after ? h("div", { class: "pc-before" }, h("dt", { text: "Headline before" }), h("dd", { text: before })) : null,
+      after ? h("div", { class: "pc-after" }, h("dt", { text: before ? "Headline now" : "Headline" }), h("dd", { text: after })) : null) : null;
+    return h("li", { class: "pc" },
+      h("div", { class: "pc-cover", "aria-hidden": "true" }),
+      h("div", { class: "pc-body" }, av,
+        h("p", { class: "pc-name", text: name || role }),
+        h("p", { class: "pc-meta", text: name ? role + ", " + sector : sector }),
+        heads,
+        showHl ? h("p", { class: "pc-hl" }, h("span", { text: hl }), period ? h("span", { class: "pc-when", text: period }) : null) : null,
+        h("p", { class: "pc-perm", text: "Shared with their permission" }),
+        isHttps(url) ? h("a", { class: "tap", href: url, target: "_blank", rel: "noopener noreferrer" }, "View profile", h("span", { class: "sr-only", text: " (opens in a new tab)" })) : null));
+  }, () => [0, 1].map(() => h("li", { class: "ph ph-card" }, COPY.preview.account.map((t) => h("span", { text: t })))));
+
+  /* When the profile cards scroll sideways, the strip becomes a labelled, keyboard-scrollable region */
+  const pcScroll = $(".pc-scroll");
+  function syncScrollRegion() {
+    if (!pcScroll || $("#slot-accounts").hidden) return;
+    const on = pcScroll.scrollWidth > pcScroll.clientWidth + 2;
+    if (on) { pcScroll.tabIndex = 0; pcScroll.setAttribute("role", "region"); pcScroll.setAttribute("aria-label", "Profiles I manage, scrolls sideways"); }
+    else { pcScroll.removeAttribute("tabindex"); pcScroll.removeAttribute("role"); pcScroll.removeAttribute("aria-label"); }
+  }
+  if (nAccounts || PREVIEW) { syncScrollRegion(); window.addEventListener("resize", syncScrollRegion, { passive: true }); }
+
+  /* Case studies: only entries with permission === true and every required field filled */
+  const nCases = slot("slot-cases", C.caseStudies, (c) => {
+    if (c.permission !== true || !["title", "who", "challenge", "whatIDid", "outcome"].every((k) => str(c[k]))) return null;
+    const quote = str(c.quote), image = str(c.image), alt = str(c.imageAlt);
+    const li = h("li", { class: "cs" + (image && alt ? " has-img" : "") });
+    if (image && alt) {
+      const img = h("img", { class: "cs-img", src: image, alt: alt, width: 1600, height: 1000, loading: "lazy", decoding: "async" });
+      img.addEventListener("error", () => { img.remove(); li.classList.remove("has-img"); });
+      li.append(img);
+    }
+    li.append(h("div", { class: "cs-body" },
+      h("p", { class: "cs-who", text: str(c.who) }),
+      h("h4", { class: "h3", text: str(c.title) }),
+      h("dl", null,
+        h("div", null, h("dt", { text: "The challenge" }), h("dd", { text: str(c.challenge) })),
+        h("div", null, h("dt", { text: "What I did" }), h("dd", { text: str(c.whatIDid) })),
+        h("div", null, h("dt", { text: "The outcome" }), h("dd", { text: str(c.outcome) }))),
+      quote ? h("blockquote", { text: "“" + quote + "”" }) : null));
+    return li;
+  }, () => [h("li", { class: "cs" }, ph("ph-cs", COPY.preview.caseImage), h("div", { class: "ph ph-card" }, COPY.preview.caseText.map((t) => h("span", { text: t }))))]);
+
+  /* Results, quotes and logos follow the same rule as profiles and case studies: they only show
+     with permission === true, typed only once the client has agreed in writing */
+  const nResults = slot("slot-results", C.results, (r) => {
+    if (r.permission !== true) return null;
+    const client = str(r.client), result = str(r.result), period = str(r.period);
+    if (!client || !result) return null;
+    return h("li", { class: "res" }, h("p", { class: "res-r", text: result }), h("p", { class: "res-m", text: client + (period ? ", " + period : "") }));
+  }, () => [h("li", null, ph("", COPY.preview.result))]);
+
+  const nQuotes = slot("slot-testimonials", C.testimonials, (t) => {
+    if (t.permission !== true) return null;
+    const quote = str(t.quote), name = str(t.name), role = str(t.role), company = str(t.company);
+    if (!quote || !name) return null;
+    const who = [role, company].filter(Boolean).join(", ");
+    return h("figure", { class: "quote" }, h("blockquote", { text: "“" + quote + "”" }),
+      h("figcaption", null, h("strong", { text: name }), who ? ", " + who : ""));
+  }, () => [ph("", COPY.preview.quote)]);
+
+  slot("slot-logos", C.clientLogos, (l) => {
+    if (l.permission !== true) return null;
+    const name = str(l.name), file = str(l.logoFile), alt = str(l.alt) || name;
+    if (!name) return null;
+    if (!file) return h("li", null, h("span", { class: "logo-name", text: name }));
+    const img = h("img", { src: file, alt: alt, width: 160, height: 48, loading: "lazy", decoding: "async" });
+    const li = h("li", null, img);
+    img.addEventListener("error", () => { li.textContent = ""; li.append(h("span", { class: "logo-name", text: name })); });
+    return li;
+  }, () => [0, 1, 2].map(() => h("li", { class: "ph ph-logo" }, h("span", { text: COPY.preview.logo }))));
+
+  slot("slot-credentials", C.credentials, (c) => {
+    const name = str(c.name), issuer = str(c.issuer);
+    if (!name) return null;
+    return h("li", { text: name + (issuer ? ", " + issuer : "") });
+  });
+
+  slot("slot-gallery", C.gallery, (g) => {
+    const file = str(g.file), alt = str(g.alt), caption = str(g.caption);
+    if (!file || !alt) return null;
+    const img = h("img", { src: file, alt: alt, width: num(g.width, 1600), height: num(g.height, 1067), loading: "lazy", decoding: "async" });
+    const li = h("li", null, h("figure", null, img, caption ? h("figcaption", { text: caption }) : null));
+    img.addEventListener("error", () => li.remove());
+    return li;
+  }, () => COPY.preview.gallery.map((t) => h("li", null, ph("ph-wide", t, COPY.preview.galleryNote))));
+
+  $("#cs-list").hidden = !nCases && !PREVIEW;
+  /* The honest "Real clients. Real results." block stays until real proof exists */
+  $("#cs-empty").hidden = nAccounts + nCases + nResults + nQuotes > 0;
+
+  /* Pass "came from QR code" on to the check page, so its lead emails say so too */
+  const src = (params.get("src") || "").slice(0, 40);
+  const sourceLabel = src === "qr" ? "QR code" : (src || "Direct link");
+  if (src) $$('a[href^="check/"]').forEach((a) => {
+    const u = new URL(a.getAttribute("href"), window.location.href);
+    u.searchParams.set("src", src);
+    a.href = u.href;
+  });
+
+  /* Setup guard: stops anyone printing a QR code to an unfinished page */
+  const setup = $("#setup");
+  const missing = [];
+  if (!C.name) missing.push("name");
+  if (!C.linkedinUrl) missing.push("LinkedIn link");
+  if (!C.email) missing.push("email");
+  /* With scripts on, the browser keeps noscript content as plain text, so a placeholder can be read here.
+     The placeholder is split in two so a find-and-replace of it never changes this check. */
+  if ($$("noscript").some((n) => n.textContent.indexOf("EMAIL-NOT" + "-SET") > -1)) missing.push("email in the no-JavaScript message");
+  function syncSetupHeight() { root.style.setProperty("--setup-h", setup.hidden ? "0px" : setup.offsetHeight + "px"); }
+  if (missing.length) {
+    setup.append(h("strong", { text: "Setup: " + missing.length + " detail" + (missing.length === 1 ? "" : "s") + " missing" }),
+      " (" + missing.join(", ") + "). Fill " + (missing.length === 1 ? "it" : "them") + " in before printing a QR code. HANDOVER.md, Step 1, shows where.");
+    setup.hidden = false;
+    syncSetupHeight();
+    window.addEventListener("resize", syncSetupHeight);
+  }
+
+  /* ---------- Enquiry form ---------- */
+  const announce = $("#announce");
+  const form = $("#enquiry-form");
+  $("#enquiry-body").hidden = false;
+  const F = { name: $("#f-name"), email: $("#f-email"), company: $("#f-company"), role: $("#f-role"), message: $("#f-message") };
+  const sendBtn = $("#send");
+  const statusEl = $("#form-status");
+  const fallback = $("#fallback");
+  const mailtoBtn = $("#mailto-btn");
+  const EMAIL_RE = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/;
+  const RULES = {
+    name: (v) => v.length > 0,
+    email: (v) => EMAIL_RE.test(v),
+    company: (v) => v.length > 0,
+    role: (v) => v.length > 0
+  };
+  /* A field that gets focus half off the screen is brought fully into view. The browser alone
+     stops as soon as the top edge shows; scroll-margin on .input keeps a gap round it. */
+  $$(".input", form).forEach((el) => el.addEventListener("focus", () => {
+    const r = el.getBoundingClientRect();
+    if (r.bottom > window.innerHeight || r.top < 0) el.scrollIntoView({ block: "nearest" });
+  }));
+  const touched = {};
+  /* Each field's description lists only the help, suggestion and error text that is showing */
+  function syncDesc(key) {
+    const ids = ["h-" + key, "s-" + key, "e-" + key].filter((id) => { const n = doc.getElementById(id); return n && !n.hidden; });
+    if (ids.length) F[key].setAttribute("aria-describedby", ids.join(" ")); else F[key].removeAttribute("aria-describedby");
+  }
+  function check(key) {
+    const input = F[key];
+    const ok = RULES[key](input.value.trim());
+    /* Analytics: the field and the kind of problem only, once each time a field turns invalid */
+    if (!ok && input.getAttribute("aria-invalid") !== "true") track("contact_form_error", { field: key, error: input.value.trim() ? "invalid" : "missing" });
+    $("#e-" + key).hidden = ok;
+    if (ok) input.removeAttribute("aria-invalid"); else input.setAttribute("aria-invalid", "true");
+    syncDesc(key);
+    return ok;
+  }
+  /* Pressing the send button blurs the field first. Showing an error at that moment would push the
+     button down under the pointer, so the click would miss. Send checks every field anyway. */
+  let pressingSend = false;
+  sendBtn.addEventListener("pointerdown", () => { pressingSend = true; window.setTimeout(() => { pressingSend = false; }, 1500); });
+  sendBtn.addEventListener("click", () => { pressingSend = false; });
+  Object.keys(RULES).forEach((key) => {
+    F[key].addEventListener("blur", (e) => { if (pressingSend || e.relatedTarget === sendBtn) return; if (F[key].value.trim() || touched[key]) { touched[key] = true; check(key); } });
+    F[key].addEventListener("input", () => { if (F[key].getAttribute("aria-invalid") === "true") check(key); });
+  });
+
+  /* Gentle typo check on common email domains */
+  const TYPOS = { "gmial.com": "gmail.com", "gamil.com": "gmail.com", "gmai.com": "gmail.com", "gmail.co": "gmail.com", "gmail.con": "gmail.com",
+    "gmail.co.uk": "gmail.com", "hotmial.com": "hotmail.com", "hotmal.com": "hotmail.com", "hotmail.con": "hotmail.com", "hotmail.co": "hotmail.co.uk",
+    "outlok.com": "outlook.com", "outlook.con": "outlook.com", "yahoo.con": "yahoo.com", "yaho.com": "yahoo.com", "iclod.com": "icloud.com",
+    "icloud.con": "icloud.com", "btinternet.con": "btinternet.com", "btinternt.com": "btinternet.com" };
+  const suggestBox = $("#s-email"), suggestBtn = $("#s-email-btn");
+  function suggestEmail() {
+    const v = F.email.value.trim(), at = v.lastIndexOf("@");
+    let fix = "";
+    if (at > 0) {
+      const dom = v.slice(at + 1).toLowerCase();
+      let better = TYPOS[dom] || "";
+      if (!better && /\.con$|\.cmo$|\.ocm$/.test(dom)) better = dom.replace(/\.(con|cmo|ocm)$/, ".com");
+      if (!better && /\.co\.k$|\.couk$|\.co\.uk\.$/.test(dom)) better = dom.replace(/\.(co\.k|couk|co\.uk\.)$/, ".co.uk");
+      if (better) fix = v.slice(0, at + 1) + better;
+    }
+    const isNew = !!fix && (suggestBox.hidden || suggestBtn.textContent !== fix);
+    suggestBtn.textContent = fix;
+    suggestBox.hidden = !fix;
+    syncDesc("email");
+    /* Focus has already left the field, so say it out loud through the live region */
+    if (isNew) { announce.textContent = ""; window.setTimeout(() => { announce.textContent = "Did you mean " + fix + "?"; }, 60); }
+  }
+  F.email.addEventListener("blur", (e) => { if (!pressingSend && e.relatedTarget !== sendBtn) suggestEmail(); });
+  suggestBtn.addEventListener("click", () => { F.email.value = suggestBtn.textContent; suggestBox.hidden = true; check("email"); F.email.focus(); });
+  Object.keys(RULES).forEach(syncDesc);
+
+  /* Analytics for the form: started (first focus), the last field touched, sent, or left
+     unfinished. Field names only, never what is typed. */
+  const formT = { started: false, done: false, left: false, last: "" };
+  const fieldOf = (el) => Object.keys(F).find((k) => F[k] === el) || "";
+  const touchField = (e) => {
+    const k = fieldOf(e.target);
+    if (!k) return;
+    formT.last = k;
+    if (!formT.started) { formT.started = true; track("contact_form_started", { field: k }); }
+  };
+  form.addEventListener("focusin", touchField);
+  form.addEventListener("input", touchField);
+  const formSent = (method) => { if (formT.done) return; formT.done = true; track("contact_form_submitted", { method: method }, { leaving: true }); };
+  ANALYTICS.onLeave(() => {
+    if (!formT.started || formT.done || formT.left || sending) return;
+    formT.left = true;
+    track("contact_form_abandoned", { last_field: formT.last }, { leaving: true });
+  });
+
+  function buildLead() {
+    const visitorName = F.name.value.trim();
+    const map = {
+      visitorName: visitorName, visitorFirstName: visitorName.split(/\s+/)[0] || visitorName,
+      visitorEmail: F.email.value.trim(), company: F.company.value.trim(), role: F.role.value.trim(),
+      message: F.message.value.trim() || "None",
+      sentDate: today(), source: sourceLabel
+    };
+    return { map: map, subject: fill(COPY.leadSubject, map), body: fill(COPY.leadBody.join("\n"), map) };
+  }
+
+  /* Email-app version: CRLF line breaks (RFC 6068), and the visitor's message is shortened
+     if needed so the whole link stays under the length some Windows mail apps accept. */
+  const MAILTO_MAX = 1900;
+  let mailCut = false;
+  function mailtoHref(L) {
+    const head = "mailto:" + C.email + "?subject=" + encodeURIComponent(L.subject) + "&body=";
+    const make = (message) => head + encodeURIComponent(fill(COPY.leadBody.join("\n"), Object.assign({}, L.map, { message: message })).replace(/\r?\n/g, "\r\n"));
+    const full = L.map.message;
+    let href = make(full), keep = full.length;
+    mailCut = false;
+    while (href.length > MAILTO_MAX && keep > 0) {
+      mailCut = true;
+      keep = Math.max(0, keep - Math.max(20, Math.ceil((href.length - MAILTO_MAX) / 3)));
+      href = make(full.slice(0, keep).trim() + " " + COPY.form.mailShortened);
+    }
+    return href;
+  }
+  function setStatus(text, isError) { statusEl.textContent = text || ""; statusEl.classList.toggle("is-error", !!isError); }
+  /* If the email version had to cut the message, say so and offer to copy the full text */
+  const cutNote = $("#fallback-cut"), copyBtn = $("#copy-msg"), copyStatus = $("#copy-status");
+  copyBtn.addEventListener("click", async () => {
+    const text = F.message.value.trim();
+    let ok = false;
+    try { if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(text); ok = true; } } catch (err) { ok = false; }
+    if (!ok) {
+      try { F.message.focus(); F.message.select(); ok = document.execCommand("copy"); } catch (err) { ok = false; }
+      copyBtn.focus();
+    }
+    copyStatus.textContent = ok ? COPY.form.copied : COPY.form.copyFailed;
+  });
+  function showFallback(L, text, btnText) {
+    if (!C.email) { setStatus(COPY.form.notReady, true); return; }
+    $("#fallback-text").textContent = text;
+    mailtoBtn.textContent = btnText;
+    mailtoBtn.href = mailtoHref(L);
+    cutNote.textContent = mailCut ? COPY.form.mailCutNote : "";
+    cutNote.hidden = !mailCut;
+    copyBtn.hidden = !mailCut;
+    copyStatus.textContent = "";
+    fallback.hidden = false;
+  }
+  /* Where focus goes once the fallback shows: the copy button first if the message was cut */
+  function fallbackFocus() { if (fallback.hidden) return; if (mailCut) copyBtn.focus(); else mailtoBtn.focus(); }
+  function succeed(L) {
+    const map = { visitorFirstName: L.map.visitorFirstName, email: C.email };
+    $("#done-h").textContent = fill(COPY.form.successHeading, map);
+    $("#done-t").textContent = fill(C.email ? COPY.form.successText : COPY.form.successTextNoEmail, map);
+    $("#enquiry-body").hidden = true;
+    $("#done").hidden = false;
+    $("#done-h").focus();
+  }
+
+  let sending = false;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (sending) return;
+    fallback.hidden = true;
+    const bad = Object.keys(RULES).filter((k) => { touched[k] = true; return !check(k); });
+    if (bad.length) { setStatus(COPY.form.error, true); F[bad[0]].focus(); return; }
+    setStatus("");
+    const L = buildLead();
+    const data = new FormData(form);
+
+    if (!C.web3formsKey) {
+      if (data.get("botcheck")) return;
+      if (!C.email) { setStatus(COPY.form.notReady, true); return; }
+      showFallback(L, COPY.form.mailText, COPY.form.mailButton);
+      /* A cut message waits for the visitor to copy it before the email app opens */
+      if (mailCut) { $("#fallback-text").textContent = COPY.form.mailTextCut; fallbackFocus(); }
+      else { formSent("email_app"); window.location.href = mailtoHref(L); }
+      return;
+    }
+
+    /* Web3Forms JSON request, as in their HTML and JavaScript guide. FormData includes the
+       hidden botcheck box only if something ticked it, which is how their spam trap works. */
+    const payload = Object.fromEntries(data);
+    payload.message = L.map.message;
+    Object.assign(payload, {
+      access_key: C.web3formsKey,
+      subject: L.subject,
+      "Came from": sourceLabel,
+      "Sent on": L.map.sentDate,
+      "Page": C.siteUrl || (window.location.origin + window.location.pathname),
+      "Summary": L.body
+    });
+
+    /* aria-disabled, not disabled, so keyboard focus stays on the button while it sends */
+    sending = true;
+    sendBtn.setAttribute("aria-disabled", "true");
+    sendBtn.textContent = COPY.form.sending;
+    setStatus(COPY.form.sending);
+    const ctrl = "AbortController" in window ? new AbortController() : null;
+    const timer = window.setTimeout(() => { if (ctrl) ctrl.abort(); }, 15000);
+    let ok = false;
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload),
+        signal: ctrl ? ctrl.signal : undefined
+      });
+      const json = await res.json().catch(() => ({}));
+      ok = res.ok && json && json.success === true;
+    } catch (err) { ok = false; }
+    window.clearTimeout(timer);
+    sending = false;
+    sendBtn.removeAttribute("aria-disabled");
+    sendBtn.textContent = COPY.form.sendButton;
+    setStatus("");
+    if (ok) { formSent("web3forms"); succeed(L); return; }
+    showFallback(L, COPY.form.failText, COPY.form.failButton);
+    fallbackFocus();
+  });
+  /* The fallback's email button: the visitor sends it from their own email app */
+  mailtoBtn.addEventListener("click", () => formSent("email_app"));
+
+  /* ---------- Phone menu (a native modal dialog: focus stays inside, Esc closes) ---------- */
+  const menu = $("#menu"), menuBtn = $("#menu-btn");
+  const menuOpen = () => !!(menu && menu.open);
+  /* Closes the sheet and frees the page's scrolling at once (the dialog's own close event comes later) */
+  const closeMenu = () => { if (menuOpen()) menu.close(); root.classList.remove("menu-open"); };
+  if (menu && menuBtn && typeof menu.showModal === "function") {
+    root.classList.add("has-menu");
+    menuBtn.hidden = false;
+    menuBtn.addEventListener("click", () => { menu.showModal(); root.classList.add("menu-open"); menuBtn.setAttribute("aria-expanded", "true"); });
+    $("#menu-close").addEventListener("click", () => menu.close());
+    /* A tap on the dimmed page behind the sheet closes it */
+    menu.addEventListener("click", (e) => { if (e.target === menu) menu.close(); });
+    menu.addEventListener("close", () => {
+      root.classList.remove("menu-open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      const a = doc.activeElement;
+      if (!a || a === doc.body || menu.contains(a)) menuBtn.focus();
+    });
+  }
+
+  /* ---------- Sticky phone actions ---------- */
+  const sticky = $("#sticky");
+  const heroActions = $(".hero-actions");
+  const contactSec = $("#contact");
+  const teaser = $("#check-teaser");
+  const foot = $(".site-foot");
+  const vis = { actions: true, contact: false, teaser: false, foot: false, typing: false };
+  function updateSticky() {
+    const show = !vis.actions && !vis.contact && !vis.teaser && !vis.foot && !vis.typing;
+    sticky.classList.toggle("show", show);
+    /* inert keeps the hidden bar's links out of the Tab order */
+    if (show) { sticky.removeAttribute("aria-hidden"); sticky.inert = false; }
+    else { sticky.setAttribute("aria-hidden", "true"); sticky.inert = true; }
+  }
+  if ("IntersectionObserver" in window) {
+    sticky.hidden = false;
+    updateSticky();
+    /* The hero buttons and the footer hide the bar as soon as any part shows. The check teaser and
+       the contact section have their own buttons, so they hide it once they fill the middle of the
+       screen; a sliver at the edge no longer switches the bar off for the FAQ and the work section. */
+    const edge = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.target === heroActions) vis.actions = en.isIntersecting;
+        else vis.foot = en.isIntersecting;
+      });
+      updateSticky();
+    }, { threshold: 0 });
+    edge.observe(heroActions);
+    if (foot) edge.observe(foot);
+    const middle = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.target === teaser) vis.teaser = en.isIntersecting;
+        else vis.contact = en.isIntersecting;
+      });
+      updateSticky();
+    }, { threshold: 0, rootMargin: "-40% 0px -40% 0px" });
+    middle.observe(teaser);
+    middle.observe(contactSec);
+    /* While a field has focus the phone keyboard is up: the bar steps aside */
+    const isField = (el) => !!el && el.matches && el.matches("input, textarea, select");
+    doc.addEventListener("focusin", (e) => { if (isField(e.target)) { vis.typing = true; updateSticky(); } });
+    doc.addEventListener("focusout", (e) => { if (isField(e.target)) { vis.typing = isField(e.relatedTarget); updateSticky(); } });
+  }
+
+  /* ---------- Header: condenses after the first few pixels, hides on the way down past the
+     hero and comes back on the way up. One passive listener, one read per frame. ---------- */
+  const head = $("#site-head"), toTop = $("#to-top"), prog = $(".head-progress"), hero = $(".hero");
+  /* Browsers without CSS scroll timelines get the progress line from this script instead */
+  const progByScript = !(window.CSS && CSS.supports && CSS.supports("animation-timeline: scroll()"));
+  let heroH = hero.offsetHeight, lastY = window.scrollY, headTick = false, footInView = false;
+  window.addEventListener("resize", () => { heroH = hero.offsetHeight; }, { passive: true });
+  /* The footer has its own "Back to top" link, so the round button steps aside once it shows */
+  if ("IntersectionObserver" in window) new IntersectionObserver((en) => { footInView = en[0].isIntersecting; headFrame(); }, { threshold: 0 }).observe($(".site-foot"));
+  function headFrame() {
+    headTick = false;
+    const y = window.scrollY, dy = y - lastY;
+    head.classList.toggle("is-stuck", y > 8);
+    const mayHide = !reduced() && y > heroH * 0.6 && !head.contains(doc.activeElement) && !menuOpen();
+    /* Hysteresis: hide after 24px of travel down, show after 12px up, so a wobbling thumb never flickers it */
+    if (!mayHide) { head.classList.remove("is-hidden"); lastY = y; }
+    else if (dy > 24) { head.classList.add("is-hidden"); lastY = y; }
+    else if (dy < -12) { head.classList.remove("is-hidden"); lastY = y; }
+    if (toTop) toTop.classList.toggle("show", y > window.innerHeight * 1.2 && !footInView);
+    if (progByScript && prog && !reduced()) { const max = root.scrollHeight - window.innerHeight; prog.style.transform = "scaleX(" + (max > 0 ? Math.min(1, y / max) : 0) + ")"; }
+  }
+  window.addEventListener("scroll", () => { if (!headTick) { headTick = true; window.requestAnimationFrame(headFrame); } }, { passive: true });
+  head.addEventListener("focusin", () => head.classList.remove("is-hidden"));
+  headFrame();
+
+  /* Scroll-spy: the desktop section link for the part of the page in the middle of the screen */
+  const spyLinks = $$(".head-sec");
+  if (spyLinks.length && "IntersectionObserver" in window) {
+    const byId = {};
+    spyLinks.forEach((a) => { byId[a.getAttribute("href").slice(1)] = a; });
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        spyLinks.forEach((a) => a.removeAttribute("aria-current"));
+        const a = byId[en.target.id];
+        if (a) a.setAttribute("aria-current", "location");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    $$("main section").forEach((s) => spy.observe(s));
+  }
+
+  /* ---------- In-page links glide to their section (0.38 to 0.72 seconds, longer for further
+     away, starting gently) and land focus there. With reduced motion it is a straight jump. Touching, wheeling or a
+     key press stops the glide; those listeners only exist while a glide runs. ---------- */
+  let glide = 0;
+  const STOPS = ["wheel", "touchstart", "keydown"];
+  const stopGlide = () => { if (glide) window.cancelAnimationFrame(glide); glide = 0; STOPS.forEach((t) => window.removeEventListener(t, stopGlide)); };
+  const headPad = () => parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+  function glideToY(to) {
+    stopGlide();
+    to = Math.max(0, Math.min(root.scrollHeight - window.innerHeight, to));
+    const from = window.scrollY;
+    if (reduced() || Math.abs(to - from) < 2) { window.scrollTo(0, to); return; }
+    const t0 = performance.now(), dur = Math.min(720, Math.max(380, 260 + Math.abs(to - from) * 0.12));
+    const ease = (p) => (p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2);
+    STOPS.forEach((t) => window.addEventListener(t, stopGlide, { passive: true }));
+    const step = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      window.scrollTo(0, from + (to - from) * ease(p));
+      if (p < 1) glide = window.requestAnimationFrame(step); else stopGlide();
+    };
+    glide = window.requestAnimationFrame(step);
+  }
+  const glideTo = (el) => glideToY(el.getBoundingClientRect().top + window.scrollY - (parseFloat(getComputedStyle(el).scrollMarginTop) || 0) - headPad());
+  const brand = $(".brand");
+  $$('a[href^="#"]').forEach((a) => {
+    const id = a.getAttribute("href").slice(1);
+    if (id === "top") {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeMenu();
+        glideToY(0);
+        if (window.location.hash && window.history && history.pushState) history.pushState(null, "", window.location.pathname + window.location.search);
+        brand.focus({ preventScroll: true });
+      });
+      return;
+    }
+    const target = id && doc.getElementById(id);
+    if (!target || id === "main") return;
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeMenu();
+      glideTo(target);
+      if (window.history && history.pushState) history.pushState(null, "", "#" + id); else window.location.hash = id;
+      const h2 = $("h2", target) || target;
+      if (!h2.hasAttribute("tabindex")) h2.setAttribute("tabindex", "-1");
+      h2.focus({ preventScroll: true });
+    });
+  });
+
+  /* ---------- Section headings ease in (opacity only), and their italic turn underlines itself
+     as they arrive. Content is visible if this never runs. ---------- */
+  (function reveals() {
+    const items = $$(".rv").filter((el) => !el.closest("[hidden]"));
+    if (!items.length || !("IntersectionObserver" in window) || reduced()) return;
+    items.forEach((el) => el.classList.add("rv-on"));
+    root.classList.add("will-animate");
+    const showAll = () => items.forEach((el) => el.classList.add("in"));
+    const failSafe = window.setTimeout(showAll, 3000);
+    /* The observed area runs from far above the screen to 40px above its bottom edge. A fast
+       scroll that jumps clean over a heading still lands it inside that area, so it shows, with no
+       position reads on every frame. */
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); obs.unobserve(en.target); } });
+    }, { rootMargin: "100000px 0px -40px 0px", threshold: 0 });
+    items.forEach((el) => io.observe(el));
+    window.addEventListener("load", () => window.clearTimeout(failSafe));
+    /* Keyboard focus never waits for a fade: the heading shows at once */
+    doc.addEventListener("focusin", (e) => { const r = e.target.closest && e.target.closest(".rv-on"); if (r) { r.style.transition = "none"; r.classList.add("in"); } });
+    reduceMQ.addEventListener && reduceMQ.addEventListener("change", () => { if (reduced()) showAll(); });
+  })();
+
+  /* ---------- Lit lines: the key clause of two statements lights word by word as it crosses the
+     screen. Words are split only when motion is allowed; with reduced motion or JavaScript off the
+     text stays exactly as written. Plain inline spans, so it still reads as one sentence. ---------- */
+  (function litLines() {
+    if (reduced()) return;
+    const lines = $$("[data-light]");
+    lines.forEach((p) => {
+      const host = $("strong", p) || p, words = [];
+      (function walk(node) {
+        Array.prototype.slice.call(node.childNodes).forEach((n) => {
+          if (n.nodeType === 3) {
+            /* Each word keeps its trailing space inside its span */
+            const v = n.nodeValue, lead = v.match(/^\s*/)[0], frag = doc.createDocumentFragment();
+            if (lead) frag.append(lead);
+            (v.slice(lead.length).match(/\S+\s*/g) || []).forEach((t) => { const w = h("span", { class: "w", text: t }); words.push(w); frag.append(w); });
+            node.replaceChild(frag, n);
+          } else if (n.nodeType === 1) walk(n);
+        });
+      })(host);
+      words.forEach((w, i) => w.style.setProperty("--i", i));
+      p.style.setProperty("--n", Math.max(1, words.length - 1));
+    });
+    /* Browsers without scroll timelines: one passive listener writes --p (0 to 1) on lit lines that
+       are on screen. All reads first, then all writes. */
+    if (!lines.length || (window.CSS && CSS.supports && CSS.supports("animation-timeline: view()")) || !("IntersectionObserver" in window)) return;
+    root.classList.add("raf-scrub");
+    const live = [];
+    let ticking = false;
+    const frame = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+      const ps = live.map((el) => { const r = el.getBoundingClientRect(); return Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height))); });
+      live.forEach((el, k) => el.style.setProperty("--p", ps[k].toFixed(4)));
+    };
+    const kick = () => { if (!ticking && live.length) { ticking = true; window.requestAnimationFrame(frame); } };
+    const io = new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        const k = live.indexOf(e.target);
+        if (e.isIntersecting && k < 0) live.push(e.target);
+        else if (!e.isIntersecting && k > -1) { live.splice(k, 1); e.target.style.setProperty("--p", e.boundingClientRect.top > 0 ? "0" : "1"); }
+      });
+      kick();
+    }, { rootMargin: "50px 0px" });
+    lines.forEach((p) => io.observe(p));
+    window.addEventListener("scroll", kick, { passive: true });
+    window.addEventListener("resize", kick, { passive: true });
+    reduceMQ.addEventListener && reduceMQ.addEventListener("change", () => { if (reduced()) root.classList.remove("raf-scrub"); });
+  })();
+
+  /* ---------- Usage analytics (only when ANALYTICS is switched on: see CONFIG.analytics) ----------
+     Which part of the page a click came from, which sections were seen, which questions opened. */
+  (function usage() {
+    if (!ANALYTICS.on) return;
+    const LEAVE = { leaving: true };
+    const whereOf = (el) => {
+      if (el.closest("#site-head")) return "header";
+      if (el.closest("#menu")) return "menu";
+      if (el.closest("#sticky")) return "sticky_bar";
+      if (el.closest("#to-top")) return "round_button";
+      if (el.closest(".site-foot")) return "footer";
+      if (el.closest(".hero")) return "hero";
+      const sec = el.closest("main section");
+      return sec ? (sec.id || sec.classList[0] || "page") : "page";
+    };
+    doc.addEventListener("click", (e) => {
+      const el = e.target && e.target.closest && e.target.closest("a, button");
+      if (!el || el.closest("#fallback, #done, #s-email")) return;
+      const where = whereOf(el);
+      if (el.id === "menu-btn") { track("menu_opened", { where: where }); return; }
+      if (el.tagName !== "A") return;
+      const raw = el.getAttribute("href") || "";
+      if (el.closest(".pv-scale")) {
+        const m = raw.match(/a1=([1-5])/);
+        track("preview_answer_tapped", { value: m ? Number(m[1]) : 0 }, LEAVE);
+        return;
+      }
+      if (raw === "#top") { track("back_to_top_clicked", { where: where }); return; }
+      if (el.hasAttribute("data-cfg-mailto")) { track("email_link_clicked", { where: where }, LEAVE); return; }
+      if (el.getAttribute("data-cfg-href") === "linkedinUrl") { track("linkedin_profile_clicked", { where: where }, LEAVE); return; }
+      if (raw === "#contact") { track("cta_clicked", { action: "contact", where: where }); return; }
+      let url = null;
+      try { url = new URL(el.href, window.location.href); } catch (err) { return; }
+      if (url.origin !== window.location.origin) return;
+      if (/\/check\/(index\.html)?$/.test(url.pathname)) { track("cta_clicked", { action: "check", where: where }, LEAVE); return; }
+      if (/\/privacy\/(index\.html)?$/.test(url.pathname)) { track("nav_link_clicked", { target: url.hash === "#access" ? "privacy_access" : "privacy", where: where }, LEAVE); return; }
+      if (raw.charAt(0) === "#" && raw.length > 1 && raw !== "#main") track("nav_link_clicked", { target: raw.slice(1), where: where });
+    });
+
+    /* Each section once, when it crosses the middle of the screen */
+    if ("IntersectionObserver" in window) {
+      const seen = new IntersectionObserver((entries, obs) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return;
+          obs.unobserve(en.target);
+          track("section_viewed", { section: en.target.id || en.target.classList[0] || "section" });
+        });
+      }, { rootMargin: "-35% 0px -35% 0px", threshold: 0 });
+      $$("main > section").forEach((s) => { if (!s.hidden) seen.observe(s); });
+    }
+
+    /* FAQ: the question's number, counting from the top of the list */
+    $$(".faq details").forEach((d, i) => d.addEventListener("toggle", () => { if (d.open) track("faq_opened", { question: i + 1 }); }));
+  })();
+})();
+</script>
+</body>
+</html>

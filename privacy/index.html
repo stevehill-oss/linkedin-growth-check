@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy and account access | Raymond Shaahu</title>
+<meta name="description" content="How your information is handled when you send an enquiry or your LinkedIn check answers, and how account access works without sharing your password.">
+<link rel="canonical" href="https://stevehill-oss.github.io/linkedin-growth-check/privacy/">
+<!-- If you move to your own domain, change the address in the canonical line above. -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0F1813" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#090E0B" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1813'/%3E%3Cpath d='M14 26V14h12M38 14h12v12M50 38v12H38M26 50H14V38' fill='none' stroke='%23E0BD82' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+/* ---------- v5 tokens (the same as the main page) ---------- */
+:root{
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",P052,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --fs-label:.75rem;--fs-small:.875rem;--fs-body:1.0625rem;
+  --fs-lead:clamp(1.1875rem,1.12rem + .3vw,1.375rem);
+  --fs-title:clamp(2.125rem,1.4rem + 3.1vw,4rem);
+  --fs-h2:clamp(1.625rem,1.3rem + 1.5vw,2.5rem);
+  --gutter:clamp(1.25rem,5vw,3.5rem);
+  --ease:cubic-bezier(.32,.72,0,1);--ease-out:cubic-bezier(.22,1,.36,1);--t-fast:160ms;
+  --setup-h:0px;
+  --bg:#F6F3EC;--raised:#FFFDF8;--ink:#141D18;--muted:#545C56;--accent:#7A5216;
+  --hairline:rgba(20,29,24,.12);--rule:rgba(20,29,24,.2);--focus:#7A5216;
+  --setup-bg:#FFF1CF;--setup-ink:#3A2A08;
+  --screen:#0F1813;--screen-ink:#F1EEE6;--screen-muted:#B4BAB3;--screen-accent:#E0BD82;
+  --screen-line:rgba(241,238,230,.14);--corner:rgba(224,189,130,.6);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#18211C;--raised:#212B26;--ink:#ECE9E1;--muted:#A7ADA7;--accent:#DDB878;
+    --hairline:rgba(236,233,225,.12);--rule:rgba(236,233,225,.2);--focus:#DDB878;
+    --screen:#090E0B;
+  }
+  .site-head{box-shadow:inset 0 -1px 0 var(--screen-line)}
+  .site-foot{box-shadow:inset 0 1px 0 var(--screen-line)}
+}
+*,*::before,*::after{box-sizing:border-box}
+/* No CSS smooth scrolling: it slows keyboard focus scrolling, as on the other two pages */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-block:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-body)/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-bottom:var(--setup-h)}
+@media (min-width:900px){body{font-size:1.125rem}}
+[hidden]{display:none!important}
+img,svg{display:block;max-width:100%}
+h1,h2,h3,h4,p,ol,ul{margin:0}
+h1,h2,h3,h4{font-weight:400}
+ol,ul{padding:0;list-style:none}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+/* Links inside running text: a taller tap area (at least 24px) without moving the lines */
+p a:not([class]){padding-block:.5em}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:50;background:var(--ink);color:var(--bg);padding:.7rem 1rem;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+/* One 40rem reading column */
+.wrap{width:min(100% - 2*var(--gutter),40rem);margin-inline:auto}
+.label{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+/* The turn of a headline, as on the other two pages: italic, plus a rule that draws once */
+.turn{font-style:italic;position:relative;display:inline-block;padding-bottom:.06em;white-space:nowrap}
+.turn::after{content:"";position:absolute;left:0;right:.12em;bottom:0;height:max(1.5px,.035em);background:currentColor;opacity:.7;transform-origin:0 50%}
+@media (prefers-reduced-motion:no-preference){.turn::after{animation:draw 900ms var(--ease-out) 350ms both}@keyframes draw{from{transform:scaleX(0)}}}
+
+/* Header: a slim screen band */
+.site-head{background:var(--screen);color:var(--screen-ink);--focus:var(--screen-accent)}
+.site-head .wrap{width:min(100% - 2*var(--gutter),76rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.5rem}
+.brand{display:inline-flex;align-items:center;gap:.55rem;color:inherit;text-decoration:none;font:400 1.0625rem/1.2 var(--serif);letter-spacing:.01em;min-height:44px;white-space:nowrap}
+.head-back{display:inline-flex;align-items:center;gap:.4rem;font:500 var(--fs-small)/1 var(--sans);min-height:44px;color:var(--screen-ink);white-space:nowrap;text-decoration:none}
+.head-back:hover{text-decoration:underline}
+@media (max-width:359.98px){.brand{font-size:.9375rem}.site-head .wrap{gap:.6rem}}
+.head-back svg{width:1.05em;height:1.05em}
+.avatar{--av:2rem;width:var(--av);height:var(--av);border-radius:50%;overflow:hidden;flex:none}
+.avatar img{width:100%;height:100%;object-fit:cover}
+
+/* Page */
+.intro{padding-block:clamp(2.5rem,7vw,6rem) 1rem}
+.intro h1{font:400 var(--fs-title)/1.06 var(--serif);letter-spacing:-.018em;margin-top:1rem;text-wrap:balance}
+.intro p.lede{margin-top:1.25rem;font-size:var(--fs-lead);line-height:1.55;color:var(--muted);text-wrap:pretty}
+/* The two halves of the page, as plain text links with arrows */
+.toc{margin-top:1.75rem;display:grid;border-top:1px solid var(--hairline)}
+.toc a{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.25rem;border-bottom:1px solid var(--hairline);text-decoration:none;font-weight:500}
+.toc a::after{content:"\2193" / "";color:var(--accent);font-family:var(--sans)}
+.toc a:hover{text-decoration:underline}
+.doc{padding-block:clamp(3rem,7vw,5.5rem) 0;scroll-margin-top:1rem}
+.doc:last-of-type{padding-bottom:clamp(3rem,7vw,5.5rem)}
+/* The scene number: each half opens like a title card */
+.scene{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-top:1rem;border-top:1px solid var(--hairline);color:var(--muted);font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.scene-n{color:var(--accent);font-variant-numeric:tabular-nums}
+.doc h2{font:400 var(--fs-h2)/1.12 var(--serif);letter-spacing:-.012em;text-wrap:balance}
+.doc .sub{margin-top:.8rem;color:var(--muted)}
+.blocks{margin-top:2rem;display:grid;border-top:1px solid var(--hairline)}
+.blocks > div{padding-block:1.25rem;border-bottom:1px solid var(--hairline)}
+.blocks h3,.card h3,.steps-box h3{font:400 1.25rem/1.3 var(--serif)}
+.blocks p{margin-top:.4rem;color:var(--muted)}
+.blocks p + p{margin-top:.6rem}
+/* A link that stands alone on its line gets a full thumb-sized tap area */
+.tap{display:inline-flex;align-items:center;min-height:44px}
+.cards{margin-top:2rem;display:grid;border-top:1px solid var(--hairline)}
+.card{padding-block:1.25rem;border-bottom:1px solid var(--hairline);display:grid;gap:.4rem}
+.card p{color:var(--muted)}
+.steps-box{margin-top:2.5rem;display:grid;gap:2rem}
+.steps-box ol{display:grid;margin-top:.8rem;border-top:1px solid var(--hairline);counter-reset:ac}
+.steps-box li{display:grid;grid-template-columns:2rem 1fr;gap:.5rem;padding-block:.75rem;border-bottom:1px solid var(--hairline);color:var(--muted)}
+.steps-box li::before{counter-increment:ac;content:counter(ac,decimal-leading-zero) / "";font:500 var(--fs-label)/1 var(--mono);letter-spacing:.1em;color:var(--accent);padding-top:.5em}
+.fact{margin-top:2.5rem;display:grid;gap:.45rem;padding-left:1.25rem;border-left:1px solid var(--accent)}
+.fact-k{font:500 var(--fs-label)/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.fact-big{font:400 clamp(1.3rem,1.15rem + .7vw,1.65rem)/1.2 var(--serif)}
+.fact-t{color:var(--muted)}
+.fact-src{font-size:var(--fs-small);color:var(--muted)}
+.notrack{margin-top:2rem;color:var(--muted);font-size:var(--fs-small)}
+/* The "Turn off analytics" control: a plain outlined button, shown only once analytics is set up */
+.opt-btn{font:600 var(--fs-small)/1.3 var(--sans);color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:10px;min-height:44px;padding:.6rem 1rem;cursor:pointer;margin-top:.4rem}
+.opt-btn:hover{border-color:var(--ink)}
+
+/* Footer: the screen, unframed */
+.site-foot{position:relative;background:var(--screen);color:var(--screen-muted);--focus:var(--screen-accent);padding-block:3.25rem 2.5rem;font-size:var(--fs-small)}
+.site-foot a{color:var(--screen-ink)}
+.site-foot .wrap{width:min(100% - 2*var(--gutter),76rem);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;justify-content:space-between}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 1.25rem}
+.foot-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+.setup{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--setup-bg);color:var(--setup-ink);border-top:2px solid #C9971F;padding:.7rem var(--gutter) calc(.7rem + env(safe-area-inset-bottom));font-size:var(--fs-small);line-height:1.4}
+.setup strong{font-weight:800}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <span class="avatar" data-avatar="decor" data-needs="photo" hidden></span>
+      <span data-cfg="brandName">Raymond Shaahu</span>
+    </a>
+    <a class="head-back" href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Main page
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap intro">
+    <p class="label">The detail</p>
+    <h1>Privacy and <em class="turn">account access</em></h1>
+    <p class="lede">Two things people reasonably want to know before they get in touch: what happens to what they send, and how I work on their LinkedIn without their password.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#privacy">How your information is handled</a>
+      <a href="#access">How account access works</a>
+    </nav>
+  </div>
+
+  <!-- PRIVACY NOTICE (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section class="doc" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">01</span>Privacy notice</p>
+      <h2 id="privacy-title">How your information is handled</h2>
+      <p class="sub">This covers the enquiry form on the main page and the LinkedIn check.</p>
+      <div class="blocks">
+        <!-- The name and email are written here too, so the notice is complete with JavaScript off.
+             If your name or email changes, change them here as well as in CONFIG (HANDOVER.md, Step 1). -->
+        <div data-needs-any="brandName email">
+          <h3>Who is responsible for it</h3>
+          <p><span data-cfg="brandName">Raymond Shaahu</span><span data-needs="brandName email">, </span><a class="tap" data-cfg-mailto data-show-email data-needs="email" href="mailto:raymond.shaahu@gmail.com">raymond.shaahu@gmail.com</a></p>
+        </div>
+        <div>
+          <h3>What I collect</h3>
+          <p>Only what you choose to send. From the enquiry form: your name, work email, company, role and any message. From the LinkedIn check: your answers, your score, the quick details you pick and the contact details you type in. Nothing is sent until you press the button.</p>
+        </div>
+        <div>
+          <h3>Why, and the legal basis</h3>
+          <p>To reply to your enquiry or your request for a free review. The legal basis is that you’ve asked me to do something before we agree any contract.</p>
+        </div>
+        <div>
+          <h3>Who else handles it</h3>
+          <p data-needs="web3formsKey" hidden>The forms are delivered to my inbox by Web3Forms, an email form service. Its <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">privacy policy<span class="sr-only"> (opens in a new tab)</span></a> says it operates from India, keeps form submissions for up to three years and uses standard contractual clauses for transfers from the UK. It also says your IP address and email address may be sent to two spam-checking services, CleanTalk and Akismet.</p>
+          <p>If you send from your own email app, your message goes through your own email provider.</p>
+          <p data-needs="posthogKey" hidden>Usage analytics are handled by PostHog, on its servers in the EU. See “Usage analytics” below.</p>
+        </div>
+        <div>
+          <h3>How long I keep it</h3>
+          <p>Only as long as I need it to deal with your request. I’ll delete it sooner if you ask.</p>
+        </div>
+        <div>
+          <h3>What I don’t do</h3>
+          <p>I never sell what you send, and I don’t add you to any mailing list unless you say yes.</p>
+        </div>
+        <div>
+          <h3>Your rights</h3>
+          <p>You can ask to see, correct or delete what I hold about you, or object to how I use it. If you’re unhappy with how I handle it, you can complain to the Information Commissioner’s Office (<a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk<span class="sr-only"> (opens in a new tab)</span></a>).</p>
+        </div>
+        <div>
+          <h3>Cookies and storage</h3>
+          <p data-unless="posthogKey">These pages set no cookies and run no tracking or analytics. While you take the check, your answers are kept in your browser tab only, so a reload doesn’t lose them. Closing the tab clears them.</p>
+          <p data-needs="posthogKey" hidden>These pages set no cookies. While you take the check, your answers are kept in your browser tab only, so a reload doesn’t lose them. Closing the tab clears them. Usage analytics, below, keep a random ID in your tab in the same way. If you turn analytics off, that choice is saved in this browser so it stays off.</p>
+        </div>
+        <!-- USAGE ANALYTICS: shows only once CONFIG.analytics.posthogKey is filled in (HANDOVER.md,
+             "Usage tracking with PostHog"). -->
+        <div id="analytics" data-needs="posthogKey" hidden>
+          <h3>Usage analytics</h3>
+          <p>To see which parts of this site are useful and where people give up, I use PostHog, an analytics service, on its servers in the EU. It sets no cookies. It keeps a random ID in your browser tab only, and closing the tab clears it.</p>
+          <p>It records the pages and sections you view, how far you scroll, how long a page is in use, which buttons and links you tap, the answers you pick in the check (as numbers from 1 to 5) and your score, and whether a form or the check was left unfinished, with the name of the last field used.</p>
+          <p data-needs="posthogReplay" hidden>It can also record an anonymous replay of a visit, showing taps and scrolling. Everything typed into a form is hidden in these replays.</p>
+          <p>It never collects your name, email address, phone number, company, LinkedIn link, message or anything else you type.</p>
+          <p>It doesn’t run at all if your browser asks sites not to track you (Global Privacy Control or Do Not Track). The legal basis is my legitimate interest in understanding how the site is used, so I can improve it.</p>
+          <p><button class="opt-btn" type="button" id="opt-btn">Turn off analytics on this device</button></p>
+          <p id="opt-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW ACCESS WORKS (wording to be confirmed: HANDOVER.md, Step 4) -->
+  <section class="doc" id="access" aria-labelledby="access-title">
+    <div class="wrap">
+      <p class="scene"><span class="scene-n" aria-hidden="true">02</span>Account access</p>
+      <h2 id="access-title">How account access works</h2>
+      <p class="sub">Your account stays in your hands, and I never ask for your password.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>I never ask for your password</h3>
+          <p>For your personal profile, every post is a draft you approve first. Then you post it, or it goes out through a scheduling tool you connect to your own account. For a company page, you add me through LinkedIn’s own admin settings.</p>
+        </article>
+        <article class="card">
+          <h3>Nothing goes out without your yes</h3>
+          <p>You see every post before it’s published. Edit it, send it back or approve it.</p>
+        </article>
+        <article class="card">
+          <h3>Everything stays yours</h3>
+          <p>Your profile, your page, your posts and your connections belong to you. If we stop working together, you keep the lot and my access ends.</p>
+        </article>
+        <article class="card">
+          <h3>You can remove me at any time</h3>
+          <p>Company page admins and connected tools are both switched off from LinkedIn’s own settings, whenever you like.</p>
+        </article>
+      </div>
+
+      <div class="steps-box">
+        <div>
+          <h3>Your personal profile</h3>
+          <ol>
+            <li>I write each post as a draft for you to approve.</li>
+            <li>You post it yourself, or a scheduling tool posts it after you’ve signed in to LinkedIn and allowed it.</li>
+            <li>You can switch off any connected tool in LinkedIn’s settings, under Data privacy, whenever you like.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Your company page (if you add company page support)</h3>
+          <ol>
+            <li>You stay super admin, the top role, so you always control who has access.</li>
+            <li>You add me as an admin from your page’s settings, under Manage admins. LinkedIn asks that I follow your page first.</li>
+            <li>You can remove me from that same screen at any time.</li>
+          </ol>
+        </div>
+      </div>
+
+      <aside class="fact" data-fact-slot="password" aria-label="A checked fact from LinkedIn" hidden></aside>
+
+      <p class="notrack">These pages set no tracking cookies, so nothing follows you around the web afterwards.</p>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p data-needs="brandName" hidden>© <span data-cfg="year"></span> <span data-cfg="brandName"></span></p>
+    <div class="foot-links">
+      <a href="../">Main page</a>
+      <a href="../check/">LinkedIn check</a>
+      <a data-cfg-mailto data-needs="email" href="mailto:raymond.shaahu@gmail.com">Email me</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<div class="setup" id="setup" role="status" hidden></div>
+
+<script>
+/* =========================================================================
+   CONFIG: everything about you lives here.
+   The SAME block is in all three pages: index.html, check/index.html and
+   privacy/index.html. Change it in index.html, then run
+   "node tools/sync-config.mjs" from the project folder to copy it here.
+   Full field-by-field help is in index.html and HANDOVER.md.
+   ========================================================================= */
+const CONFIG = {
+  // Your full name, exactly as it appears on your LinkedIn profile.
+  name: "Raymond Shaahu",
+
+  // Your first name. Leave empty to use the first word of name.
+  firstName: "",
+
+  // Your trading or business name for the header and footer. Leave empty to use your name.
+  businessName: "",
+
+  // The full web address of your own LinkedIn profile, starting https://www.linkedin.com/in/
+  linkedinUrl: "https://www.linkedin.com/in/raymondshaahu/",
+
+  // Your photo: a square JPG, about 800 by 800 pixels and under about 120 KB, saved in the
+  // site folder (for example "photo.jpg"). It shows in the main page hero, in About, in the
+  // footer and in the header of the other two pages. The check and privacy pages sit one folder
+  // down, so they look for it as "../photo.jpg" automatically.
+  // Leave empty and the pages show your initials in a circle instead.
+  photo: "",
+
+  // Optional: a taller portrait for the About section, 4:5 shape (about 1000 by 1250 pixels,
+  // under about 180 KB), saved in the site folder (for example "portrait.jpg"). When filled, it
+  // replaces the round photo in About. portraitAlt describes it in a few words, for example
+  // "Raymond Shaahu at his desk". Leave both empty to keep the round photo.
+  portrait: "",
+  portraitAlt: "",
+
+  // The email address that receives enquiries and is shown on the page.
+  email: "raymond.shaahu@gmail.com",
+
+  // Your free Web3Forms access key (see HANDOVER.md). It is safe to publish.
+  // Leave empty and the forms open the visitor's own email app instead.
+  web3formsKey: "",
+
+  // The town or city you work from. Shown in the About section and footer.
+  location: "",
+
+  // How quickly you ALWAYS reply, written to follow the words "I reply".
+  // Only fill this in if you meet it every single time.
+  responseTime: "",
+
+  // Your real terms in one or two plain sentences, such as minimum term and notice period.
+  // Filling this also switches on the "How long do I have to sign up for?" question.
+  contractTerms: "",
+
+  // Optional, only if true and checkable: how long you have worked in LinkedIn, marketing or a related field.
+  yearsExperience: "",
+
+  // Two to four sentences in your own words: what you did before, why you started this, who you work best with.
+  bio: "",
+
+  // Qualifications or memberships you actually hold, written as the issuing body writes them.
+  // Each one looks like: { name: "", issuer: "" }
+  credentials: [],
+
+  /* ACHIEVEMENTS. The strip under the main page hero. True, checkable facts only, all taken
+     from your own words. Each one looks like:
+       { kicker: "", value: "", label: "" }
+     kicker  One or two words in small capitals above the fact, for example "Background".
+     value   Optional. A short figure shown large, for example "30+". Leave "" for none.
+     label   The fact itself, in a few words.
+     Delete a line to remove it. An empty list [] hides the strip. */
+  achievements: [
+    { kicker: "Profiles", value: "30+", label: "professional profiles managed" },
+    { kicker: "Credits", value: "", label: "Production credits on a Netflix series" },
+    { kicker: "Background", value: "", label: "Film, television and editorial production" },
+    { kicker: "Worked with", value: "", label: "Senior leadership figures" }
+  ],
+
+  /* PROFILES I MANAGE. Cards in "The work speaks for itself", drawn like a LinkedIn profile.
+     Only add someone who has agreed IN WRITING to be shown. Start from this empty shape:
+       { role: "", sector: "", name: "", photo: "", headlineBefore: "", headlineAfter: "",
+         highlight: "", period: "", profileUrl: "", permission: false }
+     Field by field:
+       role            Their job, for example "Founder and CEO".
+       sector          Their field, for example "Professional services".
+       name            Optional. Only if they agreed to be named.
+       photo           Optional, only with their agreement. A square JPG, about 288 by 288
+                       pixels, saved in the site folder. No name and no photo shows a plain
+                       person outline; a name with no photo shows their initials.
+       headlineBefore  Optional. Their LinkedIn headline before you started.
+       headlineAfter   Optional. Their headline now.
+       highlight       Optional. One thing that changed, in a few words. If it has a number in
+                       it, it only shows when period is filled in too.
+       period          The dates it covers, as DD/MM/YYYY to DD/MM/YYYY.
+       profileUrl      Optional. Their LinkedIn address, starting https://
+       permission      Type true (no quote marks) ONLY with written agreement.
+     A card only shows when permission is true and role and sector are both filled in. */
+  accounts: [],
+
+  /* GALLERY. Optional photos of you at work, speaking or on set, shown under About. Only
+     photos you own the rights to, with no other company's logos in them. Each one:
+       { file: "", alt: "", caption: "", width: 1600, height: 1067 }
+     file is a landscape JPG saved in the site folder (3:2 shape, about 1600 by 1067 pixels,
+     under about 250 KB). alt says what is in the picture. caption is optional.
+     A photo only shows when file and alt are both filled in. */
+  gallery: [],
+
+  /* CASE STUDIES. Shown in the "The work speaks for itself" section of the main page.
+     While this list is empty, the page shows the "Real clients. Real results." block.
+     Each case study goes between the square brackets, inside curly brackets, with a comma
+     between case studies. Start from this empty shape:
+       { title: "", who: "", challenge: "", whatIDid: "", outcome: "", quote: "",
+         image: "", imageAlt: "", permission: false }
+     Field by field:
+       title      A short heading, for example "A quiet profile brought back to life".
+       who        An anonymised description of the client, for example
+                  "Managing director, professional services firm". No names unless they agreed.
+       challenge  One or two sentences: where they were before you started.
+       whatIDid   One or two sentences: what you actually did.
+       outcome    One or two sentences: what changed. Only what really happened, in their terms,
+                  with dates if you give numbers. No estimates, no rounding up.
+       quote      Optional. Their exact words, with their permission. Trim if you like, never reword.
+       image      Optional. A landscape picture (16:10 shape, about 1600 by 1000 pixels, under
+                  about 250 KB) saved in the site folder, for example a profile screenshot the
+                  client agreed you can show.
+       imageAlt   What the picture shows, in a few words. Needed whenever image is filled in.
+       permission Type true (no quote marks) ONLY when the client has agreed in writing that you
+                  can publish this. Anything else keeps the case study hidden.
+     A case study only shows when permission is true and title, who, challenge, whatIDid and
+     outcome are all filled in. Never write an example or a made-up case study. */
+  caseStudies: [],
+
+  // Real client quotes with their written permission. Trim them if you like, never reword them.
+  // Each one looks like: { quote: "", name: "", role: "", company: "", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  testimonials: [],
+
+  // Real outcomes a named client has agreed you can share, with the dates they cover.
+  // Each one looks like: { client: "", result: "", period: "DD/MM/YYYY to DD/MM/YYYY", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  results: [],
+
+  // Logos of clients who have said you can show them. Save the logo file in the site folder
+  // (SVG is best, otherwise a PNG about 320 by 96 pixels).
+  // Each one looks like: { name: "", logoFile: "", alt: "", permission: false }
+  // Type permission: true (no quote marks) ONLY with written agreement. Anything else keeps it hidden.
+  clientLogos: [],
+
+  // Trading name, plus company number and registered office address if you are a limited company.
+  companyDetails: "",
+
+  /* USAGE ANALYTICS (PostHog). Shows how people use the site: which pages and sections they see,
+     where they leave, and where they give up on the form or the check. Off until you add a key.
+       posthogKey   Your own PostHog project token, from your own free EU account (HANDOVER.md,
+                    "Usage tracking with PostHog"). It is safe to publish. Leave "" and nothing
+                    loads and nothing is sent.
+       posthogHost  Where events go. Keep the EU address unless PostHog tells you otherwise.
+       replay       true records anonymous replays of visits, with everything typed hidden.
+                    false switches replays off. */
+  analytics: { posthogKey: "", posthogHost: "https://eu.i.posthog.com", replay: true },
+
+  // The web address of the main page once published (used in lead emails and the QR code).
+  siteUrl: "https://stevehill-oss.github.io/linkedin-growth-check/"
+};
+
+/* ===== ANALYTICS BLOCK START ===== */
+/* =========================================================================
+   USAGE ANALYTICS (PostHog). The SAME block is in all three pages.
+   Switched off while CONFIG.analytics.posthogKey is empty: then nothing loads,
+   no listener is added and nothing is sent. With a key, PostHog loads only
+   after the page has finished loading, in idle time, and never when the
+   browser sends Global Privacy Control or Do Not Track, or after the visitor
+   turned it off on the privacy page. Events carry names, numbers and fixed
+   labels only, never anything a visitor typed. HANDOVER.md, "Usage tracking
+   with PostHog", explains it.
+   ========================================================================= */
+const ANALYTICS = (function () {
+  "use strict";
+  const A = (typeof CONFIG === "object" && CONFIG && CONFIG.analytics) || {};
+  const key = typeof A.posthogKey === "string" ? A.posthogKey.trim() : "";
+  const rawHost = typeof A.posthogHost === "string" ? A.posthogHost.trim().replace(/\/+$/, "") : "";
+  const host = /^https:\/\/[a-z0-9.-]+$/i.test(rawHost) ? rawHost : "https://eu.i.posthog.com";
+  const replay = A.replay === true;
+  const OFF_KEY = "lgc-analytics-off";
+  const nav = window.navigator || {};
+  const gpc = nav.globalPrivacyControl === true;
+  const dnt = [nav.doNotTrack, window.doNotTrack, nav.msDoNotTrack].some((v) => v === "1" || v === "yes");
+  let off = false;
+  try { off = window.localStorage.getItem(OFF_KEY) === "1"; } catch (e) { /* storage blocked: no saved choice */ }
+  const on = !!key && !gpc && !dnt && !off;
+  const path = window.location.pathname;
+  const PAGE = /\/check\/(index\.html)?$/.test(path) ? "check" : (/\/privacy\/(index\.html)?$/.test(path) ? "privacy" : "main");
+  const SRC = new URLSearchParams(window.location.search).get("src") === "qr" ? "qr" : "direct";
+  const mq = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+  function common() {
+    const w = window.innerWidth || document.documentElement.clientWidth || 0;
+    return { page: PAGE, src: SRC, device: w < 600 ? "phone" : (w < 1024 ? "tablet" : "desktop"),
+      theme: mq("(prefers-color-scheme: dark)") ? "dark" : "light", reduced_motion: mq("(prefers-reduced-motion: reduce)") };
+  }
+  /* Only numbers, true or false, and short fixed labels get through. Anything else is dropped. */
+  function clean(props) {
+    const out = {};
+    Object.keys(props || {}).forEach((k) => {
+      const v = props[k];
+      if (typeof v === "number" && isFinite(v)) out[k] = v;
+      else if (typeof v === "boolean") out[k] = v;
+      else if (typeof v === "string" && /^[a-z0-9_ ./#-]{0,48}$/i.test(v)) out[k] = v;
+    });
+    return out;
+  }
+  /* Last safety net on every event: email addresses, mailto links and LinkedIn profile links are
+     removed wherever they appear. Replay snapshots are left alone: replay masks every input. */
+  const PII = /[^\s@<>"'=:/]+@[^\s@<>"']+\.[a-z]{2,}|mailto:|linkedin\.com\/in\//i;
+  const KEEP = /^(\$session_id|\$window_id|distinct_id|\$device_id|token|uuid|\$insert_id)$/;
+  function scrub(v, depth) {
+    if (typeof v === "string") return PII.test(v) ? "[removed]" : v;
+    if (!v || typeof v !== "object" || depth > 5) return v;
+    if (Array.isArray(v)) return v.map((x) => scrub(x, depth + 1));
+    Object.keys(v).forEach((k) => { if (!KEEP.test(k)) v[k] = scrub(v[k], depth + 1); });
+    return v;
+  }
+  function beforeSend(ev) {
+    if (!ev || off) return null;
+    if (ev.event === "$snapshot") return ev;
+    ev.properties = Object.assign(scrub(ev.properties || {}, 0), common());
+    if (ev.$set) ev.$set = scrub(ev.$set, 0);
+    if (ev.$set_once) ev.$set_once = scrub(ev.$set_once, 0);
+    return ev;
+  }
+
+  let ph = null, started = false;
+  const queue = [];
+  function send(event, props, opts, ts) {
+    try {
+      const o = {};
+      if (ts) o.timestamp = ts;
+      if (opts && opts.leaving) { o.transport = "sendBeacon"; o.send_instantly = true; }
+      ph.capture(event, props, o);
+    } catch (e) { /* analytics must never break the page */ }
+  }
+  /* track(event, props): a no-op unless analytics is switched on. Before PostHog has loaded, up to
+     40 events (names and the cleaned labels only) wait in memory, with the time they happened. */
+  function track(event, props, opts) {
+    if (!on || off || !/^[a-z0-9_]{1,40}$/.test(event)) return;
+    const p = clean(props);
+    if (ph) send(event, p, opts);
+    else if (queue.length < 40) queue.push([event, p, opts, new Date()]);
+  }
+  function flush() { while (queue.length) { const q = queue.shift(); send(q[0], q[1], q[2], q[3]); } }
+
+  function load() {
+    if (!on || off || started) return;
+    started = true;
+    /* PostHog's own browser snippet, word for word from posthog.com/docs/libraries/js (checked 15/11/2026).
+       It adds one script tag for array.js from the matching "-assets" host. */
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    window.posthog.init(key, {
+      api_host: host,
+      defaults: "2026-08-30",
+      /* No cookies: PostHog keeps its random ID in this browser tab only, cleared when it closes */
+      persistence: "sessionStorage",
+      capture_pageview: true,
+      capture_pageleave: true,
+      respect_dnt: true,
+      person_profiles: "identified_only",
+      /* Clicks on links and buttons only, with no element text and no attributes such as href */
+      autocapture: { dom_event_allowlist: ["click", "submit"], element_allowlist: ["a", "button"],
+        css_selector_ignorelist: [".ph-no-autocapture", "[data-ph-no-autocapture]", ".ph-no-capture", "#fallback", "#done", "#s-email", "#announce"] },
+      mask_all_text: true,
+      mask_all_element_attributes: true,
+      mask_personal_data_properties: true,
+      capture_dead_clicks: false,
+      capture_exceptions: false,
+      disable_surveys: true,
+      disable_product_tours: true,
+      disable_conversations: true,
+      disable_web_experiments: true,
+      disable_session_recording: !replay,
+      /* Replays: every input and textarea is masked, and the parts that repeat what a visitor typed
+         (the thank-you line, the email suggestion, the email fallback, the spoken announcements)
+         are left out of the recording altogether */
+      session_recording: { maskAllInputs: true, maskTextSelector: "input, textarea, .ph-mask",
+        blockSelector: "#done, #fallback, #s-email, #announce, .status-jump" },
+      before_send: beforeSend,
+      loaded: (inst) => { ph = inst; flush(); }
+    });
+  }
+
+  /* Leaving the page: phones often never fire pagehide, so a hidden tab counts as leaving too */
+  const leaveFns = [];
+  function onLeave(fn) { if (on) leaveFns.push(fn); }
+  function leaving() { leaveFns.forEach((fn) => { try { fn(); } catch (e) { /* keep going */ } }); }
+
+  if (on) {
+    const idle = () => (window.requestIdleCallback ? window.requestIdleCallback(load, { timeout: 4000 }) : window.setTimeout(load, 1500));
+    if (document.readyState === "complete") idle(); else window.addEventListener("load", idle, { once: true });
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") leaving(); });
+    window.addEventListener("pagehide", leaving);
+
+    /* Scroll depth: 25, 50, 75 and 90 percent of the page seen, once each */
+    const marks = [25, 50, 75, 90];
+    let tick = false;
+    const depth = () => {
+      tick = false;
+      const el = document.documentElement;
+      const pct = ((window.scrollY + window.innerHeight) / Math.max(1, el.scrollHeight)) * 100;
+      while (marks.length && pct >= marks[0]) track("scroll_depth", { percent: marks.shift() });
+      if (!marks.length) window.removeEventListener("scroll", onScroll);
+    };
+    const onScroll = () => { if (!tick) { tick = true; window.requestAnimationFrame(depth); } };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    /* Engaged time: time the page is on screen, where a pause of more than 30 seconds with no
+       scroll, tap or key press counts as 30 seconds. Sent each time the visitor leaves. */
+    const CAP = 30000;
+    let last = Date.now(), engaged = 0;
+    const active = () => { const n = Date.now(); if (document.visibilityState === "visible") engaged += Math.min(n - last, CAP); last = n; };
+    ["pointerdown", "keydown", "scroll", "touchstart", "wheel"].forEach((t) => window.addEventListener(t, active, { passive: true, capture: true }));
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") last = Date.now(); });
+    leaveFns.push(() => {
+      active();
+      const s = Math.round(engaged / 1000);
+      engaged = 0;
+      if (s > 0) track("page_engaged", { engaged_seconds: s }, { leaving: true });
+    });
+  }
+
+  /* The privacy page's "Turn off analytics on this device" control */
+  function optOut() {
+    if (ph) {
+      try { ph.capture("analytics_opt_out", clean({}), { transport: "sendBeacon", send_instantly: true }); } catch (e) { /* ignore */ }
+      try { ph.opt_out_capturing(); ph.stopSessionRecording(); } catch (e) { /* ignore */ }
+    }
+    off = true;
+    queue.length = 0;
+    try { window.localStorage.setItem(OFF_KEY, "1"); return true; } catch (e) { return false; }
+  }
+  function optIn() {
+    try {
+      window.localStorage.removeItem(OFF_KEY);
+      /* PostHog keeps its own opt-out note; it goes too, so analytics really comes back */
+      Object.keys(window.localStorage).forEach((k) => { if (k.indexOf("__ph_opt_in_out_") === 0) window.localStorage.removeItem(k); });
+      return true;
+    } catch (e) { return false; }
+  }
+  return { track: track, onLeave: onLeave, on: on, keySet: !!key, replay: !!key && replay, gpc: gpc, dnt: dnt,
+    isOff: () => off, optOut: optOut, optIn: optIn };
+})();
+/* ===== ANALYTICS BLOCK END ===== */
+
+/* Checked fact from the research file (LinkedIn's own rules). */
+const FACTS = [
+  { id: "ua-2-2-password", slot: "password", sourceOwner: "LinkedIn (legal)", loadedOk: true,
+    label: "LinkedIn’s own rules", big: "Keep your password to yourself",
+    text: "LinkedIn’s User Agreement asks members to keep their password confidential and not to share or transfer their account. That’s why I never ask for yours.",
+    sourceName: "LinkedIn User Agreement, section 2.2", url: "https://www.linkedin.com/legal/user-agreement",
+    dateLabel: "effective", date: "03/11/2025" }
+];
+
+(function () {
+  "use strict";
+  const doc = document;
+  const root = doc.documentElement;
+  const $ = (s, c) => (c || doc).querySelector(s);
+  const $$ = (s, c) => Array.prototype.slice.call((c || doc).querySelectorAll(s));
+  function h(tag, props) {
+    const n = doc.createElement(tag);
+    if (props) Object.keys(props).forEach((k) => {
+      const v = props[k];
+      if (v == null || v === false) return;
+      if (k === "class") n.className = v;
+      else if (k === "text") n.textContent = v;
+      else n.setAttribute(k, v === true ? "" : String(v));
+    });
+    for (let i = 2; i < arguments.length; i++) {
+      [].concat(arguments[i]).forEach((kid) => {
+        if (kid == null || kid === false) return;
+        n.append(kid.nodeType ? kid : String(kid));
+      });
+    }
+    return n;
+  }
+
+  const str = (v) => (typeof v === "string" ? v.trim() : "");
+  const C = {};
+  ["name", "businessName", "linkedinUrl", "photo", "email", "web3formsKey"].forEach((k) => { C[k] = str(CONFIG[k]); });
+  if (C.linkedinUrl && !/^https?:\/\//i.test(C.linkedinUrl)) C.linkedinUrl = "https://" + C.linkedinUrl.replace(/^\/+/, "");
+  /* This page sits one folder below the photo, so a plain file name gets "../" in front */
+  if (C.photo && !/^(https?:|data:|\/|\.\.\/)/i.test(C.photo)) C.photo = "../" + C.photo;
+  const V = Object.assign({}, C, { brandName: C.businessName || C.name, year: String(new Date().getFullYear()),
+    posthogKey: ANALYTICS.keySet ? "on" : "", posthogReplay: ANALYTICS.replay ? "on" : "" });
+  const filled = (k) => !!V[k];
+
+  $$("[data-cfg]").forEach((n) => { const v = V[n.getAttribute("data-cfg")]; if (v) n.textContent = v; });
+  $$("[data-needs]").forEach((n) => { n.hidden = !n.getAttribute("data-needs").split(/\s+/).every(filled); });
+  $$("[data-needs-any]").forEach((n) => { n.hidden = !n.getAttribute("data-needs-any").split(/\s+/).some(filled); });
+  /* The reverse: shown only while a setting is empty (the no-analytics wording) */
+  $$("[data-unless]").forEach((n) => { n.hidden = n.getAttribute("data-unless").split(/\s+/).some(filled); });
+
+  /* "Turn off analytics on this device". The choice is kept in this browser's local storage. */
+  (function optControl() {
+    const btn = $("#opt-btn"), status = $("#opt-status");
+    if (!btn || !ANALYTICS.keySet) return;
+    const MSG = {
+      browser: "Your browser already asks sites not to track you, so analytics never runs here.",
+      isOff: "Analytics is off on this device.",
+      turnedOff: "Done. Analytics is off on this device.",
+      notSaved: "Analytics is off for this visit. Your browser won’t let this page save the choice, so it may come back on your next visit.",
+      turnedOn: "Analytics is back on. It starts on the next page you open.",
+      offLabel: "Turn off analytics on this device",
+      onLabel: "Turn analytics back on"
+    };
+    if (ANALYTICS.gpc || ANALYTICS.dnt) { btn.hidden = true; status.textContent = MSG.browser; return; }
+    const show = (offNow) => { btn.textContent = offNow ? MSG.onLabel : MSG.offLabel; };
+    show(ANALYTICS.isOff());
+    if (ANALYTICS.isOff()) status.textContent = MSG.isOff;
+    btn.addEventListener("click", () => {
+      if (!ANALYTICS.isOff()) {
+        const saved = ANALYTICS.optOut();
+        status.textContent = saved ? MSG.turnedOff : MSG.notSaved;
+        show(true);
+      } else if (ANALYTICS.optIn()) {
+        status.textContent = MSG.turnedOn;
+        btn.hidden = true;
+      }
+    });
+  })();
+  $$("[data-cfg-mailto]").forEach((a) => {
+    if (!C.email) return;
+    a.href = "mailto:" + C.email;
+    if (a.hasAttribute("data-show-email")) a.textContent = C.email;
+  });
+  if (C.name && doc.title.indexOf(C.name) === -1) doc.title = doc.title + " | " + C.name;
+
+  const words = C.name.split(/\s+/).filter(Boolean);
+  const initials = words.length ? (words[0][0] + (words.length > 1 ? words[words.length - 1][0] : "")).toUpperCase() : "";
+  $$("[data-avatar]").forEach((box) => {
+    const mono = () => { box.textContent = initials; box.setAttribute("aria-hidden", "true"); };
+    box.textContent = "";
+    if (C.photo) {
+      const img = h("img", { src: C.photo, alt: "", width: 400, height: 400, decoding: "async" });
+      img.addEventListener("error", () => { img.remove(); mono(); });
+      box.append(img);
+      box.setAttribute("aria-hidden", "true");
+    } else mono();
+  });
+
+  FACTS.filter((f) => f.loadedOk === true && /^LinkedIn\b/.test(f.sourceOwner)).forEach((f) => {
+    const host = $('[data-fact-slot="' + f.slot + '"]');
+    if (!host) return;
+    host.append(
+      h("p", { class: "fact-k", text: f.label }),
+      h("p", { class: "fact-big", text: f.big }),
+      h("p", { class: "fact-t", text: f.text }),
+      h("p", { class: "fact-src" }, "Source: ",
+        h("a", { href: f.url, target: "_blank", rel: "noopener noreferrer" }, f.sourceName, h("span", { class: "sr-only", text: " (opens in a new tab)" })),
+        " (" + f.dateLabel + " " + f.date + ")")
+    );
+    host.hidden = false;
+  });
+
+  /* Setup guard: shows what is missing before the site is shared */
+  const setup = $("#setup");
+  const missing = [];
+  if (!C.name) missing.push("name");
+  if (!C.linkedinUrl) missing.push("LinkedIn link");
+  if (!C.email) missing.push("email");
+  if (missing.length) {
+    setup.append(h("strong", { text: "Setup: " + missing.length + " detail" + (missing.length === 1 ? "" : "s") + " missing" }),
+      " (" + missing.join(", ") + "). HANDOVER.md, Step 1, shows where.");
+    setup.hidden = false;
+    root.style.setProperty("--setup-h", setup.offsetHeight + "px");
+  }
+})();
+</script>
+</body>
+</html>
